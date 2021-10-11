@@ -113,22 +113,7 @@
     </section>
 </main>
 
-<script>
-    let headers = document.getElementsByTagName("h2");
-    let overview = document.getElementById("overview");
-
-    console.log(headers);
-    console.log(overview);
-
-    for (let i = 0; i < headers.length; ++i) {
-        let element = document.createElement("li");
-        let link = document.createElement("a");
-        link.setAttribute("href", "#" + headers[i].id);
-        link.innerHTML = headers[i].innerHTML;
-        element.appendChild(link);
-        overview.appendChild(element);
-    }
-</script>
+<script src="../table_of_content.js"></script>
 </body>
 
 </html>
