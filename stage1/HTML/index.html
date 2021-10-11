@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+<header class="container background-grey">
+    <nav class="menu">
+        <ul>
+            <li><a href="../">INDEX</a></li>
+            <li><span>HTML</span></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <aside draggable="true" class="display-inline-block background-grey">
+        <ul id="overview">
+        </ul>
+    </aside>
+    <section class="display-inline-block background-grey">
+        <article>
+            <h2 id="begin">Предисловие</h2>
+            <p>Далее на странице будут представлены различные HTML-элементы, а так же объяснено их значение</p>
+        </article>
+        <article>
+            <h2 id="text-formatting">Различные способы форматирования текста</h2>
+            <h3>Заголовки</h3>
+            <p>
+                Самый простой и в то же время один из важнейших элементов на странице. Используется для создания
+                заголовков, по которым различные поисковые машины смогут более точно индексировать страницы. Всего их 6,
+                от 1 до 6, по убыванию
+            </p>
+            <h3>Жирный текст</h3>
+            <p>2 тэга:</p>
+            <dl>
+                <dt><b><code>b</code></b></dt>
+                <dl>Делает текст жирным</dl>
+                <dt><strong><code>strong</code></strong></dt>
+                <dl>То же самое, что <b><code>b</code></b>, но придает вес для поисковых машин</dl>
+            </dl>
+            <h3>Текст курсивом</h3>
+            <p>2 тэга:</p>
+            <dl>
+                <dt><i><code>i</code></i></dt>
+                <dl>Делает текст курсивным</dl>
+                <dt><em><code>em</code></em></dt>
+                <dl>То же самое, что <i><code>i</code></i>, но придает вес для поисковых машин</dl>
+            </dl>
+            <h3>Подчеркнутый текст</h3>
+            <p>2 тэга:</p>
+            <dl>
+                <dt><u><code>u</code></u></dt>
+                <dl>Делает текст подчеркнутым</dl>
+                <dt>
+                    <ins><code>ins</code></ins>
+                </dt>
+                <dl>То же самое, что <u><code>u</code></u>, но помечает текст как новые элементы на странице</dl>
+            </dl>
+            <h3>Перечеркнутый текст</h3>
+            <p>2 тэга:</p>
+            <dl>
+                <dt><strike><code>strike</code></strike></dt>
+                <dl>Делает текст подчеркнутым</dl>
+                <dt>
+                    <del><code>del</code></del>
+                </dt>
+                <dl>То же самое, что <strike><code>strike</code></strike>, но помечает текст как удаленные элементы на
+                    странице
+                </dl>
+            </dl>
+            <h3>Подстрочный/надстрочный текст</h3>
+            <p>2 тэга:</p>
+            <dl>
+                <dt>надстрочный<sup><code>sup</code></sup></dt>
+                <dl>Делает надстрочный текст</dl>
+                <dt>подстрочный<sub><code>sub</code></sub></dt>
+                <dl>Делает подстрочный текст</dl>
+            </dl>
+            <h3>Цитаты и прочее</h3>
+            <p><abbr title="Аббревиатурная аббревиатура">abbr</abbr> - абрревиатура, расшифровка которой всплывает при
+                наведении</p>
+            <p><q>q</q> - простая строчная цитата</p>
+            <p><dfn>dfn</dfn> - определение. лучше выделять CSS, а не тэгом</p>
+            <blockquote>
+                <p><q>blockuote</q> - простой способ создания блочных цитат</p>
+                <cite>cite - подпись к цитате</cite>
+            </blockquote>
+            <h3>Компьютерный текст</h3>
+            <p>Тэги:</p>
+            <dl>
+                <dt><code>code</code></dt>
+                <dl>помечает текст как программный код</dl>
+                <dt><kbd>kbd</kbd></dt>
+                <dl>помечает текст как введеный пользователем</dl>
+                <dt><samp>samp</samp></dt>
+                <dl>помечает текст как выведенный машиной</dl>
+                <dt><var>var</var></dt>
+                <dl>помечает текст как переменные</dl>
+                <dt>
+                    <pre>pre</pre>
+                </dt>
+                <dl>Выводит неформатированный текс. Полезно для дебага</dl>
+            </dl>
+        </article>
+    </section>
+</main>
+
+<script>
+    let headers = document.getElementsByTagName("h2");
+    let overview = document.getElementById("overview");
+
+    console.log(headers);
+    console.log(overview);
+
+    for (let i = 0; i < headers.length; ++i) {
+        let element = document.createElement("li");
+        let link = document.createElement("a");
+        link.setAttribute("href", "#" + headers[i].id);
+        link.innerHTML = headers[i].innerHTML;
+        element.appendChild(link);
+        overview.appendChild(element);
+    }
+</script>
+</body>
+
+</html>
