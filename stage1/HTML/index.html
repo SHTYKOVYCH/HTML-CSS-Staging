@@ -110,6 +110,17 @@
                 <dl>Выводит неформатированный текс. Полезно для дебага</dl>
             </dl>
         </article>
+        <article>
+            <h2 id="forms">Формы</h2>
+            <p>Далее представлена простая форма. Важно, обратите внимание, что заполнен атрибут action и method, без них нормально работать не будет</p>
+            <form name="test_form" autocomplete="on" method="post" action="../form_check.php">
+                <fieldset>
+                    <legend>Пример формы</legend>
+                    <p><label for="field1">Пример поля</label><input required type="text" name="field1" id="field1"></p>
+                </fieldset>
+                <button type="submit">Отправить</button>
+            </form>
+        </article>
     </section>
 </main>
 
