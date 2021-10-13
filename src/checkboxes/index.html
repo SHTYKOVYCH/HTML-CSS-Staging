@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+<header class="container background-grey">
+    <nav class="menu">
+        <ul>
+            <li><a href="../">INDEX</a></li>
+            <li><span>HTML</span></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <aside draggable="true" class="display-inline-block background-grey">
+        <ul id="overview">
+        </ul>
+    </aside>
+    <section class="display-inline-block background-grey">
+        <article>
+            <h2 id="begin">Краткое описание</h2>
+            <p>Далее на странице представлены чекбоксы, реализованные через стили</p>
+        </article>
+        <article>
+            <h2 id="css">Стилевые чекбоксы</h2>
+            <form action="">
+                <div class="field-line">
+                        <span class="checkbox-daw">
+                            <input type="checkbox" id="field1"><label for="field1" class="fake-checkbox"></label>
+                        </span>
+                    <span>Просто чекбокс</span>
+                </div>
+
+                <div class="field-line">
+                        <span class="checkbox-daw">
+                            <input type="checkbox" id="field2" disabled><label for="field2" class="fake-checkbox"></label>
+                        </span>
+                    <span>disabled чекбокс</span>
+                </div>
+            </form>
+        </article>
+    </section>
+</main>
+
+<style>
+
+    .field-line {
+        font-size: 16px;
+    }
+
+    .checkbox-daw input[type="checkbox"] {
+        display: block;
+        z-index: -1;
+        opacity: 0;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: none;
+    }
+
+    .checkbox-daw .fake-checkbox {
+        z-index: 0;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border: 1px solid gray;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 70% 70%;
+    }
+
+    .checkbox-daw input[type="checkbox"]:checked + .fake-checkbox {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%234182c0' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+
+    .checkbox-daw input[type="checkbox"]:hover + .fake-checkbox {
+        box-shadow: 0 0 2px cornflowerblue;
+    }
+
+    .checkbox-daw input[type="checkbox"]:focus + .fake-checkbox {
+        box-shadow: 0 0 4px cornflowerblue;
+    }
+
+    .checkbox-daw input[type="checkbox"]:active + .fake-checkbox {
+        box-shadow: 0 0 4px cornflowerblue;
+        border-color: #4182c0;
+    }
+
+    .checkbox-daw input[type="checkbox"]:disabled + .fake-checkbox {
+        background-color: grey;
+    }
+
+</style>
+
+<script src="../table_of_content.js"></script>
+</body>
+
+</html>

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SHTYKOVYCH/HTML-CSS-Staging#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "normalize.css": "^8.0.1"
   }
 }
