@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML</title>
+    <title>PAGE</title>
 
     <link rel="stylesheet" href="../main.css">
 </head>
@@ -42,9 +42,24 @@
 
                 <div class="field-line">
                         <span class="checkbox-daw">
-                            <input type="checkbox" id="field2" disabled><label for="field2" class="fake-checkbox"></label>
+                            <input type="checkbox" id="field2" disabled><label for="field2"
+                                                                               class="fake-checkbox"></label>
                         </span>
                     <span>disabled чекбокс</span>
+                </div>
+            </form>
+        </article>
+        <article>
+            <form action="">
+                <div class="field-line">
+                    <span class="checkbox-flag">
+                        <input type="checkbox" id="flag"><label class="fake-checkbox" for="flag"></label>
+                    </span>
+                </div>
+                <div class="field-line">
+                    <span class="checkbox-flag">
+                        <input type="checkbox" id="flag1" disabled><label class="fake-checkbox" for="flag1"></label>
+                    </span>
                 </div>
             </form>
         </article>
@@ -57,7 +72,7 @@
         font-size: 16px;
     }
 
-    .checkbox-daw input[type="checkbox"] {
+    input[type="checkbox"] {
         display: block;
         z-index: -1;
         opacity: 0;
@@ -100,6 +115,45 @@
         background-color: grey;
     }
 
+    .checkbox-flag .fake-checkbox {
+        width: 2em;
+        height: calc(1em + 2px);
+        border: 1px solid red;
+        border-radius: 10px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .checkbox-flag .fake-checkbox:after {
+        content: ' ';
+        display: block;
+        width: calc(1em - 2px);
+        height: calc(1em - 2px);
+        position: absolute;
+        left: 0;
+        border-radius: 50%;
+        border: 1px solid red;
+        background-color: red;
+
+        transition: all ease 0.2s;
+    }
+
+    .checkbox-flag input[type="checkbox"]:checked + .fake-checkbox:after {
+        left: 50%;
+    }
+
+    .checkbox-flag input[type="checkbox"]:hover + .fake-checkbox,
+    .checkbox-flag input[type="checkbox"]:focus + .fake-checkbox {
+        box-shadow: 0 0 10px red;
+    }
+
+    .checkbox-flag input[type="checkbox"]:active + .fake-checkbox:after {
+        background-color: orange;
+    }
+
+    .checkbox-flag input[type="checkbox"]:disabled + .fake-checkbox:after {
+        background-color: darkred;
+    }
 </style>
 
 <script src="../table_of_content.js"></script>
