@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE</title>
+
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+
+<header class="container background-grey">
+    <nav class="menu">
+        <ul>
+            <li><a href="../">INDEX</a></li>
+            <li><span>HTML</span></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <aside draggable="true" class="display-inline-block background-grey">
+        <ul id="overview">
+        </ul>
+    </aside>
+    <section class="display-inline-block background-grey">
+        <article>
+            <h2 id="content-box-header">
+                box-sizing
+            </h2>
+            <div><span>Нажмите на кнопки ниже для изменения модели</span></div>
+            <div>Текущее значение box-sizing: <span id="current">border-box</span></div>
+            <span id="border-box" class="btn">border-box</span>
+            <span id="content-box" class="btn">content-box</span>
+            <div class="viewport">
+                <div id="box-example">
+                    <span class="content"></span>
+                </div>
+            </div>
+            <script>
+                let box = document.getElementById("box-example");
+                let current = document.getElementById('current');
+                let buttons = document.getElementsByClassName("btn");
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener('click', function () {
+                        box.style.boxSizing = this.id;
+                        current.innerHTML = this.id;
+                    });
+                }
+            </script>
+            <style>
+                #box-example {
+                    background-color: yellow;
+                    width: 100px;
+                    height: 100px;
+                    padding: 10px;
+                    border: 2px solid red;
+                }
+
+                #box-example .content {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: red;
+                }
+            </style>
+        </article>
+        <article>
+            <h2 id="position-header">positions</h2>
+            <div class="viewport">
+                <div class="ex-1">
+                    <div class="position-static"></div>
+                </div>
+                <div class="ex-2">
+                    <div class="position-relative"></div>
+                </div>
+                <div class="ex-3" style="position: relative">
+                    <div class="position-absolute"></div>
+                </div>
+                <div class="ex-4">
+                    <div class="position-fixed"></div>
+                </div>
+                <div class="ex-5" style="height: 300vh">
+                    <div class="position-sticky"></div>
+                </div>
+            </div>
+            <style>
+                *[class*="ex-"] {
+                    width: 100%;
+                    border: 1px solid yellow;
+                    height: 52px;
+                }
+
+                *[class*="ex-"] div {
+                    height: 50px;
+                    width: 50px;
+                    background-color: red;
+                }
+
+                .position-static {
+                    position: static;
+                }
+
+                .position-relative {
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                }
+
+                .position-absolute {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                }
+
+                .position-fixed {
+                    top: 0;
+                    left: 0;
+                    position: fixed;
+                }
+
+                .position-sticky {
+                    position: sticky;
+                    top: 5px;
+                    left: 0;
+                }
+
+            </style>
+        </article>
+    </section>
+</main>
+
+<script src="../table_of_content.js"></script>
+</body>
+
+</html>

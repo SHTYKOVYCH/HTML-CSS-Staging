@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML</title>
+    <title>PAGE</title>
 
     <link rel="stylesheet" href="../main.css">
 </head>
@@ -138,7 +138,9 @@ i {
                 <image class="wide"></image>
                 <video id="short" class="wide" src=""></video>
                 <div class="wide">
-                    <div><div></div></div>
+                    <div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </article>
@@ -158,7 +160,9 @@ i {
                 <image class="wide"></image>
                 <video id="short" class="wide" src=""></video>
                 <div class="wide">
-                    <div><div></div></div>
+                    <div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </article>
@@ -244,7 +248,7 @@ i {
             </div>
         </article>
         <article>
-            <h2 id="selector-pseudoclass-struct-type">Селектор структурного псевдокласса и псевдоэлемента</h2>
+            <h2 id="selector-pseudoclass-struct-type">Селектор структурного псевдокласса типа и псевдоэлемента</h2>
             <div class="code">
                 <pre>
 *:first-of-type:before {
@@ -254,6 +258,26 @@ i {
                 </pre>
             </div>
             <div class="viewport universal elements identifier class pseudoclass-struct-type">
+                <div id="long">
+                </div>
+                <span class="thin" draggable="true"></span><i></i>
+                <image class="wide"></image>
+                <video id="short" class="wide" src=""></video>
+                <div class="wide">
+                </div>
+                <div class="wide" draggable="true"></div>
+            </div>
+        </article>
+        <article>
+            <h2 id="selector-not">Исключающий селектор</h2>
+            <div class="code">
+                <pre>
+.wide:not(div) {
+    width: 0;
+}
+                </pre>
+            </div>
+            <div class="viewport universal elements  not">
                 <div id="long">
                 </div>
                 <span class="thin" draggable="true"></span><i></i>
@@ -279,41 +303,6 @@ i {
 </script>
 
 <style>
-
-    .inputfield {
-        z-index: 9999999999999;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        display: none;
-        width: 300px;
-        height: 200px;
-        transform: translate(-50%, -50%);
-    }
-
-    .inputfield.active {
-        display: block;
-    }
-
-    .inputfield-button {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        border: 1px solid red;
-    }
-
-    .code {
-        background-color: gray;
-        font-family: serif;
-        font-size: 14px;
-        padding: 20px 10px;
-    }
-
-    .viewport {
-        margin-top: 10px;
-        border: 1px solid black;
-        background-color: white;
-    }
 
     .universal.viewport * {
         display: inline-block;
@@ -379,6 +368,10 @@ i {
     .pseudoclass-struct-type.viewport *:first-of-type:before {
         content: 'first of type';
         display: inline-block;
+    }
+
+    .not.viewport *:not(div) {
+        width: 0;
     }
 
 </style>
