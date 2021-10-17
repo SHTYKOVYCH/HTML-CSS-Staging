@@ -33,8 +33,11 @@
                 <div data-parameter-name="display" data-parameter-value-array="['block', 'flex']">
                     Текущее значение <span>display: block</span>
                 </div>
-                <span class="checkbox-flag input" data-id="flag1">
-                    <input type="checkbox" id="flag1"><label class="fake-checkbox" for="flag1"></label>
+                <span class="input">
+                <span class="checkbox checkbox__type-flag" data-id="flag1">
+                    <input class="checkbox__hiden-part" type="checkbox" id="flag1"><label class="checkbox__visible-part"
+                                                                                          for="flag1"></label>
+                </span>
                 </span>
                 <span>Включить flex</span>
             </div>
@@ -590,7 +593,6 @@
                         <input type="text" value="0">
                     </span>
                     </div>
-
                     <div class="parameter"
                          data-input-type="text"
                          data-targetId="box-example-7">
@@ -802,7 +804,7 @@
         setParam(label, targetId, parameter_name, '');
 
         if (typeOfInput === "checkbox") {
-            let checkbox = parameters[i].getElementsByClassName('checkbox-flag')[0];
+            let checkbox = parameters[i].getElementsByClassName('checkbox')[0];
 
             checkbox.addEventListener('click', function () {
                 setParam(label, targetId, parameter_name, parameter_values[+this.getElementsByTagName('input')[0].checked]);
