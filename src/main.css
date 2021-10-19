@@ -184,6 +184,11 @@ main section article h3 {
     background-color: orange;
 }
 
+
+.checkbox.checkbox__type-flag .checkbox__hiden-part:disabled + .checkbox__visible-part {
+    background-color: #763e71s;
+}
+
 .checkbox.checkbox__type-flag .checkbox__hiden-part:disabled + .checkbox__visible-part:after {
     background-color: #773f72;
 }
