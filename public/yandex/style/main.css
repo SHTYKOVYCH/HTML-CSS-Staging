@@ -1,4 +1,80 @@
-@import "../fonts/YS_text/stylesheet.css";
+@font-face {
+  font-family: "Yandex Sans Text";
+  src: url("YandexSansText-Thin.eot");
+  src: local("Yandex Sans Text Thin"), local("YandexSansText-Thin"), url("YandexSansText-Thin.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Thin.woff2") format("woff2"), url("YandexSansText-Thin.woff") format("woff"), url("YandexSansText-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Display";
+  src: url("YandexSansDisplay-Regular.eot");
+  src: local("Yandex Sans Display Regular"), local("YandexSansDisplay-Regular"), url("YandexSansDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Regular.woff2") format("woff2"), url("YandexSansDisplay-Regular.woff") format("woff"), url("YandexSansDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Text";
+  src: url("YandexSansText-RegularItalic.eot");
+  src: local("Yandex Sans Text Regular Italic"), local("YandexSansText-RegularItalic"), url("YandexSansText-RegularItalic.eot?#iefix") format("embedded-opentype"), url("YandexSansText-RegularItalic.woff2") format("woff2"), url("YandexSansText-RegularItalic.woff") format("woff"), url("YandexSansText-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Yandex Sans Display";
+  src: url("YandexSansDisplay-RegularItalic.eot");
+  src: local("Yandex Sans Display Regular Italic"), local("YandexSansDisplay-RegularItalic"), url("YandexSansDisplay-RegularItalic.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-RegularItalic.woff2") format("woff2"), url("YandexSansDisplay-RegularItalic.woff") format("woff"), url("YandexSansDisplay-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Yandex Sans Display";
+  src: url("YandexSansDisplay-Light.eot");
+  src: local("Yandex Sans Display Light"), local("YandexSansDisplay-Light"), url("YandexSansDisplay-Light.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Light.woff2") format("woff2"), url("YandexSansDisplay-Light.woff") format("woff"), url("YandexSansDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Text";
+  src: url("YandexSansText-Regular.eot");
+  src: local("Yandex Sans Text Regular"), local("YandexSansText-Regular"), url("YandexSansText-Regular.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Regular.woff2") format("woff2"), url("YandexSansText-Regular.woff") format("woff"), url("YandexSansText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Text";
+  src: url("YandexSansText-Light.eot");
+  src: local("Yandex Sans Text Light"), local("YandexSansText-Light"), url("YandexSansText-Light.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Light.woff2") format("woff2"), url("YandexSansText-Light.woff") format("woff"), url("YandexSansText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Display";
+  src: url("YandexSansDisplay-Bold.eot");
+  src: local("Yandex Sans Display Bold"), local("YandexSansDisplay-Bold"), url("YandexSansDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Bold.woff2") format("woff2"), url("YandexSansDisplay-Bold.woff") format("woff"), url("YandexSansDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Display";
+  src: url("YandexSansDisplay-Thin.eot");
+  src: local("Yandex Sans Display Thin"), local("YandexSansDisplay-Thin"), url("YandexSansDisplay-Thin.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Thin.woff2") format("woff2"), url("YandexSansDisplay-Thin.woff") format("woff"), url("YandexSansDisplay-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Text";
+  src: url("YandexSansText-Bold.eot");
+  src: local("Yandex Sans Text Bold"), local("YandexSansText-Bold"), url("YandexSansText-Bold.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Bold.woff2") format("woff2"), url("YandexSansText-Bold.woff") format("woff"), url("YandexSansText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans Text";
+  src: url("YandexSansText-Medium.eot");
+  src: local("Yandex Sans Text Medium"), local("YandexSansText-Medium"), url("YandexSansText-Medium.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Medium.woff2") format("woff2"), url("YandexSansText-Medium.woff") format("woff"), url("YandexSansText-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 .link {
   display: inline-flex;
   align-items: baseline;
@@ -29,7 +105,7 @@
   display: flex;
   transition: all ease 0.3s;
 }
-.link__content._type-text._text-white {
+.link__content._text-white {
   color: #bfbfbf;
 }
 .link__content._type-image {
@@ -51,6 +127,23 @@
 .link__content._geo {
   margin-right: 5px;
 }
+.link__content._bigger {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.6em;
+}
+.link__content._further {
+  margin-right: 16px;
+}
+.link__content._first-red:first-letter {
+  color: red;
+}
+.link__content._no-margin {
+  margin: 0;
+}
+.link._footer {
+  margin-right: 2%;
+}
 .link._geolink {
   padding-right: 14px;
 }
@@ -63,6 +156,19 @@
 }
 .link._vertical:hover ._type-image {
   transform: translate(0, -15%);
+}
+
+.widget {
+  display: flex;
+  background-color: #222;
+  padding: 5%;
+  border-radius: 7%;
+}
+
+.mail-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .icon {
@@ -102,6 +208,18 @@
 .icon._person-plus {
   -webkit-mask-image: url("../images/icons/person-add.svg");
   mask-image: url("../images/icons/person-add.svg");
+}
+.icon._thumb-up {
+  -webkit-mask-image: url("../images/icons/icon-thumb_up.svg");
+  mask-image: url("../images/icons/icon-thumb_up.svg");
+}
+.icon._thumb-down {
+  -webkit-mask-image: url("../images/icons/icon-thumb_down.svg");
+  mask-image: url("../images/icons/icon-thumb_down.svg");
+}
+.icon._arrow-share {
+  -webkit-mask-image: url("../images/icons/icon-arrow_share.svg");
+  mask-image: url("../images/icons/icon-arrow_share.svg");
 }
 .icon._max-size {
   width: 100%;
@@ -380,4 +498,159 @@ body {
 }
 .info-content__right {
   flex: 0 0 33.3%;
+}
+
+.zen-section {
+  padding-top: 20px;
+}
+.zen-section__wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.zen-section__main-part {
+  flex: 1 0 66.6%;
+  margin-right: 5px;
+}
+.zen-section__side-part {
+  flex: 0 0 33.3%;
+}
+.zen-section__elem {
+  padding: 15px 2.5%;
+  background-color: #1D1E22;
+  transition: background-color 0.3s ease;
+  border-radius: 18px;
+}
+.zen-section__elem._hover-lighter:hover {
+  background-color: #242529;
+}
+
+.zen-article {
+  display: block;
+}
+.zen-article__header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.zen-article__header .zen-article {
+  display: none;
+}
+.zen-article__publisher {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.zen-article__buttons {
+  font-size: 14px;
+}
+.zen-article__preview {
+  flex: 0 0 47%;
+  max-height: 200px;
+  border-radius: 18px;
+  margin-right: 3%;
+}
+.zen-article__content {
+  display: flex;
+}
+.zen-article__headline {
+  color: #bfbfbf;
+  margin-bottom: 5px;
+}
+.zen-article__short-view, .zen-article__date {
+  color: #fff9;
+  font-size: 14px;
+}
+.zen-article__social {
+  display: block;
+  font-size: 14px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.social__people {
+  display: flex;
+  align-items: center;
+  color: #fff9;
+}
+.social__counter {
+  display: block;
+}
+.social__counter-number {
+  font-weight: 500;
+}
+
+.image-bar {
+  display: flex;
+}
+.image-bar__elem {
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  right: 5px;
+}
+.image-bar__elem:first-child {
+  right: 0;
+  z-index: 1;
+  outline: 2px solid #1D1E22;
+}
+
+.zen-categories {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.zen-categories__header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.zen-categories__subheader {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.zen-categories__list {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.categories-list {
+  list-style: none;
+}
+.categories-list__elem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 1.5%;
+  background-color: #15161a;
+}
+.page-footer__links-list {
+  margin: 0;
+  justify-content: space-between;
 }

@@ -36,6 +36,18 @@
   -webkit-mask-image: url("../images/icons/person-add.svg");
   mask-image: url("../images/icons/person-add.svg");
 }
+.icon._thumb-up {
+  -webkit-mask-image: url("../images/icons/icon-thumb_up.svg");
+  mask-image: url("../images/icons/icon-thumb_up.svg");
+}
+.icon._thumb-down {
+  -webkit-mask-image: url("../images/icons/icon-thumb_down.svg");
+  mask-image: url("../images/icons/icon-thumb_down.svg");
+}
+.icon._arrow-share {
+  -webkit-mask-image: url("../images/icons/icon-arrow_share.svg");
+  mask-image: url("../images/icons/icon-arrow_share.svg");
+}
 .icon._max-size {
   width: 100%;
   height: 100%;
