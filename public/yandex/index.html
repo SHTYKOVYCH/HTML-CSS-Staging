@@ -8,39 +8,38 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="style/block_link/link.sass">
 </head>
 <body>
     <main class="content">
         <section class="top-bar">
-            <div class="container _top-bar">
-                <div class="row">
-                    <div class="top-bar__item">
-                        <a class="link _hover-red _geolink" href="#">
-                            <span class="link__content _type-icon icon _geo"></span>
-                            <span class="link__content _type-text">Москва</span>
-                        </a>
-                        <span class="datetime">
+            <div class="row">
+                <div class="top-bar__item">
+                    <a class="link _hover-red _geolink" href="#">
+                        <span class="link__content _type-icon icon _geo"></span>
+                        <span class="link__content _type-text">Москва</span>
+                    </a>
+                    <span class="datetime">
                             <span class="datetime__item datetime__day-number">19</span>
                             <span class="datetime__item datetime__month">октября,</span>
                             <span class="datetime__item datetime__day-name">вторник</span>
                             <span class="datetime__item datetime__time">12 <span class="blink">:</span> 24</span>
                         </span>
-                    </div>
-                    <div class="top-bar__item">
-                        <div class="icon-bar">
-                            <a href="#" class="icon-bar__item link _hover-opacity">
-                                <span class="link__content _type-icon icon _smaller _cart"></span>
-                            </a>
-                            <a href="#" class="icon-bar__item link _hover-opacity">
-                                <span class="link__content _type-icon icon _max-size _bell"></span>
-                            </a>
-                        </div>
+                </div>
+                <div class="top-bar__item">
+                    <div class="icon-bar">
+                        <a href="#" class="icon-bar__item link _hover-opacity">
+                            <span class="link__content _type-icon icon _smaller _cart"></span>
+                        </a>
+                        <a href="#" class="icon-bar__item link _hover-opacity">
+                            <span class="link__content _type-icon icon _max-size _bell"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="">
-            <div class="container">
+        <section class="services-bar">
+            <div class="container _auto-center">
                 <section class="info-content">
                     <section class="info-content__left news">
                         <header class="news__header category-list">
@@ -59,45 +58,45 @@
                         </header>
                         <section class="news__body">
                             <div class="news-list">
-                                <div class="news-list__item link _hover-red ">
+                                <a class="news-list__item link _hover-red ">
                                     <img src="./images/news_logo.png" alt=""
                                          class="link__content _type-icon news-list__logo">
-                                    <a href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
                                         consectetur
-                                        adipisicing elit. At cumque labore, necessitatibus sint tempora veritatis.</a>
-                                </div>
-                                <div class="news-list__item link _hover-red">
+                                        adipisicing elit. At cumque labore, necessitatibus sint tempora veritatis.</span>
+                                </a>
+                                <a class="news-list__item link _hover-red">
                                     <img src="./images/news_logo.png" alt=""
                                          class="link__content _type-icon news-list__logo">
-                                    <a href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
-                                        consectetur
-                                        adipisicing
-                                        elit. Maxime, quae?</a>
-                                </div>
-                                <div class="news-list__item link _hover-red ">
-                                    <img src="./images/news_logo.png" alt=""
-                                         class="link__content _type-icon news-list__logo">
-                                    <a href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
                                         consectetur
                                         adipisicing
-                                        elit. Consequatur, nostrum!</a>
-                                </div>
-                                <div class="news-list__item link _hover-red ">
+                                        elit. Maxime, quae?</span>
+                                </a>
+                                <a class="news-list__item link _hover-red ">
                                     <img src="./images/news_logo.png" alt=""
                                          class="link__content _type-icon news-list__logo">
-                                    <a href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
                                         consectetur
                                         adipisicing
-                                        elit. Aliquid, tenetur.</a>
-                                </div>
-                                <div class="news-list__item link _hover-red ">
+                                        elit. Consequatur, nostrum!</span>
+                                </a>
+                                <a class="news-list__item link _hover-red ">
                                     <img src="./images/news_logo.png" alt=""
                                          class="link__content _type-icon news-list__logo">
-                                    <a href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
                                         consectetur
                                         adipisicing
-                                        elit. Accusantium, dolores.</a>
-                                </div>
+                                        elit. Aliquid, tenetur.</span>
+                                </a>
+                                <a class="news-list__item link _hover-red ">
+                                    <img src="./images/news_logo.png" alt=""
+                                         class="link__content _type-icon news-list__logo">
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing
+                                        elit. Accusantium, dolores.</span>
+                                </a>
                             </div>
                         </section>
                         <footer class="news__footer">
@@ -183,7 +182,7 @@
                                         <span class="link__content _type-text">5</span>
                                     </a>
                                     <a href="#" class="road__text link _hover-red">
-                                        <span class="link _type-text">Ближайшие 5 часов движение затруднено</span>
+                                        <span class="link"><span class="link__content _type-text _text-white">Ближайшие 5 часов движение затруднено</span></span>
                                     </a>
                                 </section>
                             </section>
@@ -192,7 +191,86 @@
                 </section>
             </div>
         </section>
-    
+        <section class="services-section">
+            <div class="container _auto-center">
+                <div class="link-bar">
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="search-line">
+            <div class="container _auto-center">
+                <div class="search-bar">
+                    <div class="search-bar__logo">
+                        <a class="link"><img
+                                src="https://yastatic.net/s3/home-static/skins/_/HgFKh84XkTuwAu_kCRsSzc3UaLw.svg" alt=""
+                                class="link__content"></a>
+                    </div>
+                    <div class="search-bar__search-line search">
+                        <form class="search__form" action="">
+                            <div class="search__input-block">
+                                <input class="search__input" type="text" placeholder="Найдется все">
+                                <div class="search__icons icon-bar">
+                                    <a href="#" class="icon-bar__item link _hover-opacity">
+                                        <span class="link__content _type-icon icon _max-size _micro"></span>
+                                    </a>
+                                    <a href="#" class="icon-bar__item link _hover-opacity">
+                                        <span class="link__content _type-icon icon _smaller _keyboard"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="search__commit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="zen-section">
+            <div class="container _auto-center">
+                <section class="zen-section__main-part">
+                </section>
+                <aside class="zen-section__side-part"></aside>
+            </div>
+        </section>
     </main>
 </body>
 </html>

@@ -1,80 +1,4 @@
-@font-face {
-  font-family: "Yandex Sans Text";
-  src: url("YandexSansText-Thin.eot");
-  src: local("Yandex Sans Text Thin"), local("YandexSansText-Thin"), url("YandexSansText-Thin.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Thin.woff2") format("woff2"), url("YandexSansText-Thin.woff") format("woff"), url("YandexSansText-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Display";
-  src: url("YandexSansDisplay-Regular.eot");
-  src: local("Yandex Sans Display Regular"), local("YandexSansDisplay-Regular"), url("YandexSansDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Regular.woff2") format("woff2"), url("YandexSansDisplay-Regular.woff") format("woff"), url("YandexSansDisplay-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Text";
-  src: url("YandexSansText-RegularItalic.eot");
-  src: local("Yandex Sans Text Regular Italic"), local("YandexSansText-RegularItalic"), url("YandexSansText-RegularItalic.eot?#iefix") format("embedded-opentype"), url("YandexSansText-RegularItalic.woff2") format("woff2"), url("YandexSansText-RegularItalic.woff") format("woff"), url("YandexSansText-RegularItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Yandex Sans Display";
-  src: url("YandexSansDisplay-RegularItalic.eot");
-  src: local("Yandex Sans Display Regular Italic"), local("YandexSansDisplay-RegularItalic"), url("YandexSansDisplay-RegularItalic.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-RegularItalic.woff2") format("woff2"), url("YandexSansDisplay-RegularItalic.woff") format("woff"), url("YandexSansDisplay-RegularItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Yandex Sans Display";
-  src: url("YandexSansDisplay-Light.eot");
-  src: local("Yandex Sans Display Light"), local("YandexSansDisplay-Light"), url("YandexSansDisplay-Light.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Light.woff2") format("woff2"), url("YandexSansDisplay-Light.woff") format("woff"), url("YandexSansDisplay-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Text";
-  src: url("YandexSansText-Regular.eot");
-  src: local("Yandex Sans Text Regular"), local("YandexSansText-Regular"), url("YandexSansText-Regular.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Regular.woff2") format("woff2"), url("YandexSansText-Regular.woff") format("woff"), url("YandexSansText-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Text";
-  src: url("YandexSansText-Light.eot");
-  src: local("Yandex Sans Text Light"), local("YandexSansText-Light"), url("YandexSansText-Light.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Light.woff2") format("woff2"), url("YandexSansText-Light.woff") format("woff"), url("YandexSansText-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Display";
-  src: url("YandexSansDisplay-Bold.eot");
-  src: local("Yandex Sans Display Bold"), local("YandexSansDisplay-Bold"), url("YandexSansDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Bold.woff2") format("woff2"), url("YandexSansDisplay-Bold.woff") format("woff"), url("YandexSansDisplay-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Display";
-  src: url("YandexSansDisplay-Thin.eot");
-  src: local("Yandex Sans Display Thin"), local("YandexSansDisplay-Thin"), url("YandexSansDisplay-Thin.eot?#iefix") format("embedded-opentype"), url("YandexSansDisplay-Thin.woff2") format("woff2"), url("YandexSansDisplay-Thin.woff") format("woff"), url("YandexSansDisplay-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Text";
-  src: url("YandexSansText-Bold.eot");
-  src: local("Yandex Sans Text Bold"), local("YandexSansText-Bold"), url("YandexSansText-Bold.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Bold.woff2") format("woff2"), url("YandexSansText-Bold.woff") format("woff"), url("YandexSansText-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Yandex Sans Text";
-  src: url("YandexSansText-Medium.eot");
-  src: local("Yandex Sans Text Medium"), local("YandexSansText-Medium"), url("YandexSansText-Medium.eot?#iefix") format("embedded-opentype"), url("YandexSansText-Medium.woff2") format("woff2"), url("YandexSansText-Medium.woff") format("woff"), url("YandexSansText-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
+@import "../fonts/YS_text/stylesheet.css";
 .link {
   display: inline-flex;
   align-items: baseline;
@@ -229,6 +153,10 @@
   color: #999;
 }
 
+.icon-bar {
+  display: flex;
+  flex-direction: row;
+}
 .icon-bar__item {
   display: inline-flex;
   align-items: center;
@@ -318,6 +246,63 @@
   margin-right: 10px;
 }
 
+.link-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.search-line {
+  font-size: 127%;
+  margin-top: 12px;
+}
+
+.search-bar {
+  position: relative;
+}
+.search-bar__logo {
+  position: absolute;
+  right: calc(100% + 5px);
+  top: -50%;
+}
+
+.search {
+  font-size: 123.1%;
+}
+.search__form {
+  display: flex;
+  border: 0.2em solid #fc0;
+  background: #fc0;
+  height: 2.1663em;
+  border-radius: 0.625em;
+  position: relative;
+}
+.search .search__input-block {
+  flex-basis: 100%;
+}
+.search__input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 0.625rem 0.375rem 0.375rem 0.625rem;
+  position: relative;
+  color: black;
+  padding-left: 0.8em;
+  font-size: 80%;
+}
+.search__icons {
+  position: absolute;
+  right: 100px;
+  top: 3px;
+}
+.search__commit {
+  font-size: 95%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-basis: 90px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -376,74 +361,6 @@ body {
 }
 .info-content__right {
   flex: 0 0 33.3%;
-}
-
-.link-bar {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-}
-
-.search-line {
-  font-size: 127%;
-  margin-top: 12px;
-}
-
-.search-bar {
-  position: relative;
-}
-.search-bar__logo {
-  position: absolute;
-  right: calc(100% + 5px);
-  top: -50%;
-}
-
-.search {
-  font-size: 123.1%;
-}
-.search__form {
-  display: flex;
-  border: 0.2em solid #fc0;
-  background: #fc0;
-  height: 2.1663em;
-  border-radius: 0.625em;
-  position: relative;
-}
-.search .search__input-block {
-  flex-basis: 100%;
-}
-.search__input {
-  height: 100%;
-  width: 100%;
-  border: none;
-  border-radius: 0.625rem 0.375rem 0.375rem 0.625rem;
-  position: relative;
-  color: black;
-  padding-left: 0.8em;
-  font-size: 80%;
-}
-.search__icons {
-  position: absolute;
-  right: 100px;
-  top: 3px;
-}
-.search__commit {
-  font-size: 95%;
-  border: none;
-  background: none;
-  cursor: pointer;
-  flex-basis: 90px;
-}
-
-.zen-section__elem {
-  width: 100%;
-  background-color: #1d1e22;
-}
-
-.zen-article__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 /*# sourceMappingURL=main.css.map */

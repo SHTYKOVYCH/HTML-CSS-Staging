@@ -1,3 +1,7 @@
+.icon-bar {
+  display: flex;
+  flex-direction: row;
+}
 .icon-bar__item {
   display: inline-flex;
   align-items: center;

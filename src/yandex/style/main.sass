@@ -1,13 +1,15 @@
-@import "../fonts/YS_text/stylesheet.sass"
+@import "../fonts/YS_text/stylesheet.css"
 @import "block_link/link"
 @import "block_icon/icon"
-@import "./block_datetime/datetime"
+@import "block_datetime/datetime"
 @import "block_values-list/values-list"
 @import "block_icon-bar/icon-bar"
 @import "block_category-list/category-list"
 @import "block_news/news"
 @import "block_weather/weather"
 @import "block_road/road"
+@import "block_link-bar/link-bar"
+@import "block_search-line/search-line"
 
 *
   margin: 0
@@ -63,72 +65,3 @@ body
   &__right
     flex: 0 0 33.3%
 
-
-.link-bar
-  display: flex
-  justify-content: space-between
-
-  margin-top: 12px
-
-.search-line
-  font-size: 127%
-  margin-top: 12px
-
-.search-bar
-  position: relative
-
-  &__logo
-    position: absolute
-    right: calc(100% + 5px)
-    top: -50%
-
-.search
-
-
-  font-size: 123.1%
-
-  &__form
-    display: flex
-    border: 0.2em solid #fc0
-    background: #fc0
-    height: 2.1663em
-    border-radius: .625em
-    position: relative
-
-  .search__input-block
-    flex-basis: 100%
-
-  &__input
-    height: 100%
-    width: 100%
-    border: none
-    border-radius: .625rem .375rem .375rem .625rem
-    position: relative
-    color: black
-    padding-left: 0.8em
-    font-size: 80%
-
-  &__icons
-    position: absolute
-    right: 100px
-    top: 3px
-
-  &__commit
-    font-size: 95%
-
-    border: none
-    background: none
-    cursor: pointer
-    flex-basis: 90px
-
-.zen-section
-  &__elem
-    width: 100%
-    background-color: #1d1e22
-
-.zen-article
-
-  &__header
-    display: flex
-    flex-direction: row
-    justify-content: space-between
