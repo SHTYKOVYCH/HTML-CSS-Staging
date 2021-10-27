@@ -381,16 +381,3 @@ body {
 .info-content__right {
   flex: 0 0 33.3%;
 }
-
-.zen-section__elem {
-  width: 100%;
-}
-
-.zen-article {
-  background-color: #1d1e22;
-}
-.zen-article__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
