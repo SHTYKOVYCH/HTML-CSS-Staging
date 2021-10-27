@@ -7,7 +7,7 @@ const gulp = require("gulp"),
     autoprefixer = require("gulp-autoprefixer"),
     browserSync = require("browser-sync").create();
 
-var outDir = "./public";
+var outDir = "./dist";
 
 gulp.task("svgstore", function () {
     const svgs = gulp.src("./src/yandex/images/icons/**/*.svg")
@@ -52,20 +52,6 @@ gulp.task("sass", function () {
 
 gulp.task("html", function () {
     return gulp.src("./src/**/*.html").pipe(gulp.dest(outDir));
-});
-
-gulp.task("serve", function () {
-    browserSync.init({
-        server: {
-            baseDir: "public",
-        },
-    });
-
-    gulp.watch("./src/yandex/style/**/*.sass").on("change", gulp.series("sass"));
-    gulp.watch("./src/yandex/index.html").on("change", gulp.series("html"));
-
-    gulp.watch("./public/**/*.css").on("change", browserSync.reload);
-    gulp.watch("./public/**/*.html").on("change", browserSync.reload);
 });
 
 gulp.task("move:images", function () {
