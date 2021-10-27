@@ -1,0 +1,26 @@
+
+.weather
+  margin-bottom: 16px
+
+  &__header
+    margin-bottom: 8px
+
+  &__image
+    margin-right: 5px
+
+  &__item
+    font-size: 26px
+    margin-right: 14px
+    align-items: center
+
+    &._small
+      font-size: 12px
+      position: relative
+      vertical-align: bottom
+
+      &::before
+        display: block
+        content: attr(data-daytime)
+        position: absolute
+        top: -100%
+        color: rgba(195, 195, 195, .65)

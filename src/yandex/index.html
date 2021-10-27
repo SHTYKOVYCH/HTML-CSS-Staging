@@ -8,171 +8,181 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="style/block_link/link.sass">
 </head>
 <body>
     <main class="content">
-        <section class="top-bar container__top-bar">
-            <div class="container _headline">
-                <div class="row">
-                    <div class="item headline__item _left">
-                        <a class="link  _geolink" href="">
-                            <span class="link__item _type-icon icon _geo"></span>
-                            <span class="link__item _type-text">Москва</span>
-                        </a>
-                        <span class="datetime headline-item">
+        <section class="top-bar">
+            <div class="row">
+                <div class="top-bar__item">
+                    <a class="link _hover-red _geolink" href="#">
+                        <span class="link__content _type-icon icon _geo"></span>
+                        <span class="link__content _type-text">Москва</span>
+                    </a>
+                    <span class="datetime">
                             <span class="datetime__item datetime__day-number">19</span>
                             <span class="datetime__item datetime__month">октября,</span>
                             <span class="datetime__item datetime__day-name">вторник</span>
                             <span class="datetime__item datetime__time">12 <span class="blink">:</span> 24</span>
                         </span>
-                    </div>
-                    <div class="headline__item headline__right">
-                        <div class="icon-bar">
-                            <a href="#" class="link icon-bar__item">
-                                <span class="link__item _type-icon icon max-size _smaller _cart _hovered"></span>
-                            </a>
-                            <a href="#" class="link icon-bar__item">
-                                <span class="link__item _type-icon icon max-size _bell _hovered"></span>
-                            </a>
-                        </div>
+                </div>
+                <div class="top-bar__item">
+                    <div class="icon-bar">
+                        <a href="#" class="icon-bar__item link _hover-opacity">
+                            <span class="link__content _type-icon icon _smaller _cart"></span>
+                        </a>
+                        <a href="#" class="icon-bar__item link _hover-opacity">
+                            <span class="link__content _type-icon icon _max-size _bell"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="mainline container__mainline">
-            <div class="container _mainline">
+        <section class="services-bar">
+            <div class="container _auto-center">
                 <section class="info-content">
-                    <section class="news mainline__item  info-content__left">
-                        <header class="category-list news__header">
-                            <a href="#" class="link category-list__item _active">
-                                <span class="link__item _type-text _category category-list__text">Сейчас в СМИ</span>
+                    <section class="info-content__left news">
+                        <header class="news__header category-list">
+                            <a href="#" class="category-list__item _active link _hover-red">
+                                <span class="link__content _type-text">Сейчас в СМИ</span>
                             </a>
-                            <a href="#" class="link category-list__item _category">
-                                <span class="link__item _type-text  category-list__text">В Москве</span>
+                            <a href="#" class="category-list__item link _hover-red">
+                                <span class="link__content _type-text">В Москве</span>
                             </a>
-                            <a href="#" class="link category-list__item _category">
-                                <span class="link__item _type-text  category-list__text">hi-thech</span>
+                            <a href="#" class="category-list__item link _hover-red">
+                                <span class="link__content _type-text">hi-thech</span>
                             </a>
-                            <a href="#" class="link category-list__item _warning ">
-                                <span class="link__item _type-text  category-list__text">Коронавирус</span>
+                            <a href="#" class="category-list__item link _hover-red _warning">
+                                <span class="link__content _type-text">Коронавирус</span>
                             </a>
                         </header>
                         <section class="news__body">
                             <div class="news-list">
-                                <div class="link  news-list__item">
+                                <a class="news-list__item link _hover-red ">
                                     <img src="./images/news_logo.png" alt=""
-                                         class="link__item _type-icon news-list__logo">
-                                    <a href="#" class="link__item _type-text">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. At cumque labore, necessitatibus sint tempora veritatis.</a>
-                                </div>
-                                <div class="link  news-list__item">
+                                         class="link__content _type-icon news-list__logo">
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit. At cumque labore, necessitatibus sint tempora veritatis.</span>
+                                </a>
+                                <a class="news-list__item link _hover-red">
                                     <img src="./images/news_logo.png" alt=""
-                                         class="link__item _type-icon news-list__logo">
-                                    <a href="#" class="link__item _type-text">Lorem ipsum dolor sit amet, consectetur
+                                         class="link__content _type-icon news-list__logo">
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing
-                                        elit. Maxime, quae?</a>
-                                </div>
-                                <div class="link  news-list__item">
+                                        elit. Maxime, quae?</span>
+                                </a>
+                                <a class="news-list__item link _hover-red ">
                                     <img src="./images/news_logo.png" alt=""
-                                         class="link__item _type-icon news-list__logo">
-                                    <a href="#" class="link__item _type-text">Lorem ipsum dolor sit amet, consectetur
+                                         class="link__content _type-icon news-list__logo">
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing
-                                        elit. Consequatur, nostrum!</a>
-                                </div>
-                                <div class="link  news-list__item">
+                                        elit. Consequatur, nostrum!</span>
+                                </a>
+                                <a class="news-list__item link _hover-red ">
                                     <img src="./images/news_logo.png" alt=""
-                                         class="link__item _type-icon news-list__logo">
-                                    <a href="#" class="link__item _type-text">Lorem ipsum dolor sit amet, consectetur
+                                         class="link__content _type-icon news-list__logo">
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing
-                                        elit. Aliquid, tenetur.</a>
-                                </div>
-                                <div class="link  news-list__item">
+                                        elit. Aliquid, tenetur.</span>
+                                </a>
+                                <a class="news-list__item link _hover-red ">
                                     <img src="./images/news_logo.png" alt=""
-                                         class="link__item _type-icon news-list__logo">
-                                    <a href="#" class="link__item _type-text">Lorem ipsum dolor sit amet, consectetur
+                                         class="link__content _type-icon news-list__logo">
+                                    <span href="#" class="link__content _type-text _text-white">Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing
-                                        elit. Accusantium, dolores.</a>
-                                </div>
+                                        elit. Accusantium, dolores.</span>
+                                </a>
                             </div>
                         </section>
                         <footer class="news__footer">
                             <div class="values-list">
                                 <div class="values-list__item">
-                                    <a href="#" class="link _bolder values-list__name">USD</a>
+                                    <a href="#" class="values-list__name link _hover-red">
+                                        <span class="link__content _type-text _text-white">USD</span>
+                                    </a>
                                     <span class="values-list__value">70,31</span>
                                     <span class="values-list__diff">-0,83</span>
                                 </div>
                                 <div class="values-list__item">
-                                    <a href="#" class="link _bolder values-list__name">EUR</a>
+                                    <a href="#" class="values-list__name link _hover-red">
+                                        <span class="link__content _type-text _text-white">EUR</span>
+                                    </a>
                                     <span class="values-list__value">81,86</span>
                                     <span class="values-list__diff">-0,80</span>
                                 </div>
                                 <div class="values-list__item">
-                                    <a href="#" class="link _bolder values-list__name">НЕФТЬ</a>
+                                    <a href="#" class="values-list__name link _hover-red">
+                                        <span class="link__content _type-text _text-white">НЕФТЬ</span>
+                                    </a>
                                     <span class="values-list__value">85,88</span>
                                     <span class="values-list__diff">+1,73%</span>
                                 </div>
                             </div>
                         </footer>
                     </section>
-                    <section class="info-content__right mainline__item">
+                    <section class="info-content__right">
                         <div class="col">
                             <section class="weather">
-                                <header class="category-list weather__header">
-                                    <a href="#" class="link category-list__item _active">
-                                        <span class="link__item _type-text category-list__text">Погода</span>
+                                <header class="weather__header category-list">
+                                    <a href="#" class="category-list__item link _hover-red _active">
+                                        <span class="link__content _type-text">Погода</span>
                                     </a>
-                                    <a href="#" class="link category-list__item">
-                                        <span class="link__item _type-text category-list__text">Карта осадков</span>
+                                    <a href="#" class=" category-list__item link _hover-red">
+                                        <span class="link__content _type-text">Карта осадков</span>
                                     </a>
                                 </header>
                                 <section class="weather__body">
-                                    <a href="" class="link weather__item">
+                                    <a href="#" class="weather__item link _hover-red">
                                         <img src="./images/news_logo.png" alt=""
-                                             class="link__item _type_image weather__image">
-                                        <span class="link__item _type-text">+7°</span>
+                                             class="link__content _type_image _size-of-text">
+                                        <span class="link__content _type-text">+7°</span>
                                     </a>
-                                    <a href="" class="link weather__item _small _text-morning">
+                                    <a href="#" class="weather__item link _hover-red _small" data-daytime="Утром">
                                         <img src="./images/news_logo.png" alt=""
-                                             class="link__item _type_image weather__image">
-                                        <span class="link__item _type-text">+7°</span>
+                                             class="link__content _type_image _size-of-text">
+                                        <span class="link__content _type-text">+7°</span>
                                     </a>
-                                    <a href="" class="link weather__item _small _text-day">
+                                    <a href="#" class="weather__item link _hover-red _small" data-daytime="Днем">
                                         <img src="./images/news_logo.png" alt=""
-                                             class="link__item _type_image weather__image">
-                                        <span class="link__item _type-text">+7°</span>
+                                             class="link__content _type_image _size-of-text">
+                                        <span class="link__content _type-text">+7°</span>
                                     </a>
-                                    <a href="" class="link weather__item _small _text-evening">
+                                    <a href="#" class="weather__item link _hover-red _small" data-daytime="Вечером">
                                         <img src="./images/news_logo.png" alt=""
-                                             class="link__item _type_image weather__image">
-                                        <span class="link__item _type-text">+7°</span>
+                                             class="link__content _type_image _size-of-text">
+                                        <span class="link__content _type-text">+7°</span>
                                     </a>
                                 </section>
                             </section>
                             <section class="road">
-                                <header class="category-list road__header">
-                                    <a href="#" class="link category-list__item _active">
-                                        <span class="link__item _type-text category-list__text">Пробки</span>
+                                <header class="road__header category-list">
+                                    <a href="#" class="category-list__item link _hover-red _active">
+                                        <span class="link__content _type-text">Пробки</span>
                                     </a>
-                                    <a href="#" class="link category-list__item">
-                                        <span class="link__item _type-text category-list__text">Метро</span>
+                                    <a href="#" class="category-list__item link _hover-red">
+                                        <span class="link__content _type-text">Метро</span>
                                     </a>
-                                    <a href="#" class="link category-list__item">
-                                        <span class="link__item _type-text category-list__text">Расписания</span>
+                                    <a href="#" class="category-list__item link _hover-red">
+                                        <span class="link__content _type-text">Расписания</span>
                                     </a>
-                                    <a href="#" class="link category-list__item">
-                                        <span class="link__item _type-text category-list__text">Такси</span>
+                                    <a href="#" class="category-list__item link _hover-red">
+                                        <span class="link__content _type-text">Такси</span>
                                     </a>
                                 </header>
                                 <section class="road__body">
-                                    <a href="" class="link road__image">
-                                        <img src="./images/news_logo.png" alt="" class="link__item _type-image">
+                                    <a href="#" class="road__image link _hover-red">
+                                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
                                     </a>
-                                    <a href="" class="link road__grade">
-                                        <span class="link__item _type-text">5</span>
+                                    <a href="#" class="road__grade link _hover-red">
+                                        <span class="link__content _type-text">5</span>
                                     </a>
-                                    <a href="" class="link road__text">
-                                        <span class="link _type-text">Ближайшие 5 часов движение затруднено</span>
+                                    <a href="#" class="road__text link _hover-red">
+                                        <span class="link"><span class="link__content _type-text _text-white">Ближайшие 5 часов движение затруднено</span></span>
                                     </a>
                                 </section>
                             </section>
@@ -181,7 +191,103 @@
                 </section>
             </div>
         </section>
-    
+        <section class="services-section">
+            <div class="container _auto-center">
+                <div class="link-bar">
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                    <a href="#" class="link _hover-red _hover-jump _vertical">
+                        <img src="./images/news_logo.png" alt="" class="link__content _type-image">
+                        <span class="link__content _type-text">lorem</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="search-line">
+            <div class="container _auto-center">
+                <div class="search-bar">
+                    <div class="search-bar__logo">
+                        <a class="link"><img
+                                src="https://yastatic.net/s3/home-static/skins/_/HgFKh84XkTuwAu_kCRsSzc3UaLw.svg" alt=""
+                                class="link__content"></a>
+                    </div>
+                    <div class="search-bar__search-line search">
+                        <form class="search__form" action="">
+                            <div class="search__input-block">
+                                <input class="search__input" type="text" placeholder="Найдется все">
+                                <div class="search__icons icon-bar">
+                                    <a href="#" class="icon-bar__item link _hover-opacity">
+                                        <span class="link__content _type-icon icon _max-size _micro"></span>
+                                    </a>
+                                    <a href="#" class="icon-bar__item link _hover-opacity">
+                                        <span class="link__content _type-icon icon _smaller _keyboard"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="search__commit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="zen-section">
+            <div class="container _auto-center">
+                <section class="zen-section__main-part">
+                    <a href="#" class="zen-section__elem zen-section__article zen-article">
+                        <header class="zen-article__header">
+                            <a href="#" class="link">
+                                <img src="./images/news_logo.png" alt=""
+                                     class="link__content _type-image _rounded _size-of-text">
+                                <span class="link__content _type-text">Яндекс.Новости</span>
+                            </a>
+                            <div class="icon-bar">
+                                <a href="#" class="icon-bar__item link _hover-opacity">
+                                    <span class="link__content _type-icon icon _max-size _dots _paint-lighter"></span>
+                                </a>
+                                <a href="#" class="icon-bar__item link _hover-opacity">
+                                    <span class="link__content _type-icon icon _smaller _person-plus _paint-lighter"></span>
+                                </a>
+                            </div>
+                        </header>
+                    </a>
+                </section>
+                <aside class="zen-section__side-part"></aside>
+            </div>
+        </section>
     </main>
 </body>
 </html>

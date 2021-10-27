@@ -1,0 +1,22 @@
+.category-list__item {
+  font-size: 127%;
+  font-family: "Yandex Sans Text", Arial, sans-serif;
+  font-weight: 500;
+  margin-right: 0.5em;
+  color: #5a82b8;
+  opacity: 0.75;
+}
+.category-list__item._active {
+  opacity: 1;
+  font-weight: 600;
+}
+.category-list__item._warning {
+  color: #ee7b00;
+  font-size: 100%;
+  line-height: 1.36;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+.category-list__text {
+  color: #5a82b8;
+}

@@ -1,0 +1,12 @@
+.news__header, .news__body {
+  margin-bottom: 8px;
+}
+.news-list__logo {
+  border: 1px solid #bfbfbf;
+  margin-right: 5px;
+}
+.news-list__item {
+  max-width: 95%;
+}
+
+/*# sourceMappingURL=news.css.map */

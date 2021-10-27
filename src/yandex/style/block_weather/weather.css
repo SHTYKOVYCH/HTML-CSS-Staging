@@ -1,0 +1,28 @@
+.weather {
+  margin-bottom: 16px;
+}
+.weather__header {
+  margin-bottom: 8px;
+}
+.weather__image {
+  margin-right: 5px;
+}
+.weather__item {
+  font-size: 26px;
+  margin-right: 14px;
+  align-items: center;
+}
+.weather__item._small {
+  font-size: 12px;
+  position: relative;
+  vertical-align: bottom;
+}
+.weather__item._small::before {
+  display: block;
+  content: attr(data-daytime);
+  position: absolute;
+  top: -100%;
+  color: rgba(195, 195, 195, 0.65);
+}
+
+/*# sourceMappingURL=weather.css.map */

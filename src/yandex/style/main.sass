@@ -1,12 +1,13 @@
-@import "../fonts/YS_text/stylesheet.css"
-
-@keyframes blink
-  from,
-  to
-    opacity: 1
-
-  50%
-    opacity: 0
+@import "../fonts/YS_text/stylesheet.sass"
+@import "block_link/link"
+@import "block_icon/icon"
+@import "./block_datetime/datetime"
+@import "block_values-list/values-list"
+@import "block_icon-bar/icon-bar"
+@import "block_category-list/category-list"
+@import "block_news/news"
+@import "block_weather/weather"
+@import "block_road/road"
 
 *
   margin: 0
@@ -24,124 +25,34 @@ body
   font-size: 93.75%
   min-width: 1000px
 
-.icon
-  display: inline-block
-  mask-size: 100% 100%
-  mask-position: center
-  width: 100%
-  height: 100%
-  vertical-align: baseline
-
-  &._geo
-    mask-image: url("../images/icons/icon-geo.svg")
-
-  &._cart
-    mask-image: url("../images/icons/icon-cart.png")
-
-  &._bell
-    mask-image: url("../images/icons/icon-bell.svg")
-
-  &.max-size
-    width: 100% !important
-    height: 100% !important
-
-    &._smaller
-      width: 65% !important
-      height: 65% !important
-      vertical-align: middle
-
-.link
-  vertical-align: middle
-  display: inline-flex
-  align-items: baseline
-  color: #bfbfbf
-
-  &:visited
-    color: #bfbfbf
-
-  &:hover
-    cursor: pointer
-    color: red
-
-    ._type-icon
-      background-color: red
-
-    ._type-text
-      color: red !important
-
-  &__item
-    display: inline-block
-    color: #bfbfbf
-
-    &._type-image
-      width: 100%
-
-
-  &__item._type-icon
-    width: 0.9em
-    height: 0.9em
-    background-color: #bfbfbf
-    margin-right: 5px
-
-    &._hovered:hover
-      opacity: 0.5
-
-  &._bolder
-    font-weight: 500
-
-  &._geolink
-    padding-right: 14px
-
-
 .content
   min-width: 1000px
 
 .container
   margin-left: auto
   margin-right: 240px
+  width: 941px
 
-  &._headline
-    margin-top: 5px
-    padding: 0 6px 0 20px
-    font-size: .94em
-    line-height: 41px
-    vertical-align: middle
-    font-weight: bold
+  &._auto-center
+    margin: 0 auto
+
+
+.top-bar
+  margin-top: 5px
+  margin-right: 200px
+  padding: 0 6px 0 20px
+  font-size: .94em
+  line-height: 41px
+  vertical-align: middle
+  font-weight: bold
 
 .row
   display: flex
   flex-direction: row
   justify-content: space-between
 
-.datetime
-  color: rgba(195, 195, 195, .65)
-  font-size: .91em
-  font-family: sans-serif
-
-  .datetime__item
-    vertical-align: middle
-    font-weight: normal
-
-  .datetime__item::after
-    content: ' '
-
-  .datetime__time
-    word-spacing: -2px
-
-
-.icon-bar
-  &__item
-    display: inline-block
-    width: 36px
-    height: 36px
-    opacity: .3
-
-.blink
-  animation: blink 2s infinite
-
 .info-content
   display: flex
-  width: 941px
   justify-content: center
 
   margin: 0 auto
@@ -153,109 +64,71 @@ body
     flex: 0 0 33.3%
 
 
-.category-list
-  &__item
-    font-size: 127%
-    font-family: 'Yandex Sans Text', Arial, sans-serif
-    font-weight: 500
-    margin-right: 0.5em
+.link-bar
+  display: flex
+  justify-content: space-between
 
-    &._active .category-list__text
-      color: #5a82b8
+  margin-top: 12px
 
-    &._warning
-      color: #ee7b00
-      font-size: 100%
-      line-height: 1.36
-      font-weight: normal
-      vertical-align: bottom
+.search-line
+  font-size: 127%
+  margin-top: 12px
 
-  &__text
-    color: rgba(90, 130, 184, .75)
+.search-bar
+  position: relative
 
-
-.news
-  &__header,
-  &__body
-    margin-bottom: 8px
-
-.news-list
   &__logo
-    border: 1px solid #bfbfbf
+    position: absolute
+    right: calc(100% + 5px)
+    top: -50%
 
-  &__item
-    max-width: 95%
+.search
 
-.values-list
-  &__item
-    display: inline-block
-    margin-right: 10px
 
-  &__name
-    font-size: .94em
-    margin-right: 5px
+  font-size: 123.1%
 
-  &__value
-    color: #bfbfbf
-    margin-right: 5px
-
-  &__diff
-    color: #999
-
-.weather
-  margin-bottom: 16px
-
-  &__header
-    margin-bottom: 8px
-
-  &__image
-    margin-right: 5px
-
-  &__item
-    font-size: 26px
-    margin-right: 14px
-
-    &._small
-      font-size: 12px
-      position: relative
-      vertical-align: bottom
-
-      &::before
-        display: block
-        content: ' '
-        position: absolute
-        top: -100%
-
-        color: rgba(195, 195, 195, .65)
-
-      &._text-day::before
-        content: 'Днем'
-
-      &._text-morning::before
-        content: 'Утром'
-
-      &._text-evening::before
-        content: 'Вечером'
-
-  &__image
-    width: 1em
-    height: 1em
-    align-self: center
-
-.road
-
-  &__header
-    font-size: 90%
-    margin-bottom: 8px
-
-  &__body
+  &__form
     display: flex
-    align-items: center
+    border: 0.2em solid #fc0
+    background: #fc0
+    height: 2.1663em
+    border-radius: .625em
+    position: relative
 
-  &__image
-    flex-basis: 38px
-    margin-right: 10px
+  .search__input-block
+    flex-basis: 100%
 
-  &__grade
-    font-size: 26px
-    margin-right: 10px
+  &__input
+    height: 100%
+    width: 100%
+    border: none
+    border-radius: .625rem .375rem .375rem .625rem
+    position: relative
+    color: black
+    padding-left: 0.8em
+    font-size: 80%
+
+  &__icons
+    position: absolute
+    right: 100px
+    top: 3px
+
+  &__commit
+    font-size: 95%
+
+    border: none
+    background: none
+    cursor: pointer
+    flex-basis: 90px
+
+.zen-section
+  &__elem
+    width: 100%
+    background-color: #1d1e22
+
+.zen-article
+
+  &__header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
