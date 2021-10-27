@@ -66,4 +66,4 @@ gulp.task("move:fonts", function () {
 
 gulp.task("build", gulp.series("svgstore", "sass", "html", "move:images", "move:fonts"));
 
-gulp.task("default", gulp.series("svgstore", "move:fonts", "move:images", gulp.parallel("html", "sass"), "serve"));
+gulp.task("default", gulp.series("svgstore", "move:fonts", "move:images", gulp.parallel("html", "sass")));
