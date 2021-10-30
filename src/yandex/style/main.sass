@@ -1,15 +1,16 @@
+@import "common/font"
 @import "../fonts/YS_text/stylesheet"
 @import "blocks/link/link"
 @import "blocks/icon/icon"
 @import "blocks/datetime/datetime"
-@import "blocks/block_values-list/values-list"
+@import "blocks/values-list/values-list"
 @import "blocks/icon-bar/icon-bar"
 @import "blocks/category-list/category-list"
-@import "blocks/block_news/news"
-@import "blocks/block_weather/weather"
-@import "blocks/block_road/road"
-@import "blocks/block_link-bar/link-bar"
-@import "blocks/block_search-line/search-line"
+@import "blocks/news/news"
+@import "blocks/weather/weather"
+@import "blocks/road/road"
+@import "blocks/link-bar/link-bar"
+@import "blocks/search-line/search-line"
 
 *
   margin: 0
@@ -21,179 +22,44 @@ html
   min-height: 100%
 
 body
+  @extend html
   background-color: #0D0D0D
   font-family: "Yandex Sans Text", Arial, sans-serif
-  min-height: 100%
-  font-size: 93.75%
+  font-size: $base-font-size
   min-width: 1000px
-
-.content
-  min-width: 1000px
-
-.container
-  margin-left: auto
-  margin-right: 240px
-  width: 941px
-
-  &._auto-center
-    margin: 0 auto
-
 
 .top-bar
-  margin-top: 5px
-  margin-right: 200px
-  padding: 0 6px 0 20px
+  margin-top: .3rem
+  margin-right: 13.3rem
+  padding: 0 0.4rem 0 1.3rem
   font-size: .94em
-  line-height: 41px
-  vertical-align: middle
-  font-weight: bold
+  line-height: 3em
 
-.row
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-
-.info-content
-  display: flex
-  justify-content: center
-
-  margin: 0 auto
-
-  &__left
-    flex: 1 0 66.6%
-
-  &__right
-    flex: 0 0 33.3%
-
-.zen-section
-  padding-top: 20px
-
-  &__wrapper
-    display: flex
-    width: 100%
-    flex-direction: row
-
-  &__main-part
-    flex: 1 0 66.6%
-    margin-right: 5px
-
-  &__side-part
-    flex: 0 0 33.3%
-
-  &__elem
-    padding: 15px 2.5%
-    background-color: #1D1E22
-    transition: background-color 0.3s ease
-    border-radius: 18px
-
-    &._hover-lighter:hover
-      background-color: #242529
-
-.zen-article
-  display: block
-
-
-  &__header
-    display: flex
-    width: 100%
-    align-items: center
-    justify-content: space-between
-    margin-bottom: 10px
-
-    .zen-article
-      display: none
-
-  &__publisher
-    display: flex
-    align-items: center
-    font-size: 16px
-    font-weight: 500
-
-  &__buttons
-    font-size: 14px
-
-  &__preview
-    flex: 0 0 47%
-    max-height: 200px
-    border-radius: 18px
-
-    margin-right: 3%
-
-  &__content
-    display: flex
-
-  &__headline
-    color: #bfbfbf
-    margin-bottom: 5px
-
-  &__short-view,
-  &__date
-    color: #fff9
-    font-size: 14px
-
-  &__social
-    display: block
-    font-size: 14px
-
-.social
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  padding-top: 10px
-
-  &__people
-    display: flex
-    align-items: center
-    color: #fff9
-
-  &__counter
-    display: block
-
-    &-number
-      font-weight: 500
-
-.image-bar
+.layout
   display: flex
 
-  &__elem
-    border-radius: 50%
-
-    display: block
-    position: relative
-
-    width: 1.5em
-    height: 1.5em
-
-    right: 5px
-
-    &:first-child
-      right: 0
-      z-index: 1
-
-      outline: 2px solid #1D1E22
-
-.zen-categories
-  padding-left: 5%
-  padding-right: 5%
-
-  &__header
-    display: flex
-    align-items: center
-    font-size: 18px
-    font-weight: bold
-    margin-bottom: 10px
-
-  &__subheader
-    text-transform: uppercase
-    color: rgba(255, 255, 255, 0.8)
-    font-size: 13px
-    font-weight: 500
-    margin-bottom: 10px
-
-  &__list
-    display: flex
+  &._column
     flex-direction: column
-    font-size: 16px
+
+  &._container
+    width: 62.7rem
+    justify-content: center
+    margin: 0 auto
+
+  &._row
+    justify-content: space-between
+    align-items: center
+
+  &__elem
+    &._full-line
+      flex-basis: 100%
+
+@import "blocks/info-content/info-content"
+@import "blocks/zen-section/zen-section"
+@import "blocks/zen-article/zen-article"
+@import "blocks/social/social"
+@import "blocks/image-bar/image-bar"
+@import "blocks/zen-categories/zen-categories"
 
 .categories-list
   list-style: none
@@ -203,65 +69,10 @@ body
     flex-direction: row
 
     align-items: center
-    margin: 15px
+    margin: 1em
 
-.page-footer
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  align-items: center
-  position: absolute
-  bottom: 0
-  left: 0
-
-  width: 100%
-  padding: 10px 1.5%
-
-  background-color: #15161a
-
-  &__links-list
-    margin: 0
-    justify-content: space-between
-
-
-.widget
-  width: 100%
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: center
-  background-color: #222
-  padding: 7px 15px
-  border-radius: 7px
-  transition: all ease 0.3s
-  margin-bottom: 7px
-
-  &._hover-jump:hover
-    transform: translate(-5%, 0)
-
-.mail-bar
-  width: 10%
-  padding-top: 7px
-  padding-right: 7px
-  position: absolute
-  right: 0
-  top: 0
-
-.mail
-  &__item
-    fomt-size: 18px
-    width: 100%
-    align-items: center
-    margin-bottom: 10px
-
-    &._mail-line
-      font-weight: 600
-      justify-content: space-between
-
-  &__messages-total
-    margin-left: 3%
-    font-weight: 600
-
-.plus
-  justify-content: start
-  align-items: center
+@import "blocks/page-footer/page-footer"
+@import "blocks/widget/widget"
+@import "blocks/mail-bar/mail-bar"
+@import "blocks/mail/mail"
+@import "blocks/plus/plus"

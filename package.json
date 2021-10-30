@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "gulp build && node server",
     "build": "gulp build"
   },
   "repository": {

@@ -1,84 +1,96 @@
-
 .link
   display: inline-flex
-  align-items: baseline
-
-  color: #bfbfbf
+  align-items: center
 
   vertical-align: middle
 
-  &:visited
-    color: #bfbfbf
+  cursor: pointer
 
-  &._hover-red:hover
-    cursor: pointer
-    color: red
+  transition: all 0.3s ease
 
-    ._type-icon
-      background-color: red
+  &:hover
+    &._hover-color
+      color: red
+      fill: red
 
-
-
-  &._hover-opacity
-    cursor: pointer
-    opacity: 0.3
-
-    &:hover
+    &._hover-opacity:hover
       opacity: 0.5
 
+    & ._hover-jump
+      transform: translate(0, -15%)
+
+
+  &._max-width
+    width: 100%
+
+  &._no-margin
+    margin: 0
+
+  &._usual
+    color: #bfbfbf
+    fill: #bfbfbf
+
+  &._footer
+    margin-right: 0.4em
+
+  &._vertical
+    flex-direction: column
+    align-items: center
 
   &__content
     display: flex
-    transition: all ease 0.3s
+    transition: 0.3s all ease
 
-    &._text-white
-      color: #bfbfbf
-
-    &._type-image
-      width: 100%
-
-    &._size-of-text
-      width: 1em
-      height: 1em
-      margin-right: 0.3em
-
-    &._type-icon
-      width: 0.9em
-      height: 0.9em
-      background-color: #bfbfbf
+    &._bold
+      font-weight: bold
 
     &._rounded
       border-radius: 50%
 
-    &._geo
-      margin-right: 5px
+    &._wide
+      flex-basis: 100%
 
     &._bigger
       width: 1.5em
       height: 1.5em
       margin-right: 0.6em
 
-    &._further
-      margin-right: 16px
+    &._space-right
+      margin-right: 0.6em
 
-    &._first-red:first-letter
-      color: red
+    &._void-right
+      margin-right: 0.3em
+
+    &._space-bottom
+      margin-bottom: 0.4em
+
+    &._border
+      border: 0.05em solid currentColor
+
+    &._width-of-text
+      width: 1em
+
+    &._height-of-text
+      height: 1em
+
+    &._size-of-text
+      @extend ._width-of-text
+      @extend ._height-of-text
+
+    &._service
+      @extend ._size-of-text
+      font-size: 2em
+
+    &._geo
+      margin-right: 0.5em
+
+      &:last-child
+        margin-right: 1em
 
     &._no-margin
       margin: 0
 
-  &._footer
-    margin-right: 2%
 
-  &._geolink
-    padding-right: 14px
+  &._almost-transparent
+    opacity: .3
 
-  &._vertical
-    flex-direction: column
-    align-items: center
-
-    ._type-image
-      margin-bottom: 5px
-
-    &:hover ._type-image
-      transform: translate(0, -15%)

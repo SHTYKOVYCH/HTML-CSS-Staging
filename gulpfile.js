@@ -4,10 +4,9 @@ const gulp = require("gulp"),
     rename = require("gulp-rename"),
     inject = require("gulp-inject"),
     sass = require("gulp-sass")(require("sass")),
-    autoprefixer = require("gulp-autoprefixer"),
-    browserSync = require("browser-sync").create();
+    autoprefixer = require("gulp-autoprefixer");
 
-var outDir = "./dist";
+var outDir = "./public";
 
 gulp.task("svgstore", function () {
     const svgs = gulp.src("./src/yandex/images/icons/**/*.svg")
