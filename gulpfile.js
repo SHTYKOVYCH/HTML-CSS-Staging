@@ -4,7 +4,8 @@ const gulp = require("gulp"),
     rename = require("gulp-rename"),
     inject = require("gulp-inject"),
     sass = require("gulp-sass")(require("sass")),
-    autoprefixer = require("gulp-autoprefixer");
+    autoprefixer = require("gulp-autoprefixer"),
+    browserSync = require("browser-sync").create();
 
 var outDir = "./public";
 
@@ -63,6 +64,14 @@ gulp.task("move:fonts", function () {
         .pipe(gulp.dest(outDir));
 });
 
+gulp.task("serve", function () {
+    browserSync.init({
+        server: {
+            baseDir: outDir,
+        },
+    });
+});
+
 gulp.task("build", gulp.series("svgstore", "sass", "html", "move:images", "move:fonts"));
 
-gulp.task("default", gulp.series("svgstore", "move:fonts", "move:images", gulp.parallel("html", "sass")));
+gulp.task("default", gulp.series("svgstore", "move:fonts", "move:images", gulp.parallel("html", "sass"), "serve"));
