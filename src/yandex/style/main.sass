@@ -1,16 +1,5 @@
 @import "common/font"
-@import "../fonts/YS_text/stylesheet"
-@import "blocks/link/link"
-@import "blocks/icon/icon"
-@import "blocks/datetime/datetime"
-@import "blocks/values-list/values-list"
-@import "blocks/icon-bar/icon-bar"
-@import "blocks/category-list/category-list"
-@import "blocks/news/news"
-@import "blocks/weather/weather"
-@import "blocks/road/road"
-@import "blocks/link-bar/link-bar"
-@import "blocks/search-line/search-line"
+@import "common/colors"
 
 *
   margin: 0
@@ -23,54 +12,30 @@ html
 
 body
   @extend html
-  background-color: #0D0D0D
-  font-family: "Yandex Sans Text", Arial, sans-serif
-  font-size: $base-font-size
-  min-width: 1000px
+  @include base-font()
 
-.top-bar
-  margin-top: .3rem
-  margin-right: 13.3rem
-  padding: 0 0.4rem 0 1.3rem
-  font-size: .94em
-  line-height: 3em
+  background-color: $main-background-color
 
-.layout
-  display: flex
-
-  &._column
-    flex-direction: column
-
-  &._container
-    width: 62.7rem
-    justify-content: center
-    margin: 0 auto
-
-  &._row
-    justify-content: space-between
-    align-items: center
-
-  &__elem
-    &._full-line
-      flex-basis: 100%
-
+@import "blocks/link/link"
+@import "blocks/icon/icon"
+@import "blocks/datetime/datetime"
+@import "blocks/values-list/values-list"
+@import "blocks/icon-bar/icon-bar"
+@import "blocks/category-list/category-list"
+@import "blocks/news/news"
+@import "blocks/weather/weather"
+@import "blocks/road/road"
+@import "blocks/link-bar/link-bar"
+@import "blocks/search-line/search-line"
+@import "blocks/top-bar/top-bar"
+@import "blocks/layout/layout"
 @import "blocks/info-content/info-content"
 @import "blocks/zen-section/zen-section"
 @import "blocks/zen-article/zen-article"
 @import "blocks/social/social"
 @import "blocks/image-bar/image-bar"
 @import "blocks/zen-categories/zen-categories"
-
-.categories-list
-  list-style: none
-
-  &__elem
-    display: flex
-    flex-direction: row
-
-    align-items: center
-    margin: 1em
-
+@import "blocks/zen-category-list/zen-category-list"
 @import "blocks/page-footer/page-footer"
 @import "blocks/widget/widget"
 @import "blocks/mail-bar/mail-bar"

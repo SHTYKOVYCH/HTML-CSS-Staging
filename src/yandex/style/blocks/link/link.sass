@@ -1,3 +1,5 @@
+@import "../../common/colors.css"
+
 .link
   display: inline-flex
   align-items: center
@@ -9,26 +11,20 @@
   transition: all 0.3s ease
 
   &:hover
-    &._hover-color
-      color: red
-      fill: red
+    & ._hover-color
+      @include hover-color()
 
-    &._hover-opacity:hover
-      opacity: 0.5
+    & ._hover-opacity:hover
+      opacity: $link-hover-opacity
 
     & ._hover-jump
       transform: translate(0, -15%)
-
 
   &._max-width
     width: 100%
 
   &._no-margin
     margin: 0
-
-  &._usual
-    color: #bfbfbf
-    fill: #bfbfbf
 
   &._footer
     margin-right: 0.4em
@@ -41,8 +37,14 @@
     display: flex
     transition: 0.3s all ease
 
+    &._usual
+      @include base-color()
+
     &._bold
-      font-weight: bold
+      @include bold-text()
+
+    &._almost-transparent
+      opacity: $link-almost-transperent-opacity
 
     &._rounded
       border-radius: 50%
@@ -89,8 +91,4 @@
 
     &._no-margin
       margin: 0
-
-
-  &._almost-transparent
-    opacity: .3
 

@@ -1,0 +1,37 @@
+$main-background-color: #0D0D0D
+$zen-background-color: #1D1E22
+$zen-hover-background-color: #242529
+$footer-color: #15161a
+
+$widget-background-color: #222
+
+$yandex-yellow: #fc0
+
+$base-text-color: #bfbfbf
+$link-hover-color: red
+
+$link-almost-transperent-opacity: 0.3
+$link-hover-opacity: 0.5
+$menu-item-color: #5a82b8
+$warning-color: #ee7b00
+
+$gray-color: rgba(195, 195, 195, .65)
+
+@mixin set-text-color($color)
+  color: $color
+  fill: $color
+
+@mixin base-color()
+  @include set-text-color($base-text-color)
+
+@mixin hover-color()
+  @include set-text-color($link-hover-color)
+
+@mixin menu-color()
+  @include set-text-color($menu-item-color)
+
+@mixin waring-color()
+  @include set-text-color($warning-color)
+
+@mixin gray-color()
+  @include set-text-color($gray-color)

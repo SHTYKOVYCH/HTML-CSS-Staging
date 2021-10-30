@@ -1,29 +1,17 @@
-@keyframes blink
-  from,
-  to
-    opacity: 1
-
-  50%
-    opacity: 0
-
+@import "../../animations/animations"
+@import "../../common/font"
 
 .datetime
-  color: rgba(195, 195, 195, .65)
-  font-size: .91em
-  font-family: sans-serif
+  @include gray-color()
+  @mixin additional-text()
+  font-stretch: 1.5%
 
   .datetime__item
     vertical-align: middle
-    font-weight: normal
-
-  .datetime__item::after
-    content: ' '
 
   .datetime__time
     word-spacing: -0.2em
 
-    color: rgba(195, 195, 195, .65)
-
 
 .blink
-  animation: blink 2s infinite
+  @include animation-blick(2s, infinite)

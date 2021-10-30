@@ -17,7 +17,7 @@
     display: flex
     align-items: center
     font-size: 1.1em
-    font-weight: 600
+    @include bold-text()
 
   &__buttons
     font-size: .9em
@@ -37,10 +37,12 @@
     color: #bfbfbf
     margin-bottom: .3em
 
-  &__short-view,
   &__date
     color: #fff9
     font-size: .9em
+
+  &__short-view
+    @extend .zen-article__date
 
   &__social
     display: block

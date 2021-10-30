@@ -8,13 +8,13 @@
   &__people
     display: flex
     align-items: center
-    color: #fff9
+    @include set-text-color(#fff9)
 
   &__counter
     display: block
 
     &-number
-      font-weight: 600
+      @include bold-text()
 
   &__buttons
-    fill: #bfbfbf
+    @include base-color()
