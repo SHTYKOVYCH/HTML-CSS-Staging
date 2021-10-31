@@ -1,4 +1,5 @@
-@import "../fonts/YS_text/stylesheet.css"
+@import "common/font"
+@import "common/colors"
 
 *
   margin: 0
@@ -10,86 +11,34 @@ html
   min-height: 100%
 
 body
-  background-color: #0D0D0D
-  font-family: "Yandex Sans Text", Arial, sans-serif
-  min-height: 100%
-  font-size: 93.75%
-  min-width: 1000px
+  @extend html
+  @include base-font()
 
-.geolink
-  padding-right: 14px
+  background-color: $main-background-color
 
-  *
-    vertical-align: middle
-
-  &__icon
-    margin-right: 2px
-
-.link
-  vertical-align: middle
-
-  &.link_hover-red:hover
-    color: #c00
-
-  &.geolink,
-  &.geolink:visited
-    color: #bfbfbf
-
-  &.link_header.link_active
-    color: #5a82b8
-    font-size: 1.2em
-
-
-.container
-  margin-left: auto
-  margin-right: 240px
-
-  &.headline
-    margin-top: 5px
-    padding: 0 6px 0 20px
-    font-size: .94em
-    line-height: 41px
-    vertical-align: middle
-    font-weight: bold
-
-    .icon
-      display: inline-block
-      width: 36px
-      height: 36px
-
-  &.mainline
-    .row
-      margin-left: auto
-
-.content
-  min-width: 1000px
-
-.row
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-
-.datetime
-  color: rgba(195, 195, 195, .65)
-  font-size: .91em
-  font-family: serif
-
-  span
-    vertical-align: middle
-    font-weight: normal
-
-  span::after
-    content: ' '
-
-
-.icon-cart
-  background: url(//yastatic.net/s3/home-static/skins/_/deoJnU49C43wIkxlR7FCDLZMBWM.svg) no-repeat center 8px
-  opacity: .3
-
-.icon-notifier__bell svg
-  fill: rgba(255, 255, 255, 0.3)
-  vertical-align: bottom
-
-
-.news
-  &__top-line
+@import "blocks/link/link"
+@import "blocks/icon/icon"
+@import "blocks/datetime/datetime"
+@import "blocks/values-list/values-list"
+@import "blocks/icon-bar/icon-bar"
+@import "blocks/category-list/category-list"
+@import "blocks/news/news"
+@import "blocks/news-list/news-list"
+@import "blocks/weather/weather"
+@import "blocks/road/road"
+@import "blocks/link-bar/link-bar"
+@import "blocks/search-line/search-line"
+@import "blocks/top-bar/top-bar"
+@import "blocks/layout/layout"
+@import "blocks/info-content/info-content"
+@import "blocks/zen-section/zen-section"
+@import "blocks/zen-article/zen-article"
+@import "blocks/social/social"
+@import "blocks/image-bar/image-bar"
+@import "blocks/zen-categories/zen-categories"
+@import "blocks/zen-category-list/zen-category-list"
+@import "blocks/page-footer/page-footer"
+@import "blocks/widget/widget"
+@import "blocks/mail-bar/mail-bar"
+@import "blocks/mail/mail"
+@import "blocks/plus/plus"

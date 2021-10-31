@@ -1,0 +1,95 @@
+@import "../../common/colors"
+@import "../../common/font"
+
+.link
+  display: inline-flex
+  align-items: center
+
+  vertical-align: middle
+
+  cursor: pointer
+
+  transition: all 0.3s ease
+
+  &:hover
+    & ._hover-color
+      @include hover-color()
+
+    & ._hover-opacity:hover
+      opacity: $link-hover-opacity
+
+    & ._hover-jump
+      transform: translate(0, -15%)
+
+  &._max-width
+    width: 100%
+
+  &._no-margin
+    margin: 0
+
+  &._footer
+    margin-right: 0.4em
+
+  &._vertical
+    flex-direction: column
+    align-items: center
+
+  &__content
+    display: flex
+    transition: 0.3s all ease
+
+    &._usual
+      @include base-color()
+
+    &._bold
+      @include bold-text()
+
+    &._almost-transparent
+      opacity: $link-almost-transperent-opacity
+
+    &._rounded
+      border-radius: 50%
+
+    &._wide
+      flex-basis: 100%
+
+    &._bigger
+      width: 1.5em
+      height: 1.5em
+      margin-right: 0.6em
+
+    &._space-right
+      margin-right: 0.6em
+
+    &._void-right
+      margin-right: 0.3em
+
+    &._space-bottom
+      margin-bottom: 0.4em
+
+    &._border
+      border: 0.05em solid currentColor
+
+    &._width-of-text
+      width: 1em
+
+    &._height-of-text
+      height: 1em
+
+    &._size-of-text
+      @extend ._width-of-text
+      @extend ._height-of-text
+
+    &._service
+      @extend ._size-of-text
+      font-size: 2em
+
+    &._geo
+      margin-right: 0.5em
+
+      &:last-child
+        margin-right: 1em
+
+    &._no-margin
+      margin: 0
+

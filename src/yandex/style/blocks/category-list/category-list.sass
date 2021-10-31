@@ -1,0 +1,21 @@
+@import "../../common/colors"
+@import "../../common/font"
+
+.category-list
+  &__item
+    margin-right: 0.5em
+
+    font-size: 1.27em
+    @include bold-text()
+    @include menu-color()
+    opacity: 0.75
+
+    &._active
+      opacity: 1
+
+    &._warning
+      color: #ee7b00
+      font-size: 1rem
+      @include normal-text()
+      vertical-align: bottom
+

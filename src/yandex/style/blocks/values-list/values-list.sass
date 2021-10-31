@@ -1,0 +1,20 @@
+@import "../../common/font"
+@import "../../common/colors"
+
+.values-list
+  &__item
+    display: inline-block
+    margin-right: 0.75em
+
+  &__name
+    font-size: .94em
+    margin-right: 0.5em
+    @include bold-text()
+    text-transform: uppercase
+
+  &__value
+    @include base-color()
+    margin-right: 0.5em
+
+  &__diff
+    color: #999

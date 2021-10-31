@@ -3,3 +3,7 @@
 node_modules
 package-lock.json
 src/work_online
+public
+dist
+**/*.css
+**/*.css.map

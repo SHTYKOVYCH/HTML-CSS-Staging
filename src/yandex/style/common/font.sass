@@ -1,0 +1,25 @@
+@import "../../fonts/YS_text/stylesheet"
+
+$base-font-family: "Yandex Sans Text", Arial, sans-serif
+$additional-font-family: sans-serif
+
+$base-font-size: .9375em
+
+$normal-font-weight: 400
+$bold-font-weight: 600
+$light-font-weight: 300
+
+@mixin normal-text()
+  font-weight: $normal-font-weight
+
+
+@mixin bold-text()
+  font-weight: $bold-font-weight
+
+@mixin base-font()
+  @include normal-text()
+  font-family: $base-font-family
+  font-size: $base-font-size
+
+@mixin additional-text()
+  font-family: $additional-font-family

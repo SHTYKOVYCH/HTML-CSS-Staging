@@ -1,0 +1,21 @@
+@import "../../common/colors"
+
+.image-bar
+  display: flex
+
+  &__elem
+    border-radius: 50%
+
+    display: block
+    position: relative
+
+    width: 1.5em
+    height: 1.5em
+
+    right: 5px
+
+    &:first-child
+      right: 0
+      z-index: 1
+
+      outline: 2px solid $zen-background-color

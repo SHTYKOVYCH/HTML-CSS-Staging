@@ -1,0 +1,27 @@
+@import "../../common/colors"
+
+.weather
+  margin-bottom: 1em
+
+  &__header
+    margin-bottom: 0.5em
+
+  &__image
+    margin-right: .3em
+
+  &__item
+    font-size: 1.8em
+    margin-right: .3em
+    align-items: center
+
+    &._small
+      font-size: 0.8em
+      position: relative
+      vertical-align: bottom
+
+      &::before
+        display: block
+        content: attr(data-daytime)
+        position: absolute
+        top: -100%
+        @include gray-color()

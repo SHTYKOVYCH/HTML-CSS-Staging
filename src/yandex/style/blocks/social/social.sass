@@ -1,0 +1,22 @@
+@import "../../common/colors"
+@import "../../common/font"
+
+.social
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding-top: .6em
+
+  &__people
+    display: flex
+    align-items: center
+    @include set-text-color(#fff9)
+
+  &__counter
+    display: block
+
+    &-number
+      @include bold-text()
+
+  &__buttons
+    @include base-color()
