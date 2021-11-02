@@ -1,5 +1,4 @@
-@import "common/font"
-@import "common/colors"
+@import "common/common"
 
 *
   margin: 0
@@ -13,6 +12,9 @@ html
 body
   @extend html
   @include base-font()
+
+  position: relative
+  min-width: 90em
 
   background-color: $main-background-color
 
@@ -28,6 +30,8 @@ body
 @import "blocks/road/road"
 @import "blocks/link-bar/link-bar"
 @import "blocks/search-line/search-line"
+@import "blocks/search/search"
+@import "blocks/search-bar/search-bar"
 @import "blocks/top-bar/top-bar"
 @import "blocks/layout/layout"
 @import "blocks/info-content/info-content"

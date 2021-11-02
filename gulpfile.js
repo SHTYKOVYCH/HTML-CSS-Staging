@@ -10,7 +10,7 @@ const gulp = require("gulp"),
 var outDir = "./public";
 
 gulp.task("svgstore", function () {
-    const svgs = gulp.src("./src/yandex/images/icons/*.svg")
+    const svgs = gulp.src("./src/yandex/images/icons/*.svg", {base: 'src/svg'})
         .pipe(
             svgmin(function () {
                 return {

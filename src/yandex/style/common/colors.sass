@@ -8,6 +8,7 @@ $widget-background-color: #222
 $yandex-yellow: #fc0
 
 $base-text-color: #bfbfbf
+$zen-text-color: white
 $link-hover-color: red
 
 $link-almost-transperent-opacity: 0.3
@@ -16,22 +17,3 @@ $menu-item-color: #5a82b8
 $warning-color: #ee7b00
 
 $gray-color: rgba(195, 195, 195, .65)
-
-@mixin set-text-color($color)
-  color: $color
-  fill: $color
-
-@mixin base-color()
-  @include set-text-color($base-text-color)
-
-@mixin hover-color()
-  @include set-text-color($link-hover-color)
-
-@mixin menu-color()
-  @include set-text-color($menu-item-color)
-
-@mixin waring-color()
-  @include set-text-color($warning-color)
-
-@mixin gray-color()
-  @include set-text-color($gray-color)

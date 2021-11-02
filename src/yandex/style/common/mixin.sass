@@ -1,0 +1,37 @@
+@import "colors"
+@import "font"
+
+@mixin set-text-color($color)
+  color: $color
+  fill: $color
+
+@mixin normal-text()
+  font-weight: $normal-font-weight
+  font-weight: normal
+  @include set-text-color($base-text-color)
+
+@mixin bold-text()
+  font-weight: $bold-font-weight
+
+@mixin base-font()
+  @include normal-text()
+  font-family: $base-font-family
+  font-size: $base-font-size
+
+@mixin additional-text()
+  font-family: $additional-font-family
+
+@mixin base-color()
+  @include set-text-color($base-text-color)
+
+@mixin hover-color()
+  @include set-text-color($link-hover-color)
+
+@mixin menu-color()
+  @include set-text-color($menu-item-color)
+
+@mixin waring-color()
+  @include set-text-color($warning-color)
+
+@mixin gray-color()
+  @include set-text-color($gray-color)
