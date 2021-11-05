@@ -11,14 +11,17 @@
   transition: all 0.3s ease
 
   &:hover
-    & ._hover-color
-      @include hover-color()
+    & ._hover-color-main
+      @include text-set-color($color-hover-main)
 
-    & ._hover-opacity:hover
-      opacity: $link-hover-opacity
+    & ._hover-opacity
+      @include hover-opacity
 
     & ._hover-jump
       transform: translate(0, -15%)
+
+    & ._search
+      opacity: .7
 
   &._max-width
     width: 100%
@@ -37,14 +40,23 @@
     display: flex
     transition: 0.3s all ease
 
-    &._usual
-      @include base-color()
+    &._normal
+      @include text-main($color-base-text)
 
     &._bold
-      @include bold-text()
+      @include text-main-bold(currentcolor)
+
+    &._white
+      @include text-set-color($color-base-text)
 
     &._almost-transparent
-      opacity: $link-almost-transperent-opacity
+      @include text-set-color($color-base-text)
+
+    &._icon
+      @extend ._normal
+      @extend ._hover-opacity
+
+      opacity: $color-icon-opacity
 
     &._rounded
       border-radius: 50%
@@ -79,16 +91,6 @@
       @extend ._width-of-text
       @extend ._height-of-text
 
-    &._service
-      @extend ._size-of-text
-      font-size: 3em
-
-    &._geo
-      margin-right: 0.5em
-
-      &:last-child
-        margin-right: 1em
-
     &._no-margin
       margin: 0
 
@@ -102,3 +104,84 @@
       display: flex
       flex-wrap: wrap
       justify-content: center
+
+
+    &._service
+      @extend ._size-of-text
+      @extend ._hover-jump
+      font-size: 3em
+
+    &._service-text
+      @extend ._normal
+      @extend ._hover-color-main
+
+    &._service-folder
+      @extend ._service
+      @extend ._folder
+      @extend ._service-text
+      @extend ._size-of-text
+      @extend ._hover-jump
+
+    &._service-foldered
+      @extend ._service
+      font-size: .5em
+
+    &._geo
+      @include text-main-bold()
+      @extend ._hover-color-main
+      @extend ._bold
+      margin-right: 0.5em
+
+      &:last-child
+        margin-right: 1em
+
+    &._news
+      @extend ._normal
+      @extend ._hover-color-main
+      line-height: $normal-line-height
+
+    &._news-img
+      @extend ._space-right
+      font-size: .9em
+      @extend ._border
+      @extend ._size-of-text
+
+    &._value
+      @include text-set-color($color-base-text)
+      @extend ._bold
+      @extend ._hover-color-main
+
+    &._weather-value
+      @extend ._normal
+      @extend ._hover-color-main
+
+    &._road-image
+      font-size: 1.3em
+      margin-right: .3em
+
+    &._road-number
+      @extend ._normal
+      @extend ._hover-color-main
+      margin-right: .15em
+
+    &._road-text
+      @extend ._normal
+      @extend ._hover-color-main
+
+    &._search
+      @extend ._almost-transparent
+      @extend ._void-right
+      opacity: .5
+
+    &._zen-header
+      @extend ._bold
+      @include text-set-color($color-base-text)
+
+    &._zen-categories-icon
+      @extend ._size-of-text
+      @extend ._space-right
+      @extend ._hover-color-main
+
+    &._footer
+      @extend ._normal
+      @extend ._hover-color-main

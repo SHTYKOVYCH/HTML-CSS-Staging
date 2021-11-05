@@ -1,18 +1,10 @@
-@import "../../animations/animations"
-@import "../../common/common"
 @import "../../common/common"
 
 .datetime
-  @include gray-color()
-  @mixin additional-text()
-  font-stretch: 1.5%
+  @include text-info
 
   .datetime__item
     vertical-align: middle
 
-  .datetime__time
-    word-spacing: -0.2em
-
-
-.blink
-  @include animation-blick(2s, infinite)
+  & .blink
+    @include animation-blick(1s, infinite)

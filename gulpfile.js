@@ -35,7 +35,7 @@ gulp.task("svgstore", function () {
     return gulp
         .src("./src/yandex/index.html")
         .pipe(inject(svgs, {transform: fileContents}))
-        .pipe(gulp.dest(outDir));
+        .pipe(gulp.dest("./src/yandex/"));
 });
 
 

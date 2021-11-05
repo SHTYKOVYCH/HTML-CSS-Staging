@@ -1,22 +1,24 @@
 @import "common/common"
 
 *
-  margin: 0
-  padding: 0
   box-sizing: border-box
   text-decoration: none
+  vertical-align: center
 
 html
   min-height: 100%
 
 body
   @extend html
-  @include base-font()
+  @include text-main
 
   position: relative
-  min-width: 90em
+  min-width: $size-min-page-width
 
-  background-color: $main-background-color
+  background-color: $color-page-background
+
+.svg-store
+  visibility: hidden
 
 @import "blocks/link/link"
 @import "blocks/icon/icon"

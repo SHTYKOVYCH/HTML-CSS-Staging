@@ -1,17 +1,20 @@
 @import "../../common/common"
 
 .mail
+
+  background-color: $color-page-elem-background
+
   &__item
-    font-size: 1em
     width: 100%
     align-items: center
     margin-bottom: .6em
 
+    @include text-main()
+
     &._mail-line
-      @include bold-text()
       justify-content: space-between
 
   &__messages-total
     margin-left: 3%
-    @include bold-text()
+
 

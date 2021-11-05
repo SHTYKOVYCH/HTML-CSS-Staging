@@ -1,37 +1,41 @@
 @import "colors"
 @import "font"
 
-@mixin set-text-color($color)
+@mixin text-set-color($color)
   color: $color
   fill: $color
 
-@mixin normal-text()
-  font-weight: $normal-font-weight
+@mixin set-font($font-size: 1em, $font-weight: normal, $line-height: 1.2em, $text-decoration: none)
+  font-family: "Yandex Sans Text", Arial, sans-serif
+  font-size: $font-size
+  font-weight: $font-weight
+  line-height: $line-height
+  text-decoration: $text-decoration
+
+@mixin text-main($color: $color-base-text)
+  font-family: "Yandex Sans Text", Arial, sans-serif
   font-weight: normal
-  @include set-text-color($base-text-color)
+  line-height: 1.2em
+  font-size: 1em
+  @include text-set-color($color)
 
-@mixin bold-text()
-  font-weight: $bold-font-weight
+@mixin text-main-bold($color: $color-base-text)
+  @include text-main($color)
+  font-weight: 700
 
-@mixin base-font()
-  @include normal-text()
-  font-family: $base-font-family
-  font-size: $base-font-size
+@mixin text-main-light($color: $color-base-text)
+  @include text-main($color)
+  font-weight: 400
 
-@mixin additional-text()
-  font-family: $additional-font-family
+@mixin text-info()
+  font-family: Arial, sans-serif
+  color: $color-info-text
 
-@mixin base-color()
-  @include set-text-color($base-text-color)
+@mixin hover-main()
+  &:hover
+    color: $color-hover-main
+    fill: $color-hover-main
 
-@mixin hover-color()
-  @include set-text-color($link-hover-color)
-
-@mixin menu-color()
-  @include set-text-color($menu-item-color)
-
-@mixin waring-color()
-  @include set-text-color($warning-color)
-
-@mixin gray-color()
-  @include set-text-color($gray-color)
+@mixin hover-opacity()
+  &:hover
+    opacity: $color-hover-additional-opacity

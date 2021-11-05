@@ -4,19 +4,11 @@
 .social
   display: flex
   flex-direction: row
-  justify-content: space-between
-  padding-top: .6em
+  justify-content: start
 
   &__people
     display: flex
-    align-items: center
-    @include set-text-color(#fff9)
+    align-items: start
 
   &__counter
-    display: block
-
-    &-number
-      @include bold-text()
-
-  &__buttons
-    @include base-color()
+    word-spacing: 1em
