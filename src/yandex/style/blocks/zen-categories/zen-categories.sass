@@ -1,22 +1,27 @@
-@import "../../common/font"
-@import "../../common/colors"
+@import "../../common/common"
+@import "../../common/common"
 
 .zen-categories
   padding-left: 5%
   padding-right: 5%
 
+  @include text-main($color-base-text)
+
   &__header
+
+    @include text-main-bold($color-base-text)
     display: flex
     align-items: center
     font-size: 1.2em
-    @include bold-text()
+
+
     margin-bottom: .6em
 
   &__subheader
     text-transform: uppercase
-    @include gray-color()
+
     font-size: .8em
-    @include bold-text()
+
     margin-bottom: .6em
 
   &__list

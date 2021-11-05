@@ -1,20 +1,22 @@
-@import "../../common/font"
-@import "../../common/colors"
+@import "../../common/common"
+@import "../../common/common"
 
 .values-list
+
   &__item
     display: inline-block
     margin-right: 0.75em
+    @include text-main($color-base-text)
 
   &__name
-    font-size: .94em
+    @include text-set-color($color-base-text)
     margin-right: 0.5em
-    @include bold-text()
+
     text-transform: uppercase
 
   &__value
-    @include base-color()
+
     margin-right: 0.5em
 
   &__diff
-    color: #999
+    @include text-info

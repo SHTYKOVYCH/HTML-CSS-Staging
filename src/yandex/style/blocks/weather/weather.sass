@@ -1,20 +1,18 @@
-@import "../../common/colors"
+@import "../../common/common"
 
 .weather
   margin-bottom: 1em
 
   &__header
+    font-size: .9em
     margin-bottom: 0.5em
 
-  &__image
-    margin-right: .3em
-
   &__item
-    font-size: 1.8em
-    margin-right: .3em
+    @include set-font(2em)
     align-items: center
 
     &._small
+      @include text-set-color($color-info-text)
       font-size: 0.8em
       position: relative
       vertical-align: bottom
@@ -24,4 +22,4 @@
         content: attr(data-daytime)
         position: absolute
         top: -100%
-        @include gray-color()
+

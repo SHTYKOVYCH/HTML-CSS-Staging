@@ -1,5 +1,5 @@
-@import "../../common/colors"
-@import "../../common/font"
+@import "../../common/common"
+@import "../../common/common"
 
 
 .zen-article
@@ -11,7 +11,6 @@
     width: 100%
     align-items: center
     justify-content: space-between
-    margin-bottom: .6em
 
     .zen-article
       display: none
@@ -20,27 +19,37 @@
     display: flex
     align-items: center
     font-size: 1.1em
-    @include bold-text()
+
 
   &__buttons
     font-size: .9em
-    fill: #bfbfbf
+    @include text-set-color($color-base-text)
 
   &__preview
-    flex: 0 0 47%
-    max-height: 13em
+    display: block
+    width: 100%
+    flex: 1 0 40%
+    //max-height: 13em
     border-radius: 1.2em
 
     margin-right: 3%
 
   &__content
+    @include text-main()
+
     display: flex
+
+    margin: 1em auto
+
+  &__info
+    flex: 1 1 70%
 
   &__headline
     color: #bfbfbf
     margin-bottom: .3em
 
   &__date
+    display: block
     color: #fff9
     font-size: .9em
 

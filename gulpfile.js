@@ -10,7 +10,7 @@ const gulp = require("gulp"),
 var outDir = "./public";
 
 gulp.task("svgstore", function () {
-    const svgs = gulp.src("./src/yandex/images/icons/*.svg")
+    const svgs = gulp.src("./src/yandex/images/icons/*.svg", {base: 'src/svg'})
         .pipe(
             svgmin(function () {
                 return {
@@ -35,7 +35,7 @@ gulp.task("svgstore", function () {
     return gulp
         .src("./src/yandex/index.html")
         .pipe(inject(svgs, {transform: fileContents}))
-        .pipe(gulp.dest(outDir));
+        .pipe(gulp.dest("./src/yandex/"));
 });
 
 

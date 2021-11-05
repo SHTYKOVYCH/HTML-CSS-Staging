@@ -1,20 +1,24 @@
-@import "common/font"
-@import "common/colors"
+@import "common/common"
 
 *
-  margin: 0
-  padding: 0
   box-sizing: border-box
   text-decoration: none
+  vertical-align: center
 
 html
   min-height: 100%
 
 body
   @extend html
-  @include base-font()
+  @include text-main
 
-  background-color: $main-background-color
+  position: relative
+  min-width: $size-min-page-width
+
+  background-color: $color-page-background
+
+.svg-store
+  visibility: hidden
 
 @import "blocks/link/link"
 @import "blocks/icon/icon"
@@ -28,6 +32,8 @@ body
 @import "blocks/road/road"
 @import "blocks/link-bar/link-bar"
 @import "blocks/search-line/search-line"
+@import "blocks/search/search"
+@import "blocks/search-bar/search-bar"
 @import "blocks/top-bar/top-bar"
 @import "blocks/layout/layout"
 @import "blocks/info-content/info-content"
