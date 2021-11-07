@@ -1,19 +1,13 @@
 @import "../../common/common"
 
 .weather
-  margin-bottom: 1em
-
-  &__header
-    font-size: .9em
-    margin-bottom: 0.5em
-
   &__item
     @include set-font(2em)
     align-items: center
 
     &._small
       @include text-set-color($color-info-text)
-      font-size: 0.8em
+      font-size: $weather-font-size
       position: relative
       vertical-align: bottom
 
@@ -21,5 +15,6 @@
         display: block
         content: attr(data-daytime)
         position: absolute
-        top: -100%
+        top: -150%
+        font-size: $weather-small-font-size
 

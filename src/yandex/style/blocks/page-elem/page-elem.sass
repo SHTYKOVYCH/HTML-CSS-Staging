@@ -1,0 +1,29 @@
+@import "../../common/common"
+
+.page-elem
+
+  &._weather
+    margin-bottom: 1.6em
+
+  &:hover
+    .page-elem__buttons
+      cursor: pointer
+      opacity: .5
+
+
+  &__buttons
+    cursor: none
+    opacity: 0
+    transition: opacity ease .2s
+
+    &:hover
+      opacity: 1
+
+  &__header
+    display: flex
+    flex-direction: row
+    margin-bottom: .75em
+
+  &__content
+    &._values-list
+      font-size: $page-elem-values-font-size
