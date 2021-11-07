@@ -2,17 +2,26 @@
 
 .category-list
   @include text-main-light()
+  font-size: $category-list-font-size
 
   &__item
     @include text-set-color($color-menu-inactive)
     margin-right: 0.4em
 
-    font-size: 1.27em
+    font-size: $category-list-item-font-size
+
+    line-height: 1.2em
 
     &._active
       @include text-set-color($color-menu)
 
+    &._not-active-category
+      margin-right: .2em
+
     &._warning
       @include text-main-light($color-warning)
 
-      vertical-align: sub
+      vertical-align: bottom
+
+    &:last-child
+      margin-right: 0

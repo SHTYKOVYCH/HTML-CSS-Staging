@@ -18,7 +18,7 @@
       @include hover-opacity
 
     & ._hover-jump
-      transform: translate(0, -15%)
+      transform: translate(0, -.075em)
 
     & ._search
       opacity: .7
@@ -35,6 +35,9 @@
   &._vertical
     flex-direction: column
     align-items: center
+
+  &._not-active-category
+    vertical-align: sub
 
   &__content
     display: flex
@@ -95,10 +98,10 @@
       margin: 0
 
     &._small
-      font-size: .4em
+      font-size: $link-small-font-size
 
     &._user
-      font-size: 1.5em
+      font-size: $link-user-font-size
 
     &._folder
       display: flex
@@ -109,11 +112,14 @@
     &._service
       @extend ._size-of-text
       @extend ._hover-jump
-      font-size: 3em
+      font-size: $link-service-font-size
 
     &._service-text
       @extend ._normal
       @extend ._hover-color-main
+      font-size: $service-text-font-size
+
+      margin-top: .2em
 
     &._service-folder
       @extend ._service
@@ -121,10 +127,11 @@
       @extend ._service-text
       @extend ._size-of-text
       @extend ._hover-jump
+      font-size: $link-service-folder-font-size
 
     &._service-foldered
       @extend ._service
-      font-size: .5em
+      font-size: $service-foldered-font-size
 
     &._geo
       @include text-main-bold()
@@ -138,13 +145,14 @@
     &._news
       @extend ._normal
       @extend ._hover-color-main
-      line-height: $normal-line-height
+
+      line-height: 1.5em
 
     &._news-img
       @extend ._space-right
-      font-size: .9em
       @extend ._border
-      @extend ._size-of-text
+      width: 1em
+      height: 1em
 
     &._value
       @include text-set-color($color-base-text)
@@ -154,9 +162,14 @@
     &._weather-value
       @extend ._normal
       @extend ._hover-color-main
+      font-size: $link-weather-value-font-size
+      margin-left: .4em
+
+      margin-right: .6em
+
 
     &._road-image
-      font-size: 1.3em
+      font-size: $link-road-image-font-size
       margin-right: .3em
 
     &._road-number
