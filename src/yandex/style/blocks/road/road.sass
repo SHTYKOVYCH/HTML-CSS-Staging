@@ -1,13 +1,14 @@
 @import "../../common/common"
 .road
+
   &__body
     display: flex
     align-items: center
 
   &__image
-    font-size: $road-image-font-size
+    @include yandex-text-normal($road-image-font-size)
     margin-right: .5em
 
   &__grade
-    font-size: $road-grade-font-size
+    @include yandex-text-normal($road-grade-font-size)
     margin-right: .3em

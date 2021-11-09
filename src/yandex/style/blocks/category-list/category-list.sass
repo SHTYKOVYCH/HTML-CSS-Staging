@@ -1,7 +1,7 @@
 @import "../../common/common"
 
 .category-list
-  @include text-main-light()
+  @include yandex-text-normal($news-list-font-size)
   font-size: $category-list-font-size
 
   &__item
@@ -19,9 +19,15 @@
       margin-right: .2em
 
     &._warning
-      @include text-main-light($color-warning)
+      @include yandex-text-normal($category-list-warning-font-size)
+      @include text-set-color($color-warning)
 
-      vertical-align: bottom
+      vertical-align: text-bottom
 
     &:last-child
       margin-right: 0
+
+    &._weather
+      @include yandex-text-normal($category-smaller-font-size)
+      @include text-set-color($color-menu)
+      vertical-align: text-bottom

@@ -11,20 +11,6 @@ var outDir = "./public";
 
 gulp.task("svgstore", function () {
     const svgs = gulp.src("./src/yandex/images/icons/*.svg", {base: 'src/svg'})
-        .pipe(
-            svgmin(function () {
-                return {
-                    plugins: [
-                        {
-                            removeTitle: true,
-                        },
-                        {
-                            removeStyleElement: true,
-                        },
-                    ],
-                };
-            })
-        )
         .pipe(rename({prefix: "icon-"}))
         .pipe(svgstore({inlineSvg: true}));
 

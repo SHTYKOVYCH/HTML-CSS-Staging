@@ -8,21 +8,25 @@
   &:hover
     .page-elem__buttons
       cursor: pointer
-      opacity: .5
+      opacity: .3
 
+      &:hover
+        opacity: 1
 
   &__buttons
     cursor: none
     opacity: 0
     transition: opacity ease .2s
+    @include text-set-color($color-base-text)
+    @include custom-focus
 
-    &:hover
+    &:focus
       opacity: 1
 
   &__header
     display: flex
     flex-direction: row
-    margin-bottom: .75em
+    margin-bottom: .5em
 
   &__content
     &._values-list

@@ -7,10 +7,11 @@
 
 html
   min-height: 100%
+  @include yandex-text-normal($base-font-size)
 
 body
   @extend html
-  @include text-main
+  @include yandex-text-normal
 
   position: relative
   min-width: $size-min-page-width
@@ -19,6 +20,10 @@ body
 
 .svg-store
   visibility: hidden
+  position: absolute
+  left: 0
+  top: 0
+  z-index: -999999
 
 @import "blocks/link/link"
 @import "blocks/icon/icon"

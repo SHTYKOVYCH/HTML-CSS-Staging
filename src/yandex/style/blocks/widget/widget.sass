@@ -12,5 +12,23 @@
   transition: all ease 0.3s
   margin-bottom: .5em
 
+
+  @include custom-focus
+
+  &:focus
+    transition: all ease .2s
+    transform: translate(-7.5%, 0)
+
   &._hover-jump:hover
     transform: translate(-5%, 0)
+
+  &._plus
+    justify-content: start
+    align-items: center
+
+    padding: .6em
+
+    @include yandex-text-normal()
+
+    background-color: $color-page-elem-background
+    z-index: 99999

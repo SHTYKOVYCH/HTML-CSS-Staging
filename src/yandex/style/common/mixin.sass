@@ -5,31 +5,24 @@
   color: $color
   fill: $color
 
-@mixin set-font($font-size: 1em, $font-weight: normal, $line-height: 1.2em, $text-decoration: none)
-  font-family: "Yandex Sans Text", Arial, sans-serif
+@mixin set-font($font-family, $font-size: 1em)
+  font-family: $font-family
   font-size: $font-size
-  font-weight: $font-weight
-  line-height: $line-height
-  text-decoration: $text-decoration
 
-@mixin text-main($color: $color-base-text)
-  font-family: "Yandex Sans Text", Arial, sans-serif
-  font-weight: normal
-  line-height: 1.2em
-  font-size: 1em
-  @include text-set-color($color)
-
-@mixin text-main-bold($color: $color-base-text)
-  @include text-main($color)
-  font-weight: 700
-
-@mixin text-main-light($color: $color-base-text)
-  @include text-main($color)
+@mixin yandex-text-normal($font-size: 1em)
+  @include set-font($base-font-family, $font-size)
   font-weight: 400
 
-@mixin text-info()
+@mixin yandex-text-main-bold($font-size: 1em)
+  @include yandex-text-normal
+  font-weight: 500
+
+@mixin yandex-text-main-light($font-size: 1em)
+  @include yandex-text-normal
+  font-weight: 300
+
+@mixin yandex-text-info()
   font-family: Arial, sans-serif
-  color: $color-info-text
 
 @mixin hover-main()
   &:hover
@@ -39,3 +32,8 @@
 @mixin hover-opacity()
   &:hover
     opacity: $color-hover-additional-opacity
+
+@mixin custom-focus($type: 0)
+  @if ($type == 0)
+    &:focus
+      outline: .2em solid $yandex-yellow
