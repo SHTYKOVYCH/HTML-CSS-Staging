@@ -2,12 +2,13 @@
 
 .weather
   &__item
-    @include set-font(2em)
+    @include yandex-text-normal($weather-font-size)
+    @include text-set-color($color-base-text)
     align-items: center
 
     &._small
+      @include yandex-text-normal($weather-small-font-size)
       @include text-set-color($color-info-text)
-      font-size: $weather-font-size
       position: relative
       vertical-align: bottom
 
@@ -15,6 +16,6 @@
         display: block
         content: attr(data-daytime)
         position: absolute
-        top: -150%
-        font-size: $weather-small-font-size
-
+        top: -100%
+        @include yandex-text-normal($weather-small-font-size)
+        text-align: center

@@ -10,6 +10,16 @@
 
   transition: all 0.3s ease
 
+  @include custom-focus()
+
+  &:focus
+    ._icon
+      opacity: 1
+
+    ._hover-jump
+      transform: translate(0, -.075em)
+
+
   &:hover
     & ._hover-color-main
       @include text-set-color($color-hover-main)
@@ -43,14 +53,14 @@
     display: flex
     transition: 0.3s all ease
 
+    &._logo
+      @include text-set-color($color-base-text)
+
     &._normal
-      @include text-main($color-base-text)
+      @include yandex-text-normal($color-base-text)
 
     &._bold
-      @include text-main-bold(currentcolor)
-
-    &._white
-      @include text-set-color($color-base-text)
+      @include yandex-text-main-bold()
 
     &._almost-transparent
       @include text-set-color($color-base-text)
@@ -58,7 +68,7 @@
     &._icon
       @extend ._normal
       @extend ._hover-opacity
-
+      @include text-set-color($color-base-text)
       opacity: $color-icon-opacity
 
     &._rounded
@@ -108,35 +118,39 @@
       flex-wrap: wrap
       justify-content: center
 
-
     &._service
       @extend ._size-of-text
       @extend ._hover-jump
-      font-size: $link-service-font-size
+      @include yandex-text-normal($link-service-font-size)
 
     &._service-text
-      @extend ._normal
+      @include yandex-text-normal($service-text-font-size)
+      @include text-set-color($color-base-text)
       @extend ._hover-color-main
-      font-size: $service-text-font-size
-
       margin-top: .2em
+
+    &._mail-line
+      @include text-set-color($color-base-text)
+
+    &._mail-name
+      &:first-letter
+        @include text-set-color($color-hover-main)
 
     &._service-folder
       @extend ._service
       @extend ._folder
-      @extend ._service-text
       @extend ._size-of-text
       @extend ._hover-jump
-      font-size: $link-service-folder-font-size
+      @include yandex-text-normal($link-service-folder-font-size)
 
     &._service-foldered
       @extend ._service
-      font-size: $service-foldered-font-size
+      @include yandex-text-normal($service-foldered-font-size)
 
     &._geo
-      @include text-main-bold()
+      @include yandex-text-main-bold($color-base-text)
+      @include text-set-color($color-base-text)
       @extend ._hover-color-main
-      @extend ._bold
       margin-right: 0.5em
 
       &:last-child
@@ -164,9 +178,10 @@
       @extend ._hover-color-main
       font-size: $link-weather-value-font-size
       margin-left: .4em
-
       margin-right: .6em
 
+    &._road
+      @include text-set-color($color-base-text)
 
     &._road-image
       font-size: $link-road-image-font-size
@@ -185,6 +200,12 @@
       @extend ._almost-transparent
       @extend ._void-right
       opacity: .5
+
+    &._plus-icon
+      @include yandex-text-normal(1.5em)
+
+    &._plus-text
+      @include text-set-color($color-base-text)
 
     &._zen-header
       @extend ._bold
