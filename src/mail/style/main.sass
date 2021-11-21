@@ -20,6 +20,10 @@ body
 
     background-color: $color-page-background
 
+  &._mail
+    @include yandex-text-normal($base-font-size)
+
+
 .svg-store
   visibility: hidden
   position: absolute
@@ -29,6 +33,7 @@ body
 
 @import "blocks/link/link"
 @import "blocks/icon/icon"
+@import "blocks/body/body"
 @import "blocks/datetime/datetime"
 @import "blocks/values-list/values-list"
 @import "blocks/icon-bar/icon-bar"

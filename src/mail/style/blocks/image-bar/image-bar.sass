@@ -1,0 +1,20 @@
+@import "../../common/common"
+
+.image-bar
+  display: flex
+
+  &__elem
+    border: .15em solid $color-page-elem-background
+    border-radius: 50%
+
+    display: block
+    position: relative
+
+    width: 1.5em
+    height: 1.5em
+
+    right: 5px
+
+    &:first-child
+      right: 0
+      z-index: 1

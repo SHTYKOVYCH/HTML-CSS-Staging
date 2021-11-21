@@ -1,0 +1,39 @@
+@import "colors"
+@import "font"
+
+@mixin text-set-color($color)
+  color: $color
+  fill: $color
+
+@mixin set-font($font-family, $font-size: 1em)
+  font-family: $font-family
+  font-size: $font-size
+
+@mixin yandex-text-normal($font-size: 1em)
+  @include set-font($base-font-family, $font-size)
+  font-weight: 400
+
+@mixin yandex-text-main-bold($font-size: 1em)
+  @include yandex-text-normal
+  font-weight: $bold-font-weight
+
+@mixin yandex-text-main-light($font-size: 1em)
+  @include yandex-text-normal
+  font-weight: 300
+
+@mixin yandex-text-info()
+  font-family: Arial, sans-serif
+
+@mixin hover-main()
+  &:hover
+    color: $color-hover-main
+    fill: $color-hover-main
+
+@mixin hover-opacity()
+  &:hover
+    opacity: $color-hover-additional-opacity
+
+@mixin custom-focus($type: 0)
+  @if ($type == 0)
+    &:focus
+      outline: .2em solid $yandex-yellow

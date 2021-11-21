@@ -1,0 +1,12 @@
+@import "../../common/common"
+
+.news-list
+  @include yandex-text-normal($news-list-font-size)
+
+  &__item
+    display: flex
+    align-items: baseline
+    max-width: 95%
+    margin-bottom: 0.5em
+    @include text-set-color($color-base-text)
+    line-height: 1.1em
