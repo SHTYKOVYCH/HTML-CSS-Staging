@@ -1,0 +1,22 @@
+.link-bar
+  display: flex
+  justify-content: space-between
+
+  @include yandex-text-normal(1em)
+
+  &__item
+    @include text-set-color($color-base-text)
+    padding: 0 .6em 0 .6em
+    line-height: 2.5em
+
+    border-radius: .8em
+
+    &:hover
+      background-color: #00103d0a
+
+    &._background
+      background-color: #005FF9
+      @include text-set-color(white)
+
+      &:hover
+        background-color: #005CF1

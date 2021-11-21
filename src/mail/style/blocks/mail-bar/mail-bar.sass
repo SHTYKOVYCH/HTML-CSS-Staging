@@ -1,0 +1,44 @@
+@import "../../common/common"
+
+
+.mail-bar
+  width: 14em
+  min-width: 10em
+  padding-top: .2em
+  padding-right: .2em
+  position: absolute
+  right: 0
+  top: 0
+
+  &__item
+    position: relative
+
+    &:hover
+      & ._hover-jump
+        transform: translate(-7.5%, 0)
+
+      .mail-bar__cross
+        opacity: .5
+
+        transition-delay: .5s
+
+        &:hover
+          transition-delay: 0s
+          opacity: 1
+
+  &__cross
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate(0, -50%)
+    opacity: 0
+
+    z-index: 0
+
+    transition: opacity .2s ease
+
+    @include text-set-color($color-base-text)
+    @include custom-focus
+
+    &:focus
+      opacity: 1
