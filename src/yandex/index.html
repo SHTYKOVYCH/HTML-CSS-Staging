@@ -381,7 +381,7 @@
         <section class="zen-section">
             <div class="layout _container">
                 <section class="zen-section__main-part">
-                    <tempalte id="zen-article">
+                    <tempalte id="zen-article" style="display: none">
                         <article class="zen-section__elem _hover-lighter">
                             <a href="#" class="zen-article">
                                 <div class="zen-article__header">
@@ -670,8 +670,11 @@
 
                         document.querySelector('.zen-section__main-part').append(article);
                     }
-                )
-                ;
+                ).then(() => {
+                    if (document.documentElement.scrollHeight - document.documentElement.scrollTop < 2000) {
+                        createNewArticle();
+                    }
+                });
             }
         }
 
