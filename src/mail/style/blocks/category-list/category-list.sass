@@ -7,6 +7,15 @@
   &._smaller
     @include yandex-text-normal(.9em)
 
+  &._search-nav
+    @extend ._smaller
+    margin-left: 1%
+    justify-content: space-between
+
+
+    .category-list__item
+      margin-right: 2%
+
   &__item
     @include text-set-color($color-menu-inactive)
     margin-right: 0.4em
