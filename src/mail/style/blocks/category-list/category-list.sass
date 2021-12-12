@@ -12,7 +12,7 @@
     justify-content: space-between
 
 
-    .category-list__item
+    & .category-list__item
       margin-right: 2%
 
   &._news
@@ -22,6 +22,9 @@
     margin-bottom: .5em
 
     border-bottom: 1px solid #f0f1f3
+
+    & .category-list__item
+      margin-right: 1.2em
 
   &__item
     @include text-set-color($color-menu-inactive)
@@ -50,3 +53,6 @@
       @include yandex-text-normal($category-smaller-font-size)
       @include text-set-color($color-menu)
       vertical-align: text-bottom
+
+    &._color-inherit
+      @include text-set-color(inherit)

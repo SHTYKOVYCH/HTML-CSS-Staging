@@ -9,7 +9,7 @@
   border-radius: .8em
   overflow: hidden
 
-  margin-bottom: .8em
+  margin-bottom: .4em
 
   &__header
     display: flex
@@ -18,14 +18,7 @@
     justify-content: space-between
 
   &__body
-    padding: 0 1.2em
-
-    &:not(:first-child),
-    &:first-of-type
-      padding-top: .5em
-
-    &:last-child
-      padding-bottom: .5em
+    padding: .75em 1.2em
 
     &._weather
       @include yandex-text-normal(.8em)
@@ -35,6 +28,9 @@
     &._weather_big
       padding-top: 1em
       @include yandex-text-normal(1.5em)
+
+    &._less-spaced
+      padding-bottom: 0
 
   &__publisher
     display: flex
@@ -49,7 +45,7 @@
     line-height: 2.25em
 
     border-radius: .75em
-    margin: .8em .1em 0
+    margin: 1em .1em 0
 
 
   &__buttons
