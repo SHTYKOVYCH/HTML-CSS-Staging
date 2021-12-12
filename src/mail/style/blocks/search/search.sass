@@ -11,8 +11,8 @@
     padding: 0.1em
 
     background: $yandex-yellow
-    height: 2.1663em
-    border-radius: .625em
+    height: 1.75em
+    border-radius: .3em
     position: relative
 
   &__input-block
@@ -23,7 +23,7 @@
     height: 100%
     width: 100%
     border: none
-    border-radius: .625em .375em .375em .625em
+    border-radius: .3em 0 0 .3em
     position: relative
     color: black
     padding-left: 0.8em
@@ -38,7 +38,23 @@
     right: 5em
     top: .2em
 
+  &__line-button
+    position: absolute
+    left: 1%
+    top: 50%
+    transform: translate(0, -50%)
+
+  &__line-text
+    position: absolute
+    top: 50%
+    right: 9.5%
+
+    transform: translate(0, -50%)
+
+    font-size: .6em
+
   &__commit
+    @include text-set-color(white)
     font-size: $search-commit-font-size
     padding: 0 1em
 
