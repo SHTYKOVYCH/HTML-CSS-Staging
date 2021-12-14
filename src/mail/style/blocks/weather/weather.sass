@@ -20,6 +20,15 @@
         @include yandex-text-normal($weather-small-font-size)
         text-align: center
 
+    &._money
+      @extend ._signed
+
+      &::before
+        top: 100%
+        left: 30%
+        @include text-set-color(green)
+        font-weight: bold
+
 
     &._small
       @extend ._signed

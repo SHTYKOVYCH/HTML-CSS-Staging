@@ -11,6 +11,13 @@
 
   margin-bottom: .4em
 
+  &._no-style
+    border: none
+
+    box-shadow: none
+
+    border-radius: .2em
+
   &__header
     display: flex
     width: 100%
@@ -28,6 +35,11 @@
     &._weather_big
       padding-top: 1em
       @include yandex-text-normal(1.5em)
+
+    &._money_big
+      padding-top: .5em
+      @include yandex-text-normal(1.5em)
+
 
     &._less-spaced
       padding-bottom: 0

@@ -17,14 +17,16 @@
 
   &._news
     @extend ._search-nav
+    margin-top: .3em
+    margin-left: .1em
     padding-top: .5em
-    padding-bottom: .5em
     margin-bottom: .5em
 
     border-bottom: 1px solid #f0f1f3
 
     & .category-list__item
       margin-right: 1.2em
+      padding-bottom: .6em
 
   &__item
     @include text-set-color($color-menu-inactive)
@@ -36,6 +38,9 @@
 
     &._active
       @include text-set-color($color-menu)
+
+    &._active-news
+      border-bottom: .2em solid #005CF1
 
     &._not-active-category
       margin-right: .2em
