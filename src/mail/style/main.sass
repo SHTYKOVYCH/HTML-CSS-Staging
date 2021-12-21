@@ -13,17 +13,6 @@ body
 
   position: relative
 
-  &._yandex
-    @include yandex-text-normal($base-font-size)
-
-    min-width: $size-min-page-width
-
-    background-color: $color-page-background
-
-  &._mail
-    @include yandex-text-normal($base-font-size)
-
-
 .svg-store
   visibility: hidden
   position: absolute
@@ -31,32 +20,15 @@ body
   top: 0
   z-index: -999999
 
-@import "blocks/link/link"
-@import "blocks/icon/icon"
-@import "blocks/body/body"
-@import "blocks/datetime/datetime"
-@import "blocks/values-list/values-list"
-@import "blocks/icon-bar/icon-bar"
-@import "blocks/category-list/category-list"
-@import "blocks/page-elem/page-elem"
-@import "blocks/news-list/news-list"
-@import "blocks/weather/weather"
-@import "blocks/road/road"
-@import "blocks/link-bar/link-bar"
-@import "blocks/search-line/search-line"
-@import "blocks/search/search"
-@import "blocks/search-bar/search-bar"
-@import "blocks/top-bar/top-bar"
-@import "blocks/layout/layout"
-@import "blocks/info-content/info-content"
-@import "blocks/zen-section/zen-section"
-@import "blocks/zen-article/zen-article"
-@import "blocks/social/social"
-@import "blocks/image-bar/image-bar"
-@import "blocks/zen-categories/zen-categories"
-@import "blocks/zen-category-list/zen-category-list"
-@import "blocks/page-footer/page-footer"
-@import "blocks/widget/widget"
-@import "blocks/mail-bar/mail-bar"
-@import "blocks/mail/mail"
-@import "blocks/plus/plus"
+@import "blocks/header"
+@import "blocks/link"
+@import "blocks/icon"
+@import "blocks/link-row"
+@import "blocks/body"
+@import "blocks/widget"
+@import "blocks/layout"
+@import "blocks/icon-row"
+@import "blocks/break-line"
+@import "blocks/weather-item"
+@import "blocks/search-line"
+@import "blocks/news"

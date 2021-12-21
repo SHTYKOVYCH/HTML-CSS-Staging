@@ -1,0 +1,73 @@
+.widget
+  @include mail-main-font
+  width: 100%
+
+  border-radius: 1em
+
+  overflow: hidden
+
+  box-shadow: 0 .26em .8em rgba(0, 0, 0, .12)
+
+  margin-bottom: .5rem
+
+  &._no-shadow
+    box-shadow: none
+
+  &__content
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 0 1.2rem 1rem
+
+    vertical-align: center
+
+    &:first-child
+      padding-top: 1em
+
+    &._no-padding
+      padding: 0 0 1em
+
+    &._no-padding-bottom
+      padding-bottom: 0
+
+    &._less-padding-bottom
+      padding-bottom: .7em
+
+    &._weather-header
+      @include set-font-size(.9em)
+
+      padding-top: .6em
+
+    &._weather-small
+      padding-top: .2em
+
+    &._news
+      @include set-font-size(.9em)
+      padding: 0
+
+  &__left
+    @include set-font-size(1.5em)
+
+    margin-right: .3em
+
+    font-weight: bold
+
+
+    &._news
+      @include set-font-size(3em)
+
+  &__right
+    display: flex
+    flex-direction: column
+
+  &__top
+    &._news
+      @include text-set-color($mail-color-blue)
+
+  &__bottom
+    @include text-set-color($mail-color-text-secondary)
+    font-weight: 300
+
+  &__image
+    width: auto
+    height: 1em

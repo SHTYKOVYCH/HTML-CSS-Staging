@@ -1,8 +1,7 @@
-@import "../../common/common"
 
 .search
 
-  @include yandex-text-normal($search-font-size)
+  @include yandex-text-normal($yandex-search-font-size)
 
   &__form
     display: flex
@@ -25,7 +24,7 @@
     color: black
     padding-left: 0.8em
     padding-right: 6em
-    font-size: $search-input-font-size
+    font-size: $yandex-search-input-font-size
 
     &:focus
       outline: none
@@ -36,7 +35,7 @@
     top: .2em
 
   &__commit
-    font-size: $search-commit-font-size
+    font-size: $yandex-search-commit-font-size
     padding: 0 1em
 
     border: none

@@ -1,23 +1,21 @@
-@import "../../common/common"
-@import "../../common/common"
 
 .values-list
 
   &__item
     display: inline-block
     margin-right: 0.8em
-    @include yandex-text-normal($color-base-text)
+    @include yandex-text-normal($yandex-color-base-text)
 
   &__name
-    @include text-set-color($color-base-text)
+    @include text-set-color($yandex-color-base-text)
     margin-right: 0.3em
 
     text-transform: uppercase
 
   &__value
-    @include text-set-color($color-base-text)
+    @include text-set-color($yandex-color-base-text)
     margin-right: 0.3em
 
   &__diff
     @include yandex-text-info
-    @include text-set-color($color-info-text)
+    @include text-set-color($yandex-color-info-text)
