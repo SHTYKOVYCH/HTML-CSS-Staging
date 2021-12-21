@@ -5,12 +5,15 @@
   color: $color
   fill: $color
 
-@mixin set-font($font-family, $font-size: 1em)
-  font-family: $font-family
+@mixin set-font-size($font-size: 1em)
   font-size: $font-size
 
+@mixin set-font($font-family, $font-size: 1em)
+  font-family: $font-family
+  @include set-font-size($font-size)
+
 @mixin yandex-text-normal($font-size: 1em)
-  @include set-font($base-font-family, $font-size)
+  @include set-font($yandex-base-font-family, $font-size)
   font-weight: 400
 
 @mixin yandex-text-main-bold($font-size: 1em)
@@ -24,16 +27,19 @@
 @mixin yandex-text-info()
   font-family: Arial, sans-serif
 
-@mixin hover-main()
+@mixin yandex-hover-main()
   &:hover
-    color: $color-hover-main
-    fill: $color-hover-main
+    color: $yandex-color-hover-main
+    fill: $yandex-color-hover-main
 
-@mixin hover-opacity()
+@mixin yandex-hover-opacity()
   &:hover
-    opacity: $color-hover-additional-opacity
+    opacity: $yandex-color-hover-additional-opacity
 
-@mixin custom-focus($type: 0)
+@mixin yandex-custom-focus($type: 0)
   @if ($type == 0)
     &:focus
       outline: .2em solid $yandex-yellow
+
+@mixin mail-main-font()
+  font-family: Helvetica, Arial, sans-serif

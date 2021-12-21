@@ -1,0 +1,24 @@
+.news
+  padding-top: 1em
+
+  &__main
+    padding-bottom: 0
+    border-radius: .2em
+
+    margin-right: 1em
+
+  &__list
+    display: flex
+    flex-direction: column
+
+  &__item
+    @include mail-main-font
+    @include set-font-size(.9em)
+    @include text-set-color($mail-color-blue)
+    padding: .325em 0
+
+  &__category
+    @include text-set-color(black)
+    margin-right: .5em
+
+    font-weight: bold

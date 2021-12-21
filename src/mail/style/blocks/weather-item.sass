@@ -1,0 +1,37 @@
+.weather-item
+  @include mail-main-font
+  display: flex
+  flex-direction: column
+
+  &__top
+    @include text-set-color($mail-color-text-secondary)
+    @include set-font-size(.8em)
+
+    margin-bottom: .5em
+    text-align: center
+    font-weight: bold
+
+    &._reverse
+      margin-bottom: 0
+
+    &._green
+      @include text-set-color(#0dc268)
+      @include set-font-size(.75em)
+
+  &__bottom
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    font-weight: bold
+
+    &._reverse
+      margin-bottom: .2em
+
+  &__icon
+    @include set-font-size(1.5em)
+    margin-right: .5em
+    font-weight: bold
+
+    &._money
+      @include set-font-size(1em)

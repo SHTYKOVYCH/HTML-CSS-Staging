@@ -1,127 +1,84 @@
-$base-font-family: "Yandex Sans Text", Arial, sans-serif
-$additional-font-family: Verdana, Helvetica, sans-serif
+$yandex-base-font-family: "Yandex Sans Text", Arial, sans-serif
+$yandex-additional-font-family: Verdana, Helvetica, sans-serif
 
-$base-font-size: 16px
+$yandex-base-font-size: 16px
 
-$normal-font-weight: 400
-$bold-font-weight: 600
-$light-font-weight: 300
+$yandex-normal-font-weight: normal
+$yandex-bold-font-weight: 600
+$yandex-light-font-weight: 300
 
-$top-bar-font-size: .88em
-$top-bar-line-height: 2.75em
+$yandex-top-bar-font-size: .88em
+$yandex-top-bar-line-height: 2.75em
 
-$normal-line-height: 1.5em
+$yandex-normal-line-height: 1.5em
 
-$icon-bar-font-size: 1.6em
-$category-list-font-size: 1.2em
-$category-list-item-font-size: 1em
-$category-list-warning-font-size: .8em
-$search-font-size: 1.1em
-$search-input-font-size: .8em
-$search-commit-font-size: .9em
-$link-small-font-size: .4em
-$link-user-font-size: 1.5em
-$link-service-font-size: 2.5em
-$service-text-font-size: .8em
-$link-service-folder-font-size: 2.3em
-$service-foldered-font-size: .5em
-$link-weather-value-font-size: .75em
-$link-road-image-font-size: 1.3em
-$page-elem-values-font-size: .9em
-$news-list-font-size: .9em
-$road-image-font-size: 4em
-$road-grade-font-size: 1.8em
-$search-bar-font-size: 1.2em
-$search-bar-logo-font-size: 8em
-$weather-font-size: 2em
-$weather-small-font-size: .75em
-$category-smaller-font-size: .8em
+$yandex-icon-bar-font-size: 1.6em
+$yandex-category-list-font-size: 1.2em
+$yandex-category-list-item-font-size: 1em
+$yandex-category-list-warning-font-size: .8em
+$yandex-search-font-size: 1.1em
+$yandex-search-input-font-size: .8em
+$yandex-search-commit-font-size: .9em
+$yandex-link-small-font-size: .4em
+$yandex-link-user-font-size: 1.5em
+$yandex-link-service-font-size: 2.5em
+$yandex-service-text-font-size: .8em
+$yandex-link-service-folder-font-size: 2.3em
+$yandex-service-foldered-font-size: .5em
+$yandex-link-weather-value-font-size: .75em
+$yandex-link-road-image-font-size: 1.3em
+$yandex-page-elem-values-font-size: .9em
+$yandex-news-list-font-size: .9em
+$yandex-road-image-font-size: 4em
+$yandex-road-grade-font-size: 1.8em
+$yandex-search-bar-font-size: 1.2em
+$yandex-search-bar-logo-font-size: 8em
+$yandex-weather-font-size: 2em
+$yandex-weather-small-font-size: .75em
+$yandex-category-smaller-font-size: .8em
 
-@mixin font-import($name, $display)
+$mail-base-font-family: Helvetica, Arial, sasn-serif
+
+@mixin font-import-family($name, $path, $display: 'swap')
+
   @font-face
-    font-family: 'Yandex Sans Text'
-    src: url($name + "-Thin.eot")
-    src: url($name + "-Thin.eot?#iefix") format("embedded-opentype"), url($name + "-Thin.woff2") format("woff2"), url($name + "-Thin.woff") format("woff"), url($name + "-Thin.ttf") format("truetype")
+    font-family: $name
+    src: url($path + "-Thin.eot") format('eot'), url($path + "-Thin.eot?#iefix") format("embedded-opentype"), url($path + "-Thin.woff2") format("woff2"), url($path + "-Thin.woff") format("woff"), url($path + "-Thin.ttf") format("truetype")
     font-weight: 100
     font-style: normal
-    font-display: swap
+    font-display: $display
 
   @font-face
-    font-family: 'Yandex Sans Display'
-    src: url($name + "-Regular.eot")
-    src: url($name + "-Regular.eot?#iefix") format("embedded-opentype"), url($name + "-Regular.woff2") format("woff2"), url($name + "-Regular.woff") format("woff"), url($name + "-Regular.ttf") format("truetype")
+    font-family: $name
+    src: url($path + "-Regular.eot") format('eot'), url($path + "-Regular.eot?#iefix") format("embedded-opentype"), url($path + "-Regular.woff2") format("woff2"), url($path + "-Regular.woff") format("woff"), url($path + "-Regular.ttf") format("truetype")
     font-weight: normal
     font-style: normal
-    font-display: swap
+    font-display: $display
 
   @font-face
-    font-family: 'Yandex Sans Text'
-    src: url($name + "-RegularItalic.eot")
-    src: url($name + "-RegularItalic.eot?#iefix") format("embedded-opentype"), url($name + "-RegularItalic.woff2") format("woff2"), url($name + "-RegularItalic.woff") format("woff"), url($name + "-RegularItalic.ttf") format("truetype")
+    font-family: $name
+    src: url($path + "-RegularItalic.eot") format('eot'), url($path + "-RegularItalic.eot?#iefix") format("embedded-opentype"), url($path + "-RegularItalic.woff2") format("woff2"), url($path + "-RegularItalic.woff") format("woff"), url($path + "-RegularItalic.ttf") format("truetype")
     font-weight: normal
     font-style: italic
-    font-display: swap
+    font-display: $display
 
   @font-face
-    font-family: 'Yandex Sans Display'
-    src: url($name + "-RegularItalic.eot")
-    src: url($name + "-RegularItalic.eot?#iefix") format("embedded-opentype"), url($name + "-RegularItalic.woff2") format("woff2"), url($name + "-RegularItalic.woff") format("woff"), url($name + "-RegularItalic.ttf") format("truetype")
-    font-weight: normal
-    font-style: italic
-    font-display: swap
-
-  @font-face
-    font-family: 'Yandex Sans Display'
-    src: url($name + "-Light.eot")
-    src: url($name + "-Light.eot?#iefix") format("embedded-opentype"), url($name + "-Light.woff2") format("woff2"), url($name + "-Light.woff") format("woff"), url($name + "-Light.ttf") format("truetype")
+    font-family: $name
+    src: url($path + "-Light.eot") format('eot'), url($path + "-Light.eot?#iefix") format("embedded-opentype"), url($path + "-Light.woff2") format("woff2"), url($path + "-Light.woff") format("woff"), url($path + "-Light.ttf") format("truetype")
     font-weight: 300
     font-style: normal
-    font-display: swap
+    font-display: $display
 
   @font-face
-    font-family: 'Yandex Sans Text'
-    src: url($name + "-Regular.eot")
-    src: url($name + "-Regular.eot?#iefix") format("embedded-opentype"), url($name + "-Regular.woff2") format("woff2"), url($name + "-Regular.woff") format("woff"), url($name + "-Regular.ttf") format("truetype")
-    font-weight: normal
-    font-style: normal
-    font-display: swap
-
-  @font-face
-    font-family: 'Yandex Sans Text'
-    src: url($name + "-Light.eot")
-    src: url($name + "-Light.eot?#iefix") format("embedded-opentype"), url($name + "-Light.woff2") format("woff2"), url($name + "-Light.woff") format("woff"), url($name + "-Light.ttf") format("truetype")
-    font-weight: 300
-    font-style: normal
-    font-display: swap
-
-  @font-face
-    font-family: 'Yandex Sans Display'
-    src: url($name + "-Bold.eot")
-    src: url($name + "-Bold.eot?#iefix") format("embedded-opentype"), url($name + "-Bold.woff2") format("woff2"), url($name + "-Bold.woff") format("woff"), url($name + "-Bold.ttf") format("truetype")
+    font-family: $name
+    src: url($path + "-Bold.eot") format('eot'), url($path + "-Bold.eot?#iefix") format("embedded-opentype"), url($path + "-Bold.woff2") format("woff2"), url($path + "-Bold.woff") format("woff"), url($path + "-Bold.ttf") format("truetype")
     font-weight: bold
     font-style: normal
-    font-display: swap
+    font-display: $display
 
   @font-face
-    font-family: 'Yandex Sans Display'
-    src: url($name + "-Thin.eot")
-    src: url($name + "-Thin.eot?#iefix") format("embedded-opentype"), url($name + "-Thin.woff2") format("woff2"), url($name + "-Thin.woff") format("woff"), url($name + "-Thin.ttf") format("truetype")
-    font-weight: 100
-    font-style: normal
-    font-display: swap
-
-  @font-face
-    font-family: 'Yandex Sans Text'
-    src: url($name + "-Bold.eot")
-    src: url($name + "-Bold.eot?#iefix") format("embedded-opentype"), url($name + "-Bold.woff2") format("woff2"), url($name + "-Bold.woff") format("woff"), url($name + "-Bold.ttf") format("truetype")
-    font-weight: bold
-    font-style: normal
-    font-display: swap
-
-  @font-face
-    font-family: 'Yandex Sans Text'
-    src: url($name + "-Medium.eot")
-    src: url($name + "-Medium.eot?#iefix") format("embedded-opentype"), url($name + "-Medium.woff2") format("woff2"), url($name + "-Medium.woff") format("woff"), url($name + "-Medium.ttf") format("truetype")
+    font-family: $name
+    src: url($path + "-Medium.eot") format('eot'), url($path + "-Medium.eot?#iefix") format("embedded-opentype"), url($path + "-Medium.woff2") format("woff2"), url($path + "-Medium.woff") format("woff"), url($path + "-Medium.ttf") format("truetype")
     font-weight: 500
     font-style: normal
-    font-display: swap
+    font-display: $display

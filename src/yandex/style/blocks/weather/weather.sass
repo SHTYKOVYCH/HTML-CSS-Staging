@@ -1,14 +1,13 @@
-@import "../../common/common"
 
 .weather
   &__item
-    @include yandex-text-normal($weather-font-size)
-    @include text-set-color($color-base-text)
+    @include yandex-text-normal($yandex-weather-font-size)
+    @include text-set-color($yandex-color-base-text)
     align-items: center
 
     &._small
-      @include yandex-text-normal($weather-small-font-size)
-      @include text-set-color($color-info-text)
+      @include yandex-text-normal($yandex-weather-small-font-size)
+      @include text-set-color($yandex-color-info-text)
       position: relative
       vertical-align: bottom
 
@@ -17,5 +16,5 @@
         content: attr(data-daytime)
         position: absolute
         top: -100%
-        @include yandex-text-normal($weather-small-font-size)
+        @include yandex-text-normal($yandex-weather-small-font-size)
         text-align: center

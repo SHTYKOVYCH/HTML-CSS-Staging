@@ -26,7 +26,7 @@ gulp.task("svgstore", function () {
 
 
 gulp.task("sass", function () {
-    return gulp.src("./src/**/*.sass")
+    return gulp.src("./src/**/style/main.sass")
         .pipe(sass())
         .pipe(
             autoprefixer({

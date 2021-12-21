@@ -1,5 +1,7 @@
 @import "common/common"
 
+@import "./animations/animations"
+
 *
   box-sizing: border-box
   text-decoration: none
@@ -14,11 +16,11 @@ body
   position: relative
 
   &._yandex
-    @include yandex-text-normal($base-font-size)
+    @include yandex-text-normal($yandex-base-font-size)
 
-    min-width: $size-min-page-width
+    min-width: $yandex-size-min-page-width
 
-    background-color: $color-page-background
+    background-color: $yandex-color-page-background
 
 .svg-store
   visibility: hidden

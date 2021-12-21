@@ -1,26 +1,25 @@
-@import "../../common/common"
 
 .category-list
-  @include yandex-text-normal($news-list-font-size)
-  font-size: $category-list-font-size
+  @include yandex-text-normal($yandex-news-list-font-size)
+  font-size: $yandex-category-list-font-size
 
   &__item
-    @include text-set-color($color-menu-inactive)
+    @include text-set-color($yandex-color-menu-inactive)
     margin-right: 0.4em
 
-    font-size: $category-list-item-font-size
+    font-size: $yandex-category-list-item-font-size
 
     line-height: 1.2em
 
     &._active
-      @include text-set-color($color-menu)
+      @include text-set-color($yandex-color-menu)
 
     &._not-active-category
       margin-right: .2em
 
     &._warning
-      @include yandex-text-normal($category-list-warning-font-size)
-      @include text-set-color($color-warning)
+      @include yandex-text-normal($yandex-category-list-warning-font-size)
+      @include text-set-color($yandex-color-warning)
 
       vertical-align: text-bottom
 
@@ -28,6 +27,6 @@
       margin-right: 0
 
     &._weather
-      @include yandex-text-normal($category-smaller-font-size)
-      @include text-set-color($color-menu)
+      @include yandex-text-normal($yandex-category-smaller-font-size)
+      @include text-set-color($yandex-color-menu)
       vertical-align: text-bottom

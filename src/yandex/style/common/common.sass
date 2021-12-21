@@ -1,10 +1,8 @@
 @import "reset"
 @import "font"
 
-@include font-import("../fonts/YS_text/YandexSansText", "swap")
-@include font-import("../fonts/YS_text/YandexSansDisplay", "swap")
+@include font-import-family($yandex-base-font-family, "../fonts/YS_text/YandexSansText")
 
 @import "colors"
 @import "sizes"
 @import "mixin"
-@import "../animations/animations"

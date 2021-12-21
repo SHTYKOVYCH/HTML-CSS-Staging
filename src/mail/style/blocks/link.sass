@@ -1,0 +1,80 @@
+
+.link
+  @include set-font($mail-base-font-family)
+
+  display: flex
+
+  transition: all ease .2s
+
+  justify-content: center
+
+  &._max-width
+    width: 100%
+
+  &._header
+    @include set-font-size(.8em)
+    @include text-set-color($mail-color-text-primary)
+
+    flex-direction: row
+
+    padding: .5em .65em
+    border-radius: .5em
+
+    cursor: pointer
+
+  &._search
+    @include text-set-color($mail-color-blue)
+    margin-right: 1.75em
+
+    cursor: pointer
+
+  &._white-text
+    @include text-set-color(white)
+
+  &._blue-text
+    @include text-set-color($mail-color-blue)
+
+  &._text-black
+    @include text-set-color(black)
+
+  &._blue-background
+    background-color: $mail-color-blue
+
+  &._grey-background
+    background-color: #00103d0a
+
+  &._grey-background-hover:hover
+    background-color: #00103d0a
+
+  &._bold
+    font-weight: bold
+
+  &._news
+    margin-right: 1.5em
+
+    padding-bottom: .5em
+
+    border-bottom: .2em solid transparent
+
+    &:hover
+      border-bottom: .2em solid $color-break-line
+
+  &._news._active
+    border-bottom: .2em solid $mail-color-blue
+
+  &__content
+
+    &._letter-space-after
+      margin-right: 1em
+
+      &:last-child
+        margin-right: 0
+
+    &._text-main
+      @include text-set-color($mail-color-text-primary)
+
+    &._type-image
+      width: 100%
+
+    &._blue-text
+      @include text-set-color($mail-color-blue)

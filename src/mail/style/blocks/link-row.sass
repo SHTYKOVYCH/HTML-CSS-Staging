@@ -1,0 +1,19 @@
+.link-row
+  display: flex
+
+  flex-direction: row
+
+  &._search
+    @include set-font-size(.9em)
+    padding-left: .2em
+    padding-top: .2em
+
+    margin-bottom: 1em
+
+  &._news
+    @include set-font-size(.9em)
+    @include text-set-color($mail-color-text-secondary)
+    padding-left: .2em
+    margin-top: .9em
+
+    border-bottom: .1em solid $color-break-line
