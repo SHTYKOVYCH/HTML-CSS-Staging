@@ -1,0 +1,93 @@
+.article
+  height: 30em
+  max-width: 93.5em
+
+  margin: 3.4em auto
+
+  border-radius: .5em
+  overflow: hidden
+
+  background-color: white
+
+  &__image
+    display: block
+    width: 60%
+    height: 100%
+
+    float: left
+    margin-right: -36.5%
+
+    position: relative
+
+    z-index: 0
+
+
+  &__tag
+    @include text-set-color(#ff7a18)
+    @include set-font($triks-main-forn)
+    @include set-font-size(.85em)
+
+    text-transform: uppercase
+    font-weight: bold
+
+  &__detail
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    height: 100%
+
+    padding-left: 30%
+
+    z-index: 2
+    position: relative
+    background: linear-gradient(270deg, #fff, #fff, #fff, transparent)
+
+
+  &__header
+    @include set-font($triks-main-forn)
+    @include set-font-size(3em)
+
+    display: block
+
+    margin: .5em 0 1em
+
+    font-weight: bold
+
+
+  &__short
+    @include set-font($triks-secondary-font)
+    @include set-font-size(1.2em)
+    @include text-set-color(#474747)
+
+    padding-left: .1em
+
+    max-width: 34em
+
+    margin-bottom: 1.3em
+
+    line-height: 2em
+
+  &__autor
+    display: flex
+    flex-direction: row
+    align-content: center
+    align-items: center
+
+  &__author-image
+    width: 2.5em
+    height: 2.5em
+
+    margin-right: .6em
+
+  &__author-name
+    @include set-font($triks-secondary-font)
+
+    margin-right: .25em
+
+    letter-spacing: .05em
+    font-weight: bold
+
+  &__date
+    @include set-font($triks-secondary-font)
+    @include text-set-color(#565656)

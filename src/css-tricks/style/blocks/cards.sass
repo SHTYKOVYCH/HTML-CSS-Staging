@@ -1,0 +1,49 @@
+.cards
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+  max-width: 93.5em
+
+  margin: 0 auto
+
+  height: 15em
+  border: 1px solid red
+
+  &__left
+    flex: 0 0 17%
+
+    border: 1px solid red
+
+  &__list
+    flex: 0 0 100%
+
+    overflow: visible
+
+    margin-left: 1%
+
+    border: 1px solid red
+
+  &__card
+    display: block
+    width: 12.5em
+    margin-right: -6.5%
+    height: 100%
+
+    float: left
+
+    background-color: white
+
+    border: 1px solid red
+    overflow: visible
+
+    transition: all .2s ease
+
+    &:last-child
+      margin-right: 0
+
+    &:hover
+      @extend :last-child
+      margin-right: .75em
+
+      transform: translate(0, -10%) rotate(5deg)
