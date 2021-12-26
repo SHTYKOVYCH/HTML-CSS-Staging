@@ -1,0 +1,55 @@
+.link
+  &._header
+    @include set-font($triks-main-forn)
+
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  &._header-logo
+    @extend ._header
+
+    @include text-set-color(white)
+    @include set-font-size(1.75em)
+
+    padding: .65em
+    margin-right: 1.1em
+
+    font-weight: 500
+    letter-spacing: .08em
+
+  &._header-list
+    @include set-font($triks-main-forn)
+    @include text-set-color(white)
+    @include set-font-size(.9em)
+
+    align-self: center
+
+    padding: 1em 1.25em
+
+    text-transform: uppercase
+    font-weight: bold
+
+    @media (max-width: 32em)
+      @include set-font-size(.75em)
+
+      padding: 1em
+
+  &._header-icon
+    margin-right: .6em
+
+    &:last-child
+      margin-right: 0
+
+  &__content
+
+    &._header-logo,
+    &._header-icon
+      @include text-set-color(white)
+
+    &._header-icon
+      @include set-font-size(2em)
+
+
+    &._asterix
+      margin-right: .35em

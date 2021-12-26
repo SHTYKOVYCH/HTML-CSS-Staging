@@ -1,0 +1,54 @@
+.cards
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-content: stretch
+
+  max-width: 93.5em
+  margin: 0 auto
+
+  height: 15em
+  border: 1px solid red
+
+  overflow: hidden
+
+  &__left
+    flex: 0 0 17%
+
+    border: 1px solid red
+
+  &__list
+    width: 100%
+
+    display: flex
+    flex-wrap: nowrap
+
+    padding-top: 1.75em
+    padding-left: 1%
+
+    overflow: scroll
+
+    border: 1px solid red
+
+  &__card
+    flex: 0 0 12.5em
+
+    display: block
+    width: 12.5em
+    height: 100%
+    margin-right: -6.5%
+
+    background-color: white
+
+    border: 1px solid red
+
+    transition: all .2s ease
+
+    &:last-child
+      margin-right: 1%
+
+    &:hover
+      @extend :last-child
+      margin-right: .75em
+
+      transform: translate(0, -10%) rotate(5deg)

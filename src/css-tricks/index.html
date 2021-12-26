@@ -2,305 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
     
-    <link rel="stylesheet" href="./style/main.css">
+    <title>CSS-Tricks</title>
+    
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
     <header class="header">
-        <section class="header__item link-row">
-            <a href="#" class="link _header _bold _grey-background-hover "><span
-                    class="link__content _bold">Mail.ru</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Почта</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Мой Мир</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Одноклассники</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">ВКонтакте</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Игры</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Знакомства</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Новости</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Поиск</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">Облако</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">VK Работа</span></a>
-            <a href="#" class="link _header _grey-background-hover"><span class="link__content">VK Combo</span></a>
-            <a href="#" class="link _header _grey-background-hover">
-                <span class="link__content _letter-space-after">Все проекты</span>
-                <span class="link__content"><svg class="icon"><use href="#icon-grid"></use></svg></span>
+        <a href="#" class="link _header-logo">
+            <svg class="link__content _header-logo _asterix icon">
+                <use href="#icon-asterix"></use>
+            </svg>
+            <span class="link__content">CSS-TRICKS</span>
+        </a>
+        <section class="link-list _header-list">
+            <a href="#" class="link _header _header-list">
+                <span class="link__content">Articles</span>
+            </a>
+            <a href="#" class="link _header  _header-list">
+                <span class="link__content">videos</span>
+            </a>
+            <a href="#" class="link _header  _header-list">
+                <span class="link__content">almanac</span>
+            </a>
+            <a href="#" class="link _header  _header-list">
+                <span class="link__content">newsletter</span>
+            </a>
+            <a href="#" class="link _header  _header-list">
+                <span class="link__content">guides</span>
+            </a>
+            <a href="#" class="link _header  _header-list">
+                <span class="link__content">books</span>
             </a>
         </section>
-        <section class="header__item link-row">
-            <a href="#" class="link _header _blue-text _grey-background-hover"><span
-                    class="link__content">Регистрация</span></a>
-            <a href="#" class="link _header _blue-background _white-text"><span class="link__content">Войти</span></a>
+        <section class="link-list _header">
+            <a href="#" class="link _header-icon">
+                <svg class="link__content _header-icon icon">
+                    <use href="#icon-search-tricks"></use>
+                </svg>
+            </a>
+            <a href="#" class="link _header-icon">
+                <svg class="link__content _header-icon icon">
+                    <use href="#icon-person-tricks"></use>
+                </svg>
+            </a>
         </section>
     </header>
     <main class="body">
-        <section class="body__left">
-            <article class="widget">
-                <section class="widget__content _no-padding">
-                    <a href="#" class="link _image _block">
-                        <img src="images/header.png" alt="" class="link__content _type-image">
-                    </a>
-                </section>
-                <section class="widget__content">
-                    <section class="layout _space-beetween">
-                        <a href="#" class="link _bold"><span class="link__content">Почта</span></a>
-                        <span class="icon-row">
-                            <svg class="icon">
-                                <use href="#icon-cam">
-                                </use>
-                            </svg>
-                            <svg class="icon">
-                                <use href="#icon-cam">
-                                </use>
-                            </svg>
-                            <svg class="icon">
-                                <use href="#icon-cam">
-                                </use>
-                            </svg>
-                        </span>
-                    </section>
-                </section>
-                <section class="widget__content _less-padding-bottom">
-                    <a href="#" class="link _header _blue-background _max-width _white-text"><span
-                            class="link__content">Войти в почту</span></a>
-                </section>
-                <section class="widget__content _less-padding-bottom">
-                    <a href="#" class="link _header _blue-background _max-width _white-text"><span
-                            class="link__content">Войти в почту</span></a>
-                </section>
-                <section class="widget__content">
-                    <a href="#" class="link _header _blue-background _max-width _white-text"><span
-                            class="link__content">Войти в почту</span></a>
-                </section>
-            </article>
-            <article class="widget">
-                <section class="widget__content _weather-header _less-padding-bottom">
-                    <section class="layout _space-beetween">
-                        <a href="#" class="link _bold _text-black"><span class="link__content">Москва</span></a>
-                        <a href="#" class="link _text-blue"><span class="link__content">Подробнее</span></a>
-                    </section>
-                </section>
-                <section class="widget__content _wheather-big _less-padding-bottom">
-                    <span class="widget__left">
-                        <svg class="icon"><use href="#icon-wheater"></use></svg>
-                    </span>
-                    <span class="widget__left">
-                    +5°
-                    </span>
-                    <span class="widget__right">
-                        <span class="widget__top">Пасмурно</span>
-                        <span class="widget__bottom">Влажность 76%</span>
-                    </span>
-                </section>
-                <section class="widget__content _no-padding-bottom">
-                    <div class="break-line"></div>
-                </section>
-                <section class="widget__content _weather-small layout _row _space-beetween">
-                    <div class="weather-item">
-                        <span class="weather-item__top">Утром</span>
-                        <span class="weather-item__bottom">
-                            <span class="weather-item__icon">
-                                <svg class="icon"><use href="#icon-wheater"></use></svg>
-                            </span>
-                            <span class="item__temp">+5°</span>
-                        </span>
-                    </div>
-                    <div class="weather-item">
-                        <span class="weather-item__top">Утром</span>
-                        <span class="weather-item__bottom">
-                            <span class="weather-item__icon">
-                                <svg class="icon"><use href="#icon-wheater"></use></svg>
-                            </span>
-                            <span class="item__temp">+5°</span>
-                        </span>
-                    </div>
-                    <div class="weather-item">
-                        <span class="weather-item__top">Утром</span>
-                        <span class="weather-item__bottom">
-                            <span class="weather-item__icon">
-                                <svg class="icon"><use href="#icon-wheater"></use></svg>
-                            </span>
-                            <span class="weather-item__temp">+5°</span>
-                        </span>
-                    </div>
-                </section>
-            </article>
-            <article class="widget">
-                <section class="widget__content layout _row _space-beetween">
-                    <div class="weather-item">
-                        <span class="weather-item__bottom _reverse">
-                            <span class="weather-item__icon _money">
-                                <svg class="icon"><use href="#icon-money"></use></svg>
-                            </span>
-                            <span class="item__temp">78.55</span>
-                        </span>
-                        <span class="weather-item__top _reverse _green">+0.55</span>
-                    </div>
-                    <div class="weather-item">
-                        <span class="weather-item__bottom _reverse">
-                            <span class="weather-item__icon _money">
-                                <svg class="icon"><use href="#icon-money"></use></svg>
-                            </span>
-                            <span class="item__temp">78.55</span>
-                        </span>
-                        <span class="weather-item__top _reverse _green">+0.55</span>
-                    </div>
-                    <div class="weather-item">
-                        <span class="weather-item__bottom _reverse">
-                            <span class="weather-item__icon _money">
-                                <svg class="icon"><use href="#icon-money"></use></svg>
-                            </span>
-                            <span class="item__temp">78.55</span>
-                        </span>
-                        <span class="weather-item__top _reverse _green">+0.55</span>
-                    </div>
-                </section>
-            </article>
-            <article class="widget">
-                <section class="widget__content _wheather-big _less-padding-bottom">
-                    <span class="widget__left">
-                        <svg class="icon"><use href="#icon-wheater"></use></svg>
-                    </span>
-                    <span class="widget__right">
-                        <span class="widget__top">Пасмурно</span>
-                        <span class="widget__bottom">Влажность 76%</span>
-                    </span>
-                </section>
-            </article>
-        </section>
-        <section class="body__right">
-            <section class="link-row _search">
-                <a href="#" class="link _bold _search">
-                    <span class="link__content _search">Поиск в интернете</span>
-                </a>
-                <a href="#" class="link _search">
-                    <span class="link__content _search">Соцсети</span>
-                </a>
-                <a href="#" class="link _search">
-                    <span class="link__content _search">Картинки</span>
-                </a>
-                <a href="#" class="link _search">
-                    <span class="link__content _search">Видео</span>
-                </a>
-                <a href="#" class="link _search">
-                    <span class="link__content _search">Ответы</span>
-                </a>
-            </section>
-            <form class="search-line">
-                <div class="search-line__input-wrapper">
-                    <span class="search-line__icon"><svg class="icon"><use href="#icon-search"></use></svg></span>
-                    <input type="text" class="search-line__input">
-                    <span class="search-line__example">Сейчас ищут:
-                        <a class="link _blue-text">
-                            <span class="link__content">Российские дессантники погибли в беларуссии</span>
-                        </a>
-                    </span>
+        <article class="article">
+            <img src="images/website-lightning.webp" alt="" class="article__image">
+            <section class="article__detail">
+                <div class="article__tags"><span class="article__tag">perfomance</span></div>
+                <span class="article__header">Links on Performance V</span>
+                <span class="article__short">Does shadow DOM improve style performance? — Nolan Lawson covers how, because of the inherent encapsulation of the shadow DOM, the styling gets applied a bit faster than it would if those styling rules were relevant to the entire page. But as ever, it depends, and it turns out that classes and IDs are actually faster […]</span>
+                <div class="article__autor">
+                    <img src="images/914_oooo.plus.png" alt="" class="article__author-image">
+                    <span class="article__author-name">Chris Coyier</span>
+                    <span class="article__date"> on Dec 21, 2021</span>
                 </div>
-                <button class="search-line__button">Найти</button>
-            </form>
-            <section class="link-row _news">
-                <a href="#" class="link _bold _news _active _blue-text">
-                    <span class="link__content _blue-text">Новости</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">COVID-19</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Москва</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Спорт</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Леди</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Авто</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Кино</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Hi-Tech</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Игры</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Дети</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Здоровье</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Дом</span>
-                </a>
-                <a href="#" class="link _news">
-                    <span class="link__content _text-main">Питомцы</span>
-                </a>
             </section>
-            <section class="news">
-                <article class="news__main widget _no-shadow">
-                    <section class="widget__content _news">
-                    <span class="widget__left _news">
-                        <img class="widget__image" src="images/news.jpg" alt="">
-                    </span>
-                        <span class="widget__right">
-                        <span class="widget__top _news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vitae!</span>
-                        <span class="widget__bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor, excepturi. Explicabo non reiciendis sit!</span>
-                    </span>
-                    </section>
-                </article>
-                <section class="news__list">
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim iure laborum molestias porro totam voluptates.</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis eum quo reprehenderit, sapiente sint!</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur dolore dolores nostrum soluta unde?</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam mollitia quis reprehenderit saepe sequi, voluptatem!</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt in quod reprehenderit sunt tenetur, ullam.</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consectetur error perferendis porro sapiente! Praesentium?</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eveniet ipsum, nostrum officia similique veritatis!</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dignissimos magni repudiandae, tempore veritatis vitae?</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet distinctio molestiae mollitia quaerat vero!</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid asperiores, facere illo maxime praesentium.</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content"><span class="news__category">category</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laboriosam magnam nobis, nulla quae recusandae!</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content"><span class="news__category">category</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim est fugit ipsam quisquam ullam voluptas.</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content"><span class="news__category">category</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus harum nostrum quaerat repellat, ut.</span>
-                    </a>
-                    <a href="#" class="news__item">
-                        <span class="link__content"><span class="news__category">category</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus eligendi esse libero minima repudiandae?</span>
-                    </a>
-                </section>
+        </article>
+        <section class="cards">
+            <section class="cards__left"></section>
+            <section class="cards__list">
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
+                <article class="cards__card"></article>
             </section>
         </section>
     </main>
+    
     <div class="svgstore">
         <!-- inject:svg -->
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

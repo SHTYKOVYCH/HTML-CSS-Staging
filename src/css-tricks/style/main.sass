@@ -1,0 +1,31 @@
+@import "common/common"
+
+*
+  box-sizing: border-box
+  text-decoration: none
+  vertical-align: center
+
+html
+  min-height: 100%
+
+body
+  @extend html
+
+  background: linear-gradient(180deg, #fff, #262626)
+
+  position: relative
+
+.svgstore
+  visibility: hidden
+  position: absolute
+  left: 0
+  top: 0
+  z-index: -999999
+
+@import "blocks/header"
+@import "blocks/icon"
+@import "blocks/link"
+@import "blocks/link-list"
+@import "blocks/body"
+@import "blocks/article"
+@import "blocks/cards"
