@@ -23,10 +23,17 @@
     @include text-set-color(white)
     @include set-font-size(.9em)
 
+    align-self: center
+
     padding: 1em 1.25em
 
     text-transform: uppercase
     font-weight: bold
+
+    @media (max-width: 32em)
+      @include set-font-size(.75em)
+
+      padding: 1em
 
   &._header-icon
     margin-right: .6em

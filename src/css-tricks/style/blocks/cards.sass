@@ -2,13 +2,15 @@
   display: flex
   flex-direction: row
   justify-content: space-between
+  align-content: stretch
 
   max-width: 93.5em
-
   margin: 0 auto
 
   height: 15em
   border: 1px solid red
+
+  overflow: hidden
 
   &__left
     flex: 0 0 17%
@@ -16,31 +18,34 @@
     border: 1px solid red
 
   &__list
-    flex: 0 0 100%
+    width: 100%
 
-    overflow: visible
+    display: flex
+    flex-wrap: nowrap
 
-    margin-left: 1%
+    padding-top: 1.75em
+    padding-left: 1%
+
+    overflow: scroll
 
     border: 1px solid red
 
   &__card
+    flex: 0 0 12.5em
+
     display: block
     width: 12.5em
-    margin-right: -6.5%
     height: 100%
-
-    float: left
+    margin-right: -6.5%
 
     background-color: white
 
     border: 1px solid red
-    overflow: visible
 
     transition: all .2s ease
 
     &:last-child
-      margin-right: 0
+      margin-right: 1%
 
     &:hover
       @extend :last-child
