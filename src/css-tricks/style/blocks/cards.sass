@@ -9,6 +9,19 @@
 
   overflow: hidden
 
+  position: relative
+
+  &:after
+    content: ' '
+    position: absolute
+    right: 0
+    top: 1.65em
+    bottom: 4.4em
+    width: .4em
+
+    border-radius: .3em
+    background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%)
+
   &__left
     flex: 0 0 17%
 
@@ -88,6 +101,13 @@
     padding-left: 1%
 
     overflow-x: scroll
+
+    &::-webkit-scrollbar
+      width: 1em
+
+    &::-webkit-scrollbar-thumb
+      border-radius: .5em
+      background: linear-gradient(180deg, #ccc, #262626)
 
   &__card
     flex: 0 0 18em

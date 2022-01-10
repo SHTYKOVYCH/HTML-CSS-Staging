@@ -1,4 +1,30 @@
+@mixin article-small()
+  width: 100%
+  height: auto
+
+  flex-direction: column
+
+  .article__image
+    width: 100%
+    height: auto
+    margin-right: 0
+
+  .article__detail
+    padding: 5%
+
+  .article__header
+    @include set-font-size(2.25em)
+
+  .article__short
+    @include set-font-size(1em)
+
+  .article__autor
+    padding-top: 1em
+    margin-top: auto
+
 .article
+  display: flex
+
   height: 30em
   max-width: 93.5em
 
@@ -10,65 +36,14 @@
   background-color: white
 
   &._compact
-    width: 100%
-    height: auto
-    margin: 0 0 1.5em
-
-    .article__image
-      width: 100%
-      height: auto
-      margin-right: 0
-      float: none
-
-    .article__detail
-      display: block
-      position: static
-      padding: 5%
-
-    .article__header
-      @include set-font-size(2.25em)
-
-    .article__short
-      @include set-font-size(1em)
-
-    .article__autor
-      padding-top: 1em
-
-  @media (max-width: 50em)
-    width: 100%
-    height: auto
-    margin: 0 0 1.5em
-
-    .article__image
-      width: 100%
-      height: auto
-      margin-right: 0
-      float: none
-
-    .article__detail
-      display: block
-      position: static
-      padding: 5%
-
-    .article__header
-      @include set-font-size(2.25em)
-      line-height: 1em
-
-    .article__short
-      @include set-font-size(1em)
-
-    .article__autor
-      padding-top: 1em
+    @include article-small
 
   &__image
     display: block
     width: 60%
     height: 100%
 
-    float: left
     margin-right: -36.5%
-
-    position: relative
 
     z-index: 0
 
@@ -76,16 +51,18 @@
   &__detail
     display: flex
     flex-direction: column
-    justify-content: center
 
     height: 100%
 
+    padding-top: 3.5em
     padding-left: 30%
 
     z-index: 2
     position: relative
     background: linear-gradient(270deg, #fff, #fff, #fff, transparent)
 
+  &__tags
+    margin-bottom: .5em
 
   &__header
     @include set-font($triks-main-forn)
@@ -93,7 +70,7 @@
 
     display: block
 
-    margin: .5em 0 1em
+    margin-bottom: .75em
 
     font-weight: bold
     line-height: 1em
@@ -108,9 +85,9 @@
 
     max-width: 34em
 
-    margin-bottom: 1.3em
+    margin-bottom: 1.75em
 
-    line-height: 2em
+    line-height: 1.9em
 
   &__autor
     display: flex
@@ -135,3 +112,6 @@
   &__date
     @include set-font($triks-secondary-font)
     @include text-set-color(#565656)
+
+  @media (max-width: 50em)
+    @include article-small

@@ -1,7 +1,50 @@
 .advert
   width: 100%
-  height: 13em
 
   display: block
 
-  border: 1px solid red
+  margin-bottom: 3.5em
+  padding: .5em
+
+  border-radius: .5em
+  background-color: white
+
+  &__image
+    width: 100%
+
+    border-radius: .5em
+
+    overflow: hidden
+
+    transition: all .2s ease
+
+    &:hover
+      transform: translate(0, -.4em) rotate(-2deg)
+
+  &__blue-line
+    @include set-font($triks-secondary-font)
+    @include set-font-size(.5em)
+
+    display: block
+
+    padding-left: 2em
+
+    text-transform: uppercase
+
+    color: #0089c7
+
+    letter-spacing: .1em
+
+    font-weight: lighter
+
+  &__title
+    @include set-font($triks-secondary-font)
+    @include set-font-size(.75em)
+
+    display: block
+
+    padding-left: 1.33em
+
+    color: #434343
+
+    margin-bottom: 1em
