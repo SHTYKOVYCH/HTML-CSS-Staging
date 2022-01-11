@@ -7,7 +7,7 @@
   padding: .5em
 
   border-radius: .5em
-  background-color: white
+  background-color: $tricks-advert-color
 
   &__image
     width: 100%
@@ -23,7 +23,7 @@
 
   &__blue-line
     @include set-font($triks-secondary-font)
-    @include set-font-size(.5em)
+    @include set-font-size($tricks-advert-blue-line-font-size)
 
     display: block
 
@@ -31,7 +31,7 @@
 
     text-transform: uppercase
 
-    color: #0089c7
+    color: $tricks-advert-blue-line-color
 
     letter-spacing: .1em
 
@@ -39,12 +39,11 @@
 
   &__title
     @include set-font($triks-secondary-font)
-    @include set-font-size(.75em)
+    @include set-font-size($tricks-advert-title-font-size)
+    @include text-set-color($tricks-advert-title-color)
 
     display: block
 
     padding-left: 1.33em
-
-    color: #434343
 
     margin-bottom: 1em

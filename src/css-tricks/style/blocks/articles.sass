@@ -38,18 +38,18 @@
 
   &__button
     @include set-font($triks-main-forn)
-    @include set-font-size(1.15em)
+    @include set-font-size($tricks-articles-button-font-size)
+    @include text-set-color($tricks-articles-button-color)
     display: block
 
     width: 100%
 
     margin-bottom: 1em
 
-    background-color: #5e5e5e
+    background-color: $tricks-articles-button-color
 
     line-height: 3em
 
-    color: white
     text-align: center
     text-transform: uppercase
     font-weight: bold

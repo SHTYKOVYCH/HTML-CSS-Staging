@@ -9,7 +9,7 @@
 
   border-radius: .5em
 
-  background-color: #ff9e00
+  background-color: $mail-yellow
 
   &__input-wrapper
     flex: 0 0 91%
@@ -17,7 +17,7 @@
     position: relative
 
   &__input
-    @include set-font-size(1em)
+    @include set-font-size($mail-search-line-font-size)
 
     appearance: none
     outline: 0
@@ -42,7 +42,7 @@
 
   &__example
     @include mail-main-font
-    @include set-font-size(.78em)
+    @include set-font-size($mail-search-line-example-font-size)
     display: flex
     flex-direction: row
 
@@ -54,8 +54,8 @@
 
 
   &__button
-    @include text-set-color(white)
-    @include set-font-size(1em)
+    @include text-set-color($mail-search-line-button-color)
+    @include set-font-size($mail-search-line-button-font-size)
 
     appearance: none
     outline: 0
@@ -65,4 +65,4 @@
 
     border-radius: 0 .2em .2em 0
 
-    background-color: #ff9e00
+    background-color: $mail-yellow

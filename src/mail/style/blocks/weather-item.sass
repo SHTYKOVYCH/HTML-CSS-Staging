@@ -5,7 +5,7 @@
 
   &__top
     @include text-set-color($mail-color-text-secondary)
-    @include set-font-size(.8em)
+    @include set-font-size($mail-wheather-item-top-font-size)
 
     margin-bottom: .5em
     text-align: center
@@ -15,8 +15,8 @@
       margin-bottom: 0
 
     &._green
-      @include text-set-color(#0dc268)
-      @include set-font-size(.75em)
+      @include text-set-color($mail-text-green)
+      @include set-font-size($mail-wheather-item-top-green-font-size)
 
   &__bottom
     display: flex
@@ -29,9 +29,9 @@
       margin-bottom: .2em
 
   &__icon
-    @include set-font-size(1.5em)
+    @include set-font-size($mail-wheather-item-icon-font-size)
     margin-right: .5em
     font-weight: bold
 
     &._money
-      @include set-font-size(1em)
+      @include set-font-size($mail-wheather-item-icon-money-font-size)

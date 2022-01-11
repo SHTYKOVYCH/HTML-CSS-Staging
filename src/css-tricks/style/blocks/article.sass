@@ -13,10 +13,10 @@
     padding: 5%
 
   .article__header
-    @include set-font-size(2.25em)
+    @include set-font-size($tricks-article-small-header-font-size)
 
   .article__short
-    @include set-font-size(1em)
+    @include set-font-size($tricks-article-small-short-font-size)
 
   .article__autor
     padding-top: 1em
@@ -33,7 +33,7 @@
   border-radius: .5em
   overflow: hidden
 
-  background-color: white
+  background-color: $tricks-article-color
 
   &._compact
     @include article-small
@@ -59,14 +59,14 @@
 
     z-index: 2
     position: relative
-    background: linear-gradient(270deg, #fff, #fff, #fff, transparent)
+    background: $tricks-article-detail-color
 
   &__tags
     margin-bottom: .5em
 
   &__header
     @include set-font($triks-main-forn)
-    @include set-font-size(3em)
+    @include set-font-size($tricks-article-header-font-size)
 
     display: block
 
@@ -78,8 +78,8 @@
 
   &__short
     @include set-font($triks-secondary-font)
-    @include set-font-size(1.2em)
-    @include text-set-color(#474747)
+    @include set-font-size($tricks-article-short-font-size)
+    @include text-set-color($tricks-article-short-color)
 
     padding-left: .1em
 
@@ -111,7 +111,7 @@
 
   &__date
     @include set-font($triks-secondary-font)
-    @include text-set-color(#565656)
+    @include text-set-color($tricks-article-date)
 
   @media (max-width: 50em)
     @include article-small

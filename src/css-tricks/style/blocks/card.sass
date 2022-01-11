@@ -2,7 +2,7 @@
   padding: 1em
 
   border-radius: .75em
-  background: linear-gradient(85deg, #434343, #262626)
+  background: $tricks-card-background-color
 
   display: flex
   flex-direction: column
@@ -12,20 +12,20 @@
 
   &__meta-title
     @include set-font($triks-secondary-font)
-    @include text-set-color(white)
-    @include set-font-size(1em)
+    @include text-set-color($tricks-card-meta-title-color)
+    @include set-font-size($tricks-card-meta-title-font-size)
 
     letter-spacing: .05em
     font-weight: 500
 
   &__date
     @include set-font($triks-secondary-font)
-    @include text-set-color(#777)
+    @include text-set-color($tricks-card-date-color)
 
   &__title
     @include set-font($triks-main-forn)
-    @include text-set-color(white)
-    @include set-font-size(1.4em)
+    @include text-set-color($tricks-card-title-color)
+    @include set-font-size($tricks-card-title-font-size)
 
     display: block
 
@@ -35,7 +35,7 @@
     line-height: 1em
 
   &__tags
-    @include set-font-size(.75em)
+    @include set-font-size($tricks-card-tags-font-size)
 
     padding-top: 2em
 
@@ -44,7 +44,7 @@
     margin-top: auto
 
   &__author-image
-    @include set-font-size(2.5em)
+    @include set-font-size($tricks-card-author-name-font-size)
     width: 1em
     height: 1em
 
@@ -53,7 +53,7 @@
 
   &__author-name
     @include set-font($triks-secondary-font)
-    @include text-set-color(white)
+    @include text-set-color($tricks-card-author-name-color)
 
     vertical-align: middle
     font-weight: 500

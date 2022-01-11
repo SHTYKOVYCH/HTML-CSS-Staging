@@ -12,7 +12,7 @@
     width: 100%
 
   &._header
-    @include set-font-size(.8em)
+    @include set-font-size($mail-link-font-size-header)
     @include text-set-color($mail-color-text-primary)
 
     flex-direction: row
@@ -29,22 +29,22 @@
     cursor: pointer
 
   &._white-text
-    @include text-set-color(white)
+    @include text-set-color($mail-link-white-text)
 
   &._blue-text
     @include text-set-color($mail-color-blue)
 
   &._text-black
-    @include text-set-color(black)
+    @include text-set-color($mail-link-text-black)
 
   &._blue-background
     background-color: $mail-color-blue
 
   &._grey-background
-    background-color: #00103d0a
+    background-color: $mail-grey
 
   &._grey-background-hover:hover
-    background-color: #00103d0a
+    background-color: $mail-grey
 
   &._bold
     font-weight: bold

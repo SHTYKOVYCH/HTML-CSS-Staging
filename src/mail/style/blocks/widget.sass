@@ -34,7 +34,7 @@
       padding-bottom: .7em
 
     &._weather-header
-      @include set-font-size(.9em)
+      @include set-font-size($mail-widget-weather-header-font-size)
 
       padding-top: .6em
 
@@ -42,11 +42,11 @@
       padding-top: .2em
 
     &._news
-      @include set-font-size(.9em)
+      @include set-font-size($mail-widget-news-font-size)
       padding: 0
 
   &__left
-    @include set-font-size(1.5em)
+    @include set-font-size($mail-widget-left-font-size)
 
     margin-right: .3em
 
@@ -54,7 +54,7 @@
 
 
     &._news
-      @include set-font-size(3em)
+      @include set-font-size($mail-widget-left-news-font-size)
 
   &__right
     display: flex

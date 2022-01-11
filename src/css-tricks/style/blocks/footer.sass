@@ -7,11 +7,11 @@
   z-index: 1
 
   &__asterix
-    @include text-set-color(white)
-    @include set-font-size(7.5em)
+    @include text-set-color($tricks-footer-asterix-color)
+    @include set-font-size($tricks-footer-asterix-font-size)
 
     position: absolute
-    top: -50%
+    top: -18%
     left: 2.75%
 
     z-index: -99999
@@ -19,7 +19,7 @@
   &__inner
     width: 100%
     height: 100%
-    background-color: #111111
+    background-color: $tricks-footer-inner-color
 
   &__content
     max-width: 93.5em
@@ -32,8 +32,8 @@
 
   &__title
     @include set-font($triks-secondary-font)
-    @include text-set-color(white)
-    @include set-font-size(1.75em)
+    @include text-set-color($tricks-footer-title-color)
+    @include set-font-size($tricks-footer-title-font-size)
     display: block
 
     flex: 45 55 100%
@@ -53,9 +53,9 @@
     flex: 1 2 100%
 
   &__list-header
-    @include text-set-color(#ff7a18)
+    @include text-set-color($tricks-footer-list-header-color)
     @include set-font($triks-main-forn)
-    @include set-font-size(1.25em)
+    @include set-font-size($tricks-footer-list-header-font-size)
 
     text-transform: uppercase
     font-weight: bold
@@ -65,8 +65,8 @@
 
   &__list-link
     @include set-font($triks-secondary-font)
-    @include set-font-size(1.25em)
-    @include text-set-color(white)
+    @include set-font-size($tricks-footer-list-link-font-size)
+    @include text-set-color($tricks-footer-list-link-color)
 
 
     text-transform: capitalize

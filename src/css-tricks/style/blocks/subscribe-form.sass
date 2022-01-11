@@ -1,5 +1,5 @@
 .subscribe-form
-  background-color: #434343
+  background-color: $tricks-subscribe-form-color
 
   position: relative
 
@@ -15,12 +15,12 @@
     width: 0
     height: 0
     border-left: 1em solid transparent
-    border-bottom: 2em solid #909090
+    border-bottom: 2em solid $tricks-subscribe-form-before-color
 
   &__title
-    @include text-set-color(#ff7a18)
+    @include text-set-color($tricks-subscribe-form-title-color)
     @include set-font($triks-main-forn)
-    @include set-font-size(1.5em)
+    @include set-font-size($tricks-subscribe-form-title-font-size)
 
     display: block
 
@@ -31,7 +31,7 @@
 
   &__subtitle
     @include set-font($triks-secondary-font)
-    @include text-set-color(white)
+    @include text-set-color($tricks-subscribe-form-subtitle-color)
 
     display: block
 
@@ -40,7 +40,7 @@
     margin-bottom: 1.75em
 
   &__input
-    @include set-font-size(1em)
+    @include set-font-size($tricks-subscribe-form-input-font-size)
 
     width: 78.5%
     padding: 1em .5em
@@ -48,17 +48,17 @@
 
   &__button
     @include set-font($triks-main-forn)
-    @include set-font-size(1.15em)
+    @include set-font-size($tricks-subscribe-form-button-font-size)
+    @include text-set-color($tricks-subscribe-form-button-color)
 
     width: 20%
 
     margin-bottom: 1em
 
-    background-color: #5e5e5e
+    background-color: $tricks-subscribe-form-button-color
 
     line-height: 3em
 
-    color: white
     text-align: center
     text-transform: uppercase
     font-weight: bold
