@@ -50,6 +50,11 @@ gulp.task("move:fonts", function () {
         .pipe(gulp.dest(outDir));
 });
 
+gulp.task("move:json", function () {
+    return gulp.src("./src/**/*.json")
+        .pipe(gulp.dest(outDir));
+});
+
 gulp.task("serve", function () {
     browserSync.init({
         server: {
@@ -58,6 +63,6 @@ gulp.task("serve", function () {
     });
 });
 
-gulp.task("build", gulp.series("svgstore", "sass", "html", "move:images", "move:fonts"));
+gulp.task("build", gulp.series("svgstore", "sass", "html", "move:images", "move:fonts", "move:json"));
 
 gulp.task("default", gulp.series("svgstore", "move:fonts", "move:images", gulp.parallel("html", "sass"), "serve"));
