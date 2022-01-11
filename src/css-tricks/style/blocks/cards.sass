@@ -9,6 +9,19 @@
 
   overflow: hidden
 
+  position: relative
+
+  &:after
+    content: ' '
+    position: absolute
+    right: 0
+    top: 1.65em
+    bottom: 4.4em
+    width: .4em
+
+    border-radius: .3em
+    background: $tricks-cards-after-color
+
   &__left
     flex: 0 0 17%
 
@@ -31,7 +44,7 @@
       width: 100%
       height: 100%
       border-radius: .75em
-      background-image: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%)
+      background-image: $tricks-title-card-before-color
       z-index: -1
 
     &:after
@@ -44,14 +57,14 @@
       height: calc(100% - 1em)
 
       border-radius: .75em
-      background-color: black
+      background-color: $tricks-cards-title-card-after-color
 
       z-index: -1
 
   &__title
-    @include text-set-color(white)
+    @include text-set-color($tricks-cards-title-color)
     @include set-font($triks-main-forn)
-    @include set-font-size(2.05em)
+    @include set-font-size($tricks-cards-title-font-size)
     display: block
 
     line-height: 1.1em
@@ -59,8 +72,8 @@
     font-weight: 900
 
   &__sponsored
-    @include text-set-color(white)
-    @include set-font-size(1em)
+    @include text-set-color($tricks-cards-sponsored-color)
+    @include set-font-size($tricks-cards-sponsored-font-size)
     @include set-font($triks-secondary-font)
     display: block
 
@@ -71,7 +84,7 @@
 
   &__author
     @include set-font($triks-secondary-font)
-    @include text-set-color(#0089c7)
+    @include text-set-color($tricks-cards-author-color)
 
     display: block
     padding-top: 1em
@@ -89,13 +102,20 @@
 
     overflow-x: scroll
 
+    &::-webkit-scrollbar
+      width: 1em
+
+    &::-webkit-scrollbar-thumb
+      border-radius: .5em
+      background: $tricks-cards-scrollbar-thumb-color
+
   &__card
     flex: 0 0 18em
 
     display: block
     margin-right: -9%
 
-    box-shadow: -2em 0 3em -2em #000
+    box-shadow: -2em 0 3em -2em $tricks-cards-card-shadow-color
 
     transition: .2s
 

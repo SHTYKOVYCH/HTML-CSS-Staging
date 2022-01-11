@@ -9,8 +9,8 @@
   &._header-logo
     @extend ._header
 
-    @include text-set-color(white)
-    @include set-font-size(1.75em)
+    @include text-set-color($tricks-link-header-logo-color)
+    @include set-font-size($tricks-link-header-logo-font-size)
 
     padding: .65em
     margin-right: 1.1em
@@ -20,8 +20,8 @@
 
   &._header-list
     @include set-font($triks-main-forn)
-    @include text-set-color(white)
-    @include set-font-size(.9em)
+    @include text-set-color($tricks-link-header-list-color)
+    @include set-font-size($tricks-link-header-list-font-size)
 
     align-self: center
 
@@ -31,7 +31,7 @@
     font-weight: bold
 
     @media (max-width: 50em)
-      @include set-font-size(.75em)
+      @include set-font-size($tricks-link-header-list-break-1-font-size)
 
       padding: 1em
 
@@ -45,10 +45,10 @@
 
     &._header-logo,
     &._header-icon
-      @include text-set-color(white)
+      @include text-set-color($tricks-link-content-header-icon-color)
 
     &._header-icon
-      @include set-font-size(2em)
+      @include set-font-size($tricks-link-content-header-icon-footer-size)
 
 
     &._asterix

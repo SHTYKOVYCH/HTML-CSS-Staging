@@ -13,12 +13,12 @@
 
   &__item
     @include mail-main-font
-    @include set-font-size(.9em)
+    @include set-font-size($mail-news-item-font-size)
     @include text-set-color($mail-color-blue)
     padding: .325em 0
 
   &__category
-    @include text-set-color(black)
+    @include text-set-color($main-news-category-color)
     margin-right: .5em
 
     font-weight: bold

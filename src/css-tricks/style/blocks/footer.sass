@@ -1,0 +1,73 @@
+.footer
+
+  margin-top: 16.5em
+
+
+  position: relative
+  z-index: 1
+
+  &__asterix
+    @include text-set-color($tricks-footer-asterix-color)
+    @include set-font-size($tricks-footer-asterix-font-size)
+
+    position: absolute
+    top: -18%
+    left: 2.75%
+
+    z-index: -99999
+
+  &__inner
+    width: 100%
+    height: 100%
+    background-color: $tricks-footer-inner-color
+
+  &__content
+    max-width: 93.5em
+    margin: 0 auto
+    padding-top: 4.8em
+    padding-bottom: 4.8em
+
+  &__upperline
+    display: flex
+
+  &__title
+    @include set-font($triks-secondary-font)
+    @include text-set-color($tricks-footer-title-color)
+    @include set-font-size($tricks-footer-title-font-size)
+    display: block
+
+    flex: 45 55 100%
+
+    line-height: 1.5em
+
+  &__form
+    display: block
+    flex: 55 45 100%
+
+  &__columns
+    display: flex
+    justify-content: space-between
+    margin-top: -4%
+
+  &__column
+    flex: 1 2 100%
+
+  &__list-header
+    @include text-set-color($tricks-footer-list-header-color)
+    @include set-font($triks-main-forn)
+    @include set-font-size($tricks-footer-list-header-font-size)
+
+    text-transform: uppercase
+    font-weight: bold
+
+  &__list-links
+    padding-top: .75em
+
+  &__list-link
+    @include set-font($triks-secondary-font)
+    @include set-font-size($tricks-footer-list-link-font-size)
+    @include text-set-color($tricks-footer-list-link-color)
+
+
+    text-transform: capitalize
+    line-height: 1.5em
