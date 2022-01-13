@@ -1,0 +1,33 @@
+@import "../mail/style/common/common"
+
+$color-pink: #EA1A65
+$color-gray: #393939
+
+html, body
+  height: 100%
+
+#app
+  background-color: $color-gray
+
+.blocks
+  display: grid
+  grid-gap: 10px
+
+  padding: 5% 10%
+
+  grid-template-rows: 1fr
+  grid-template-columns: 1fr 1fr 1fr 1fr
+
+  @media screen and (max-width: 960px)
+    grid-template-columns: 1fr 1fr 1fr
+
+  @media screen and (max-width: 768px)
+    grid-template-columns: 1fr 1fr
+
+  @media screen and (max-width: 480px)
+    grid-template-columns: 1fr
+
+  &__block
+    height: 100px
+    width: 100%
+    background-color: $color-pink

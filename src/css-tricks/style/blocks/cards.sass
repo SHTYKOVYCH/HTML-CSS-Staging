@@ -11,6 +11,10 @@
 
   position: relative
 
+  @media (max-width: $bp-medium-bigger)
+    overflow: scroll
+    margin: 0
+
   &:after
     content: ' '
     position: absolute
@@ -22,8 +26,11 @@
     border-radius: .3em
     background: $tricks-cards-after-color
 
+    @media (max-width: $bp-medium-bigger)
+      display: none
+
   &__left
-    flex: 0 0 17%
+    flex: 1 5 100%
 
     padding-top: 1.75em
 
@@ -94,7 +101,7 @@
 
     display: flex
     flex-wrap: nowrap
-    flex: 0 1 100%
+    flex: 5 1 100%
 
     padding-top: 1.75em
     padding-bottom: 3.5em
@@ -109,6 +116,9 @@
       border-radius: .5em
       background: $tricks-cards-scrollbar-thumb-color
 
+    @media (max-width: $bp-medium-bigger)
+      overflow: visible
+
   &__card
     flex: 0 0 18em
 
@@ -121,6 +131,9 @@
 
     &:last-child
       margin-right: 1%
+
+      @media (max-width: $bp-medium-bigger)
+        margin-right: 0
 
     &:hover
       @extend :last-child
