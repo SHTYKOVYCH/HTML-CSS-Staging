@@ -378,6 +378,126 @@
                 </div>
             </div>
         </section>
+        <section class="zen-section">
+            <div class="layout _container">
+                <section class="zen-section__main-part">
+                    <tempalte id="zen-article" style="display: none">
+                        <article class="zen-section__elem _hover-lighter">
+                            <a href="#" class="zen-article">
+                                <div class="zen-article__header">
+                                    <a href="#" class="zen-article__publisher link">
+                                        <img src="./images/914_oooo.plus.png" alt=""
+                                             class="link__content _type_image _rounded _bigger">
+                                        <span class="link__content _zen-header">Яндекс.Новости</span>
+                                    </a>
+                                    <div class="zen-article__buttons icon-bar">
+                                        <a href="#" class="icon-bar__item link">
+                                        <span class="link__content _space-right _hover-opacity">
+                                            <svg class="icon">
+                                                <use href="#icon-person"></use>
+                                            </svg>
+                                        </span>
+                                        </a>
+                                        <a href="#" class="icon-bar__item link">
+                                        <span class="link__content _hover-opacity">
+                                            <svg class="icon">
+                                                <use href="#icon-dots"></use>
+                                            </svg>
+                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="zen-article__content">
+                                    <img src="./images/W_McLaren.jpg" alt="" class="zen-article__preview"/>
+                                    <section class="zen-article__info">
+                                        <h4 class="zen-article__headline">Lorem ipsum dolor sit amet,
+                                            consectetur.</h4>
+                                        <span class="zen-article__short-view">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, deserunt, modi. At debitis, illum. Aperiam culpa laboriosam laborum obcaecati reprehenderit!</span>
+                                        <span class="zen-article__date">16 августа</span>
+                                    </section>
+                                </div>
+                                <div class="zen-article__header">
+                                    <a href="#" class="social__people">
+                                        <div class="image-bar">
+                                            <img src="./images/914_oooo.plus.png" alt="" class="image-bar__elem">
+                                            <img src="./images/914_oooo.plus.png" alt="" class="image-bar__elem">
+                                        </div>
+                                        <span class="social__counter link">
+                                        <span class="link__content _bold _void-right _zen-header">999</span>
+                                        <span class="link__content _normal">коментариев</span>
+                                    </span>
+                                    </a>
+                                    <div class="social__buttons icon-bar">
+                                        <a href="#" class="icon-bar__item link">
+                                                <span class="link__content _hover-opacity _void-right">
+                                                    <svg class="icon">
+                                                    <use href="#icon-thumb_up"></use>
+                                                    </svg>
+                                                </span>
+                                        </a>
+                                        <a href="#" class="icon-bar__item link">
+                                                <span class="link__content _hover-opacity _void-right">
+                                                    <svg class="icon">
+                                                    <use href="#icon-thumb_down"></use>
+                                                    </svg>
+                                                </span>
+                                        </a>
+                                        <a href="#" class="icon-bar__item link">
+                                                <span class="link__content _hover-opacity">
+                                                    <svg class="icon">
+                                                        <use href="#icon-arrow_share"></use>
+                                                    </svg>
+                                                </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </tempalte>
+                </section>
+                <aside class="zen-section__side-part">
+                    <article class="zen-section__elem zen-categories">
+                        <a href="#" class="zen-categories__header link">
+                                <span class="link__content _zen-categories-icon"><svg class="icon"><use
+                                        href="#icon-zen-icon"></use></svg></span>
+                            <span class="link__content _usual">Дзен</span>
+                        </a>
+                        <span class="zen-categories__subheader">рекомендуем</span>
+                        <ul class="zen-categories__list zen-category-list">
+                            <li class="zen-category-list__elem link _hover-color-main">
+                                    <span class="link__content  _zen-categories-icon"><svg class="icon"><use
+                                            href="#icon-zen-icon"></use></svg></span>
+                                <span class="link__content _hover-color-main">Hello worlds</span>
+                            </li>
+                            <li class="zen-category-list__elem link _hover-color-main">
+                                                                    <span class="link__content  _zen-categories-icon"><svg
+                                                                            class="icon"><use
+                                                                            href="#icon-zen-icon"></use></svg></span>
+                                <span class="link__content _hover-color-main">Hello worlds</span>
+                            </li>
+                            <li class="zen-category-list__elem link _hover-color-main">
+                                                                    <span class="link__content  _zen-categories-icon"><svg
+                                                                            class="icon"><use
+                                                                            href="#icon-zen-icon"></use></svg></span>
+                                <span class="link__content _hover-color-main">Hello worlds</span>
+                            </li>
+                            <li class="zen-category-list__elem link _hover-color-main">
+                                                                    <span class="link__content  _zen-categories-icon"><svg
+                                                                            class="icon"><use
+                                                                            href="#icon-zen-icon"></use></svg></span>
+                                <span class="link__content _hover-color-main">Hello worlds</span>
+                            </li>
+                            <li class="zen-category-list__elem link _hover-color-main">
+                                                                    <span class="link__content  _zen-categories-icon"><svg
+                                                                            class="icon"><use
+                                                                            href="#icon-zen-icon"></use></svg></span>
+                                <span class="link__content _hover-color-main">Hello worlds</span>
+                            </li>
+                        </ul>
+                    </article>
+                </aside>
+            </div>
+        </section>
     </main>
     
     <div class="svg-store">
@@ -516,12 +636,18 @@
     </div>
     <script>
         function createNewArticle() {
+            console.log(createNewArticle.executing)
+            if (createNewArticle.executing) {
+                return;
+            }
+
+            createNewArticle.executing = true;
+
             if (document.documentElement.scrollHeight - document.documentElement.scrollTop < 2000) {
                 let article = document.getElementById("zen-article").querySelector(".zen-section__elem").cloneNode(true);
 
-                fetch("article.json").then(async function (res) {
+                fetch("./article.json").then(async function (res) {
                         res = await res.json();
-                        console.log(res);
                         article.querySelector(".zen-article__publisher .link__content._zen-header").textContent = res["publisher"];
                         article.querySelector(".zen-article__publisher ._type_image").src = res["publisher-image__link"];
 
@@ -531,15 +657,17 @@
 
                         article.querySelector(".link__content._bold._void-right._zen-header").textContent = res["comments"];
 
-                        console.log(article);
-
                         document.querySelector('.zen-section__main-part').append(article);
                     }
                 ).then(() => {
+                    createNewArticle.executing = false;
+
                     if (document.documentElement.scrollHeight - document.documentElement.scrollTop < 2000) {
                         createNewArticle();
                     }
                 });
+            } else {
+                createNewArticle.executing = false;
             }
         }
 

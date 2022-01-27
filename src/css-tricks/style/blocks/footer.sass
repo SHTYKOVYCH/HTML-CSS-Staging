@@ -14,6 +14,11 @@
     top: -18%
     left: 2.75%
 
+    @media (max-width: $bp-smaller)
+      left: unset
+      right: 7.5%
+      top: -15%
+
     z-index: -99999
 
   &__inner
@@ -22,13 +27,18 @@
     background-color: $tricks-footer-inner-color
 
   &__content
-    max-width: 93.5em
+    max-width: 90%
+
     margin: 0 auto
     padding-top: 4.8em
     padding-bottom: 4.8em
 
+
   &__upperline
     display: flex
+
+    @media (max-width: $bp-smaller)
+      flex-direction: column
 
   &__title
     @include set-font($triks-secondary-font)
@@ -40,17 +50,31 @@
 
     line-height: 1.5em
 
+    @media (max-width: $bp-smaller)
+      order: 2
+      margin-top: -10%
+
   &__form
     display: block
     flex: 55 45 100%
+
 
   &__columns
     display: flex
     justify-content: space-between
     margin-top: -4%
 
+    @media (max-width: $bp-medium-bigger)
+      flex-wrap: wrap
+
+    @media (max-width: $bp-smaller)
+      margin-top: 5%
+
   &__column
     flex: 1 2 100%
+
+    @media (max-width: $bp-medium-bigger)
+      flex: 1 1 50%
 
   &__list-header
     @include text-set-color($tricks-footer-list-header-color)
