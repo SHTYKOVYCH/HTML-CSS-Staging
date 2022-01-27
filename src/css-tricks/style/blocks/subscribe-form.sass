@@ -39,21 +39,32 @@
 
     margin-bottom: 1.75em
 
+  &__input-wrapper
+    display: flex
+    flex-direction: row
+    align-items: stretch
+
   &__input
     @include set-font-size($tricks-subscribe-form-input-font-size)
 
-    width: 78.5%
+    appearance: none
+    border: none
+
+    display: block
+
+    flex: 1 1 100%
+
     padding: 1em .5em
 
 
   &__button
     @include set-font($triks-main-forn)
     @include set-font-size($tricks-subscribe-form-button-font-size)
-    @include text-set-color($tricks-subscribe-form-button-color)
+    @include text-set-color($tricks-subscribe-form-button-font-color)
 
-    width: 20%
+    display: block
+    flex: 0 0 12em
 
-    margin-bottom: 1em
 
     background-color: $tricks-subscribe-form-button-color
 

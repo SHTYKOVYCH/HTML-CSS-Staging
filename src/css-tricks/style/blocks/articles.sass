@@ -11,10 +11,16 @@
 
     padding-right: 3em
 
-    @media (max-width: 50em)
+    @media (max-width: $bp-medium-bigger)
       flex-direction: column
       justify-content: stretch
       align-items: stretch
+
+      flex: 6 2 100%
+
+    @media (max-width: $bp-small)
+      justify-content: center
+      padding-right: 0
 
   &__articles-wrapper
     display: flex
@@ -22,19 +28,35 @@
     justify-content: space-between
     flex-wrap: wrap
 
-
   &__article
-    max-width: 30%
+    //max-width: 30%
 
-    margin: 0 0 3em
-    @media (max-width: 50em)
-      max-width: 100%
+    flex: 0 0 30%
+
+    margin: 0 1em 3em
+
+    @media (max-width: $bp-bigger)
+      flex-basis: 48%
+      margin: 0 0 3em
+
+    @media (max-width: $bp-medium-bigger)
+      flex-basis: 100%
+
+    @media (max-width: $bp-small)
+      flex-basis: 48%
+
+    @media (max-width: $bp-smallest)
+      flex: 100%
 
   &__advertisement
     flex: 2 7.5 100%
 
-    @media (max-width: 50em)
+    @media (max-width: $bp-medium-bigger)
+      flex: 2 6 100%
+
+    @media (max-width: $bp-small)
       display: none
+
 
   &__button
     @include set-font($triks-main-forn)
@@ -47,6 +69,9 @@
     margin-bottom: 1em
 
     background-color: $tricks-subscribe-form-button-background-color
+
+    border-radius: .2em
+    box-shadow: $tricks-articles-button-shadow
 
     line-height: 3em
 
