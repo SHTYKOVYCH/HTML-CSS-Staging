@@ -64,7 +64,7 @@ gulp.task("serve", function () {
 });
 
 gulp.task("js", function () {
-    return gulp.src("./**/*.js").pipe(gulp.dest(outDir));
+    return gulp.src("./src/**/*.js").pipe(gulp.dest(outDir));
 });
 
 gulp.task("build", gulp.series("svgstore", "sass", "html", "js", "move:images", "move:fonts", "move:json"));
