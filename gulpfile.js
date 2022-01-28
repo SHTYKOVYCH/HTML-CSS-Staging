@@ -63,6 +63,10 @@ gulp.task("serve", function () {
     });
 });
 
-gulp.task("build", gulp.series("svgstore", "sass", "html", "move:images", "move:fonts", "move:json"));
+gulp.task("js", function () {
+    return gulp.src("./**/*.js").pipe(gulp.dest(outDir));
+});
+
+gulp.task("build", gulp.series("svgstore", "sass", "html", "js", "move:images", "move:fonts", "move:json"));
 
 gulp.task("default", gulp.series("svgstore", "move:fonts", "move:images", gulp.parallel("html", "sass"), "serve"));
