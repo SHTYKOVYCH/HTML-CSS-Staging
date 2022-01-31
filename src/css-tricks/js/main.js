@@ -8,10 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        onScroll.executing = true;
+
         advert = advert.map(el => {
             if (window.scrollY - el.getBoundingClientRect().top >= document.documentElement.clientHeight / 2) {
                 el.style.opacity = '1';
-                console.log(el.getBoundingClientRect().top)
                 return null;
             }
 
@@ -22,6 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             window.removeEventListener("scroll", onScroll);
         }
 
-        setTimeout(() => onScroll.executing = false, 1000);
+        setTimeout(() => onScroll.executing = false, 250);
     })
 })
